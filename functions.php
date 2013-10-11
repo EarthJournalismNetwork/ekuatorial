@@ -186,7 +186,8 @@ function infoamazonia_geojson_api_query($query) {
 add_filter('jeo_geojson_api_query', 'infoamazonia_geojson_api_query');
 
 // add qtrans filter to get_permalink
-add_filter('post_type_link', 'qtrans_convertURL');
+if(function_exists('qtrans_convertURL'))
+	add_filter('post_type_link', 'qtrans_convertURL');
 
 // custom marker data
 function infoamazonia_marker_data($data) {
