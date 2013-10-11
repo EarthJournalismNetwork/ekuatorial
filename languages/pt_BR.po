@@ -1,0 +1,827 @@
+# Copyright (C) 2013 memeLab
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: InfoAmazonia 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-05-06 20:06-0300\n"
+"PO-Revision-Date: 2013-05-06 20:06-0300\n"
+"Last-Translator: Miguel Peixe <miguel@cardume.art.br>\n"
+"Language-Team: Cardume\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: BRAZIL\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../loop-maps.php:16
+msgid "View this map"
+msgstr "Ver este mapa"
+
+#: ../single.php:26
+msgid "Go to the original article"
+msgstr "Ir para a notícia original"
+
+#: ../single.php:28
+msgid "Embed this story"
+msgstr "Incorporar notícia"
+
+#: ../single.php:29
+#: ../functions.php:49
+msgid "Print"
+msgstr "Imprimir"
+
+#: ../content-map-group.php:26
+msgid "More..."
+msgstr "Mais..."
+
+#: ../content-map-group.php:36
+msgid "View all maps"
+msgstr "Ver todos os mapas"
+
+#: ../header.php:16
+#: ../content-embed.php:16
+msgid "Page"
+msgstr "Página"
+
+#: ../header.php:43
+msgid "Last updated:"
+msgstr "Última atualização:"
+
+#: ../header.php:49
+msgid "by"
+msgstr "por"
+
+#: ../header.php:49
+msgid "and"
+msgstr "e"
+
+#: ../header.php:56
+#: ../section-submit-call.php:4
+msgid "Submit a story"
+msgstr "Envie um artigo"
+
+#: ../header.php:80
+msgid "Follow us"
+msgstr "Siga-nos"
+
+#: ../functions.php:44
+msgid "stories"
+msgstr "artigos"
+
+#: ../functions.php:46
+msgid "Copy the embed code"
+msgstr "Copie o código de incorporação"
+
+#: ../functions.php:47
+msgid "Share this"
+msgstr "Compartilhe"
+
+#: ../functions.php:48
+msgid "Embed"
+msgstr "Incorporar"
+
+#: ../functions.php:54
+msgid "Read"
+msgstr "Leia"
+
+#: ../functions.php:56
+msgid "Open slideshow"
+msgstr "Abrir slideshow"
+
+#: ../functions.php:57
+msgid "Watch video gallery"
+msgstr "Assistir vídeos"
+
+#: ../functions.php:58
+msgid "Watch video"
+msgstr "Assistir vídeo"
+
+#: ../functions.php:59
+msgid "View image gallery"
+msgstr "Ver galeria de imagens"
+
+#: ../functions.php:60
+msgid "View fullscreen image"
+msgstr "Ver imagem em tela cheia"
+
+#: ../functions.php:61
+msgid "View infographic"
+msgstr "Ver infográfico"
+
+#: ../functions.php:62
+msgid "View infographics"
+msgstr "Ver infográficos"
+
+#: ../functions.php:85
+msgid "Success! Thank you, your story will be reviewed by one of our editors and soon will be online."
+msgstr "Obrigado! Seu artigo será revisado por um dos nossos editores e em breve estará online."
+
+#: ../functions.php:86
+msgid "Oops, please try again in a few minutes."
+msgstr "Ops, tente novamente em alguns minutos."
+
+#: ../functions.php:115
+msgid "Main widgets"
+msgstr "Widgets principais"
+
+#: ../functions.php:117
+msgid "Widgets used on front and inside pages."
+msgstr "Widgets utilizados na página inicial e internas."
+
+#: ../functions.php:268
+msgid "Search for stories"
+msgstr "Busque por notícias"
+
+#: ../functions.php:270
+msgid "Search for stories on this map"
+msgstr "Buscar notícias neste mapa"
+
+#: ../functions.php:272
+msgid "Search for stories on this publisher"
+msgstr "Buscar notícias neste editor"
+
+#: ../single-map.php:13
+msgid "Embed this map"
+msgstr "Incorporar este mapa"
+
+#: ../single-map.php:31
+msgid "Stories on"
+msgstr "Artigos em"
+
+#: ../loop.php:8
+msgctxt "reduced date format"
+msgid "m/d/Y"
+msgstr "d/m/Y"
+
+#: ../section-subheader.php:6
+msgid "Choose a publisher"
+msgstr "Escolha um editor"
+
+#: ../section-subheader.php:22
+msgid "All stories"
+msgstr "Todas as notícias"
+
+#: ../section-subheader.php:46
+msgid "Nothing found for: "
+msgstr "Nada encontrado para:"
+
+#: ../section-subheader.php:48
+msgid "Search results for: "
+msgstr "Resultados da busca por:"
+
+#: ../section-subheader.php:61
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Arquivo do dia: %s"
+
+#: ../section-subheader.php:63
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Arquivo do mês: %s"
+
+#: ../section-subheader.php:63
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F,  Y"
+
+#: ../section-subheader.php:65
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Arquivos do ano: %s"
+
+#: ../section-subheader.php:65
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: ../section-subheader.php:67
+msgid "Archives"
+msgstr "Arquivos"
+
+#: ../section-submit-call.php:2
+msgid "Do you have news to share from the Amazon? Contribute to this map by submitting your story. Help broaden the understanding of the global impact of this important region in the world."
+msgstr "Você tem alguma notícia para compartilhar sobre a Amazônia? Contribua para este mapa enviando uma reportagem. Ajude a ampliar o entendimento do impacto global desta importante região."
+
+#: ../section-publisher-description.php:7
+msgid "Visit"
+msgstr "Visite"
+
+#: ../404.php:6
+msgid "Page not found"
+msgstr "Página não encontrada"
+
+#: ../content-marker-bubble.php:12
+msgctxt "map bubble date format"
+msgid "m/d/Y"
+msgstr "d/m/Y"
+
+#: ../content-share.php:10
+msgid "Choose a map"
+msgstr "Escolha um mapa"
+
+#: ../content-share.php:14
+msgid "Choose any map from the list"
+msgstr "Escolha qualquer mapa da lista"
+
+#: ../content-share.php:20
+msgid "Select a map"
+msgstr "Selecione um mapa"
+
+#: ../content-share.php:25
+msgid "Select layers from this map"
+msgstr "Selecione camadas deste mapa"
+
+#: ../content-share.php:34
+msgid "Select layers from"
+msgstr "Selecione camadas de"
+
+#: ../content-share.php:36
+#: ../content-share.php:53
+msgid "Select layers"
+msgstr "Selecione camadas"
+
+#: ../content-share.php:41
+msgid "Choose any layers from the list"
+msgstr "Escolha camadas da lista"
+
+#: ../content-share.php:65
+msgid "Back to default layer configuration"
+msgstr "Voltar para as camadas padrões"
+
+#: ../content-share.php:75
+msgid "Select a story"
+msgstr "Selecione notícia"
+
+#: ../content-share.php:79
+msgid "Choose a story from a variety of different sources"
+msgstr "Escolha notícias de diferentes editores"
+
+#: ../content-share.php:85
+msgid "Select stories"
+msgstr "Selecione notícias"
+
+#: ../content-share.php:90
+msgid "Selected story"
+msgstr "Notícia selecionada"
+
+#: ../content-share.php:95
+msgid "General stories"
+msgstr "Notícias"
+
+#: ../content-share.php:96
+msgid "Stories from the map"
+msgstr "Notícias do mapa"
+
+#: ../content-share.php:96
+msgid "Latest stories"
+msgstr "Últimas notícias"
+
+#: ../content-share.php:97
+msgid "No stories"
+msgstr "Nenhuma notícia"
+
+#: ../content-share.php:99
+msgid "By publishers"
+msgstr "Por editores"
+
+#: ../content-share.php:112
+msgid "Width & Height"
+msgstr "Altura e largura"
+
+#: ../content-share.php:116
+msgid "Select the width and height proportions you would like to embed to be."
+msgstr "Selecione a altura e largura para o seu mapa incorporado"
+
+#: ../content-share.php:121
+msgid "Small"
+msgstr "Pequeno"
+
+#: ../content-share.php:122
+msgid "Medium"
+msgstr "Médio"
+
+#: ../content-share.php:123
+msgid "Large"
+msgstr "Grande"
+
+#: ../content-share.php:133
+msgid "HTML Output"
+msgstr "Código HTML"
+
+#: ../content-share.php:137
+msgid "Copy and paste this code into an HTML page"
+msgstr "Copie e cole este código em uma página HTML"
+
+#: ../archive-map.php:11
+msgid "Maps"
+msgstr "Mapas"
+
+#: ../searchform.php:4
+msgid "Search"
+msgstr "Buscar"
+
+#: ../index.php:24
+msgid "Highlights"
+msgstr "Destaques"
+
+#: ../index.php:36
+msgid "Last stories"
+msgstr "Últimas notícias"
+
+#: ../index.php:38
+msgid "Stories by "
+msgstr "Notícias por"
+
+#: ../index.php:40
+msgid "Stories on "
+msgstr "Notícias em "
+
+#: ../index.php:42
+msgid "Stories"
+msgstr "Notícias"
+
+#: ../index.php:52
+msgid "Nothing found. Viewing all posts"
+msgstr "Nada encontrado. Visualizando todas as notícias"
+
+#: ../inc/taxonomies.php:14
+#: ../inc/taxonomies.php:28
+msgid "Publishers"
+msgstr "Editores"
+
+#: ../inc/taxonomies.php:15
+msgid "Publisher"
+msgstr "Editor"
+
+#: ../inc/taxonomies.php:16
+msgid "Search publishers"
+msgstr "Buscar editores"
+
+#: ../inc/taxonomies.php:17
+msgid "Popular publishers"
+msgstr "Editores populares"
+
+#: ../inc/taxonomies.php:18
+msgid "All publishers"
+msgstr "Todos os editores"
+
+#: ../inc/taxonomies.php:19
+msgid "Parent publisher"
+msgstr "Editor pai"
+
+#: ../inc/taxonomies.php:20
+msgid "Parent publisher:"
+msgstr "Editor pai:"
+
+#: ../inc/taxonomies.php:21
+msgid "Edit publisher"
+msgstr "Editar editor"
+
+#: ../inc/taxonomies.php:22
+msgid "Update publisher"
+msgstr "Atualizar editor"
+
+#: ../inc/taxonomies.php:23
+msgid "Add new publisher"
+msgstr "Adicionar novo editor"
+
+#: ../inc/taxonomies.php:24
+msgid "New publisher name"
+msgstr "Novo nome de editor"
+
+#: ../inc/taxonomies.php:25
+msgid "Separate publishers with commas"
+msgstr "Separar editores com vírgulas"
+
+#: ../inc/taxonomies.php:26
+msgid "Add or remove publishers"
+msgstr "Adicionar ou remover editores"
+
+#: ../inc/taxonomies.php:27
+msgid "Choose from most used publishers"
+msgstr "Escolher entre os editores mais utilizados"
+
+#: ../inc/infoamazonia-widget.php:46
+msgid "default"
+msgstr "padrão"
+
+#: ../inc/infoamazonia-widget.php:54
+msgid "Share a map"
+msgstr "Compartilhe mapas"
+
+#: ../inc/geocode-box.php:18
+msgid "Write an address"
+msgstr "Escreva um endereço"
+
+#: ../inc/geocode-box.php:21
+msgid "Geolocate"
+msgstr "Geolocalizar"
+
+#: ../inc/geocode-box.php:25
+msgid "Result"
+msgstr "Resultado"
+
+#: ../inc/geocode-box.php:27
+msgid "Latitude"
+msgstr "Latitude"
+
+#: ../inc/geocode-box.php:30
+msgid "Longitude"
+msgstr "Longitude"
+
+#: ../inc/geocode-box.php:35
+msgid "Finish geocoding"
+msgstr "Finalizar geocodificação"
+
+#: ../inc/taxonomies-meta.php:10
+msgid "Publisher information"
+msgstr "Informações do editor"
+
+#: ../inc/taxonomies-meta.php:17
+msgid "Publisher url"
+msgstr "Site do url"
+
+#: ../inc/submit-story.php:13
+msgid "Close"
+msgstr "Fechar"
+
+#: ../inc/submit-story.php:20
+msgid "Submit a url"
+msgstr "Envie uma URL"
+
+#: ../inc/submit-story.php:21
+msgid "Submit full story"
+msgstr "Envie uma história completa"
+
+#: ../inc/submit-story.php:27
+#: ../inc/submit-story.php:85
+msgid "Your full name"
+msgstr "Nome completo"
+
+#: ../inc/submit-story.php:31
+#: ../inc/submit-story.php:89
+msgid "E-mail"
+msgstr "Email"
+
+#: ../inc/submit-story.php:35
+msgid "Reporter"
+msgstr "Repórter"
+
+#: ../inc/submit-story.php:39
+msgid "Story title"
+msgstr "Título da notícia"
+
+#: ../inc/submit-story.php:43
+msgid "Story text"
+msgstr "Texto da notícia"
+
+#: ../inc/submit-story.php:47
+#: ../inc/submit-story.php:93
+msgid "Story url"
+msgstr "Link da notícia"
+
+#: ../inc/submit-story.php:51
+msgid "Lead picture"
+msgstr "Imagem principal"
+
+#: ../inc/submit-story.php:56
+#: ../inc/submit-story.php:98
+msgid "Story location"
+msgstr "Localização da notícia"
+
+#: ../inc/submit-story.php:58
+#: ../inc/submit-story.php:100
+msgid "Find location on map"
+msgstr "Encontre localização no mapa"
+
+#: ../inc/submit-story.php:63
+#: ../inc/submit-story.php:105
+msgid "Latitude:"
+msgstr "Latitude:"
+
+#: ../inc/submit-story.php:64
+#: ../inc/submit-story.php:106
+msgid "Longitude:"
+msgstr "Longitude:"
+
+#: ../inc/submit-story.php:73
+msgid "Publishing date"
+msgstr "Data de publicação"
+
+#: ../inc/submit-story.php:77
+msgid "Notes to the InfoAmazonia editor"
+msgstr "Notas para o editor do InfoAmazonia"
+
+#: ../inc/submit-story.php:80
+#: ../inc/submit-story.php:114
+msgid "Send story"
+msgstr "Enviar notícia"
+
+#: ../inc/submit-story.php:135
+msgid "Missing information. Please fill all the required fields!"
+msgstr "Preencha todos os campos requeridos"
+
+#: ../inc/submit-story.php:144
+msgid "Could not save submission"
+msgstr "Não pôde salvar envio"
+
+#: ../inc/category-feeds-widget.php:5
+msgid "RSS Feeds by selected categories"
+msgstr "RSS Feeds por categorias selecionadas"
+
+#: ../inc/category-feeds-widget.php:6
+msgid "Category Feed Links"
+msgstr "Links do feed de categorias"
+
+#: ../inc/category-feeds-widget.php:10
+msgid "RSS Feeds"
+msgstr "RSS Feeds"
+
+#: ../inc/category-feeds-widget.php:14
+msgid "Title"
+msgstr "Título"
+
+#: ../inc/category-feeds-widget.php:15
+msgid "Categories separated by comma"
+msgstr "Categorias separadas por vírgula"
+
+#: ../inc/category-feeds-widget.php:43
+msgid "RSS Feed"
+msgstr "RSS Feed"
+
+#: ../inc/ajax-calendar.php:15
+msgid "AJAX Powered Calendar"
+msgstr "Calendário ajax"
+
+#: ../inc/ajax-calendar.php:18
+#: ../inc/ajax-calendar.php:28
+#: ../inc/ajax-calendar.php:46
+#: ../inc/ajax-calendar.php:113
+msgid "AJAX Calendar"
+msgstr "Calendário ajax"
+
+#: ../inc/ajax-calendar.php:75
+msgid "Stories calendar"
+msgstr "Calendário de notícias"
+
+#: ../inc/ajax-calendar.php:118
+msgid "Category IDs:"
+msgstr "IDs de categorias:"
+
+#: ../inc/metaboxes/story/story-meta.php:9
+msgid "Story data"
+msgstr "Dados do artigo"
+
+#: ../inc/metaboxes/story/story-meta.php:28
+msgid "Author name"
+msgstr "Nome do autor"
+
+#: ../inc/metaboxes/story/story-meta.php:32
+msgid "Author email"
+msgstr "Email do autor"
+
+#: ../inc/metaboxes/featured/featured.php:9
+msgid "Featured post"
+msgstr "Notícia destacada"
+
+#: ../inc/metaboxes/featured/featured.php:21
+msgid "This post is featured"
+msgstr "Esta notícia está destacada"
+
+#: ../inc/tax-meta-class/tax-meta-class.php:250
+msgid "Delete this image"
+msgstr "Remover esta imagem"
+
+#: ../inc/tax-meta-class/tax-meta-class.php:250
+#: ../inc/tax-meta-class/tax-meta-class.php:882
+msgid "Delete"
+msgstr "Deletar"
+
+#: ../inc/tax-meta-class/tax-meta-class.php:357
+msgid "Cannot delete file. Something's wrong."
+msgstr "Arquivo não pôde ser deletado. Algo está errado."
+
+#: ../inc/tax-meta-class/tax-meta-class.php:582
+#: ../inc/tax-meta-class/tax-meta-class.php:629
+msgid "Remove"
+msgstr "Remover"
+
+#: ../inc/tax-meta-class/tax-meta-class.php:595
+msgid "Add"
+msgstr "Adicionar"
+
+#: ../inc/tax-meta-class/tax-meta-class.php:878
+msgid "Uploaded files"
+msgstr "Arquivos enviados"
+
+#: ../inc/tax-meta-class/tax-meta-class.php:889
+msgid "Upload new files"
+msgstr "Enviar novos arquivos"
+
+#: ../inc/tax-meta-class/tax-meta-class.php:895
+msgid "Add more files"
+msgstr "Adicionar mais arquivos"
+
+#: ../inc/tax-meta-class/tax-meta-class.php:947
+msgid "Select a color"
+msgstr "Selecione uma cor"
+
+#~ msgid "More"
+#~ msgstr "Mais"
+
+#~ msgid "Results"
+#~ msgstr "Resultados"
+
+#~ msgid "Clear search"
+#~ msgstr "Limpar busca"
+
+#~ msgid "Map"
+#~ msgstr "Mapa"
+
+#~ msgid "Add new map"
+#~ msgstr "Adicionar novo mapa"
+
+#~ msgid "Edit map"
+#~ msgstr "Editar mapa"
+
+#~ msgid "New map"
+#~ msgstr "Novo mapa"
+
+#~ msgid "No map found"
+#~ msgstr "Nenhum mapa foi encontrado"
+
+#~ msgid "No map found in the trash"
+#~ msgstr "Nenhum mapa foi encontrado na lixeira"
+
+#~ msgid "MapBox Maps"
+#~ msgstr "Mapas do MapBox"
+
+#~ msgid "Map groups"
+#~ msgstr "Grupos de mapa"
+
+#~ msgid "Map group"
+#~ msgstr "Grupo de mapa"
+
+#~ msgid "Add new map group"
+#~ msgstr "Adicionar novo grupo de mapa"
+
+#~ msgid "Edit map group"
+#~ msgstr "Editar grupo de mapa"
+
+#~ msgid "New map group"
+#~ msgstr "Novo grupo de mapa"
+
+#~ msgid "Search map group"
+#~ msgstr "Buscar grupo de mapa"
+
+#~ msgid "No map group found"
+#~ msgstr "Nenhum grupo de mapa foi encontrado"
+
+#~ msgid "No map group found in the trash"
+#~ msgstr "Nenhum grupo de mapa foi encontrado na lixeira"
+
+#~ msgid "MapBox maps agroupment"
+#~ msgstr "Agrupamento de mapas do MapBox"
+
+#~ msgid "Add new group"
+#~ msgstr "Adicionar novo grupo"
+
+#~ msgid ""
+#~ "Select which maps this post belongs to. If you don't mark any they will "
+#~ "appear in all maps."
+#~ msgstr ""
+#~ "Selecione os mapas correspondentes a este post. Se você não marcar "
+#~ "nenhum, este post aparecerá em todos os mapas."
+
+#~ msgid "You haven't created any map, yet!"
+#~ msgstr "Você não criou mapas, ainda!"
+
+#~ msgid "Address and geolocation"
+#~ msgstr "Endereço e geolocalização"
+
+#~ msgid "Drag the marker for a more precise result"
+#~ msgstr "Arraste o marcador para um resultado mais preciso"
+
+#~ msgid "Add to \"more\" tab"
+#~ msgstr "Adicionar à aba \"mais\""
+
+#~ msgid "Select a map to add to your map group"
+#~ msgstr "Selecione um mapa para adicionar ao seu grupo de mapas"
+
+#~ msgid "Map legend"
+#~ msgstr "Legenda do mapa"
+
+#~ msgid "Enter your HTML code to use as legend on the map"
+#~ msgstr "Entre com código HTML para usar como legenda do mapa"
+
+#~ msgid "Layer options"
+#~ msgstr "Opções de layer"
+
+#~ msgid "Fixed"
+#~ msgstr "Fixa"
+
+#~ msgid "Layer title"
+#~ msgstr "Título da layer"
+
+#~ msgid "Hidden"
+#~ msgstr "Escondida"
+
+#~ msgid "MapBox Setup"
+#~ msgstr "Configurações do MapBox"
+
+#~ msgid ""
+#~ "First, define your map server. Most likely you will be using the MapBox "
+#~ "default servers. If not and you know what you are doing, feel free to "
+#~ "type your own TileStream server url below."
+#~ msgstr ""
+#~ "Primeiro, defina seu servidor de mapa. Muito provavelmente você estará "
+#~ "usando os servidores do MapBox. Caso contrário e você sabe o que está "
+#~ "fazendo, fique a vontade para configurar seu próprio servidor TileStream "
+#~ "abaixo."
+
+#~ msgid "Use MapBox servers"
+#~ msgstr "Utilize os servidores do MapBox"
+
+#~ msgid "Use custom TileStream server"
+#~ msgstr "Utilize um servidor TileStream customizado"
+
+#~ msgid ""
+#~ "Edit the default layer and fill the IDs of the maps to overlay layers of "
+#~ "your map, in order of appearance"
+#~ msgstr ""
+#~ "Altere a layer padrão e preencha com os IDs dos mapas para sobrepor "
+#~ "camadas em seu mapa, em order de exibição."
+
+#~ msgid "Add new layer"
+#~ msgstr "Adicionar nova layer"
+
+#~ msgid "Update preview"
+#~ msgstr "Atualizar pré-visualização"
+
+#~ msgid "Preview map"
+#~ msgstr "Pré-visualizar mapa"
+
+#~ msgid "Map settings"
+#~ msgstr "Configurações do mapa"
+
+#~ msgid "Currently viewing"
+#~ msgstr "Atualmente visualizando"
+
+#~ msgid "Center"
+#~ msgstr "Centro"
+
+#~ msgid "Zoom"
+#~ msgstr "Zoom"
+
+#~ msgid "East"
+#~ msgstr "Leste"
+
+#~ msgid "North"
+#~ msgstr "Norte"
+
+#~ msgid "South"
+#~ msgstr "Sul"
+
+#~ msgid "West"
+#~ msgstr "Oeste"
+
+#~ msgid "Map center & zoom"
+#~ msgstr "Centro e zoom do mapa"
+
+#~ msgid "Set current as map center & zoom"
+#~ msgstr "Defina o atual como centro e zoom do mapa"
+
+#~ msgid "Min zoom"
+#~ msgstr "Zoom mín."
+
+#~ msgid "Current"
+#~ msgstr "Atual"
+
+#~ msgid "Max zoom"
+#~ msgstr "Zoom máx."
+
+#~ msgid "Pan limits"
+#~ msgstr "Limites de margem"
+
+#~ msgid "Set current as map panning limits"
+#~ msgstr "Defina o atual como limite de margem do mapa"
+
+#~ msgid "Enable geocoding service"
+#~ msgstr "Ativar serviço de geocoding"
+
+#~ msgid "Enable geocode search service"
+#~ msgstr "Ativar serviço de busca de localização"
+
+#~ msgid "Preview mode"
+#~ msgstr "Modo de pré-visualização"
+
+#~ msgid "(preview mode doesn't apply zoom range nor pan limits setup)"
+#~ msgstr ""
+#~ "(o modo de pré-visualização não aplica os limites de zoom e margem "
+#~ "configurados para o mapa)"
