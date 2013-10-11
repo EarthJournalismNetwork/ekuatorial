@@ -29,8 +29,6 @@
 		if(typeof jeo.fragment === 'function' && !map.conf.disableHash)
 			fragment = jeo.fragment();
 
-		console.log(infoamazonia_markers.query);
-
 		$.getJSON(infoamazonia_markers.ajaxurl,
 		{
 			action: 'markers_geojson',
@@ -153,7 +151,9 @@
 			if(listPosts.length) {
 				listPosts.find('li').click(function() {
 					var markerID = $(this).attr('id');
-					document.body.scrollTop = 0;
+					$('html,body').animate({
+						scrollTop: $('#stage').offset().top
+					}, 400);
 					markers.open(markerID, false);
 					return false;
 				});

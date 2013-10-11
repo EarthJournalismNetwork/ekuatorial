@@ -3,7 +3,7 @@
 <?php if(have_posts()) : the_post(); ?>
 
 	<article class="single-post">
-		<section id="stage">
+		<section id="stage" class="row">
 			<div class="container">
 				<div class="twelve columns">
 					<header class="post-header">
@@ -41,7 +41,7 @@
 							</p>
 							<div class="fb-like" data-href="<?php the_permalink(); ?>" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana" data-action="recommend"></div>
 							<div class="twitter-button">
-								<a href="https://twitter.com/share" class="twitter-share-button" data-via="InfoAmazonia" data-lang="<?php echo qtrans_getLanguage(); ?>">Tweet</a>
+								<a href="https://twitter.com/share" class="twitter-share-button" data-via="InfoAmazonia" <?php if(function_exists('qtrans_getLanguage')) : ?>data-lang="<?php echo qtrans_getLanguage(); ?>"<?php endif; ?>>Tweet</a>
 							</div>
 						</div>
 					</div>

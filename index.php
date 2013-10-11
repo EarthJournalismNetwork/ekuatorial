@@ -13,13 +13,59 @@
 
 <section id="content">
 
-	<?php get_template_part('section', 'publisher-description'); ?>
+	<?php
+	if(is_front_page()) :
+		$highlights = get_posts();
+		if($highlights) :
+			?>
+			<div class="highlights row">
+				<ul>
+					<?php
+					foreach($highlights as $post) :
+						global $post;
+						setup_postdata($post);
+						?>
+						<li class="highlight" data-postid="<?php the_ID(); ?>">
+							<article id="post-<?php the_ID(); ?>" class="highlight-item">
+								<div class="thumbnail">
+									<?php the_post_thumbnail(); ?>
+								</div>
+								<div class="post-content">
+									<header class="post-header">
+										<p class="date-publisher">
+											<?php
+											echo get_the_date();
+											$publisher = get_the_terms($post->ID, 'publisher');
+											if($publisher) :
+												$publisher = array_shift($publisher);
+												?>
+												- 
+												<a href="<?php echo get_term_link($publisher); ?>"><?php echo $publisher->name; ?></a>
+											<?php endif; ?>
+										</p>
+										<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+										<?php the_excerpt(); ?>
+										<a class="button" href="<?php the_permalink(); ?>"><?php _e('Read more', 'ekuatorial'); ?></a>
+									</header>
+								</div>
+							</article>
+						</li>
+						<?php
+						wp_reset_postdata();
+					endforeach;
+					?>
+				</ul>
+				<div class="highlight-navigation">
+					<a class="prev" href="#" title="<?php _e('Previous', 'ekuatorial'); ?>"><span class="lsf">&#xE080;</span></a>
+					<a class="next" href="#" title="<?php _e('Next', 'ekuatorial'); ?>"><span class="lsf">&#xE112;</span></a>
+				</div>
+			</div>
+		<?php
+		endif;
+	endif;
+	?>
 
-	<div class="container">
-		<div class="twelve columns">
-			<?php get_search_form(); ?>
-		</div>
-	</div>
+	<?php get_template_part('section', 'publisher-description'); ?>
 
 	<?php if(is_front_page() && !is_paged()) : ?>
 

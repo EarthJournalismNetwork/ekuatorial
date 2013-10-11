@@ -68,7 +68,7 @@ function infoamazonia_scripts() {
 	// custom marker system
 	global $jeo_markers;
 	wp_deregister_script('jeo.markers');
-	wp_register_script('jeo.markers', get_stylesheet_directory_uri() . '/js/infoamazonia.markers.js', array('jeo', 'underscore', 'shadowbox', 'twttr'), '0.3.7', true);
+	wp_register_script('jeo.markers', get_stylesheet_directory_uri() . '/js/infoamazonia.markers.js', array('jeo', 'underscore', 'shadowbox', 'twttr'), '0.3.8', true);
 	wp_localize_script('jeo.markers', 'infoamazonia_markers', array(
 		'ajaxurl' => admin_url('admin-ajax.php'),
 		'query' => $jeo_markers->query(),
@@ -128,6 +128,10 @@ function infoamazonia_scripts() {
 	));
 
 	wp_enqueue_script('infoamazonia-print', get_stylesheet_directory_uri() . '/js/infoamazonia.print.js', array('jquery', 'imagesloaded'));
+
+
+	wp_register_script('sly', get_stylesheet_directory_uri() . '/lib/sly.min.js', array('jquery'));
+	wp_enqueue_script('ekuatorial-site', get_stylesheet_directory_uri() . '/js/site.js', array('jquery','sly'));
 
 
 }

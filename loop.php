@@ -1,6 +1,6 @@
 <ul class="list-posts row">
 	<?php while(have_posts()) : the_post(); ?>
-		<li id="post-<?php the_ID(); ?>" <?php post_class('post-item three columns'); ?>>
+		<li id="post-<?php the_ID(); ?>" <?php post_class('post-item four columns'); ?>>
 			<article>
 				<header class="post-header">
 					<p class="meta">
