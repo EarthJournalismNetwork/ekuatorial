@@ -34,24 +34,13 @@
 	<header id="masthead">
 		<div class="container">
 			<div class="twelve columns">
-				<em class="revision">
-					<?php
-					// get last post date
-					$last_post = get_posts('post_type=post&posts_per_page=1');
-					if($last_post) {
-						$post = array_shift($last_post);
-						setup_postdata($post);
-						echo __('Last updated:', 'infoamazonia') . ' ' . get_the_date();
-						wp_reset_postdata();
-					}
-					?>
-				</em>
 				<?php
 				$lang = '';
 				if(function_exists('qtrans_getLanguage'))
 					$lang = qtrans_getLanguage();
 				?>
-				<h1><a href="<?php echo home_url('/' . $lang); ?>" title="<?php echo bloginfo('name'); ?>"><?php bloginfo('name'); ?><span class="icon logo">&nbsp;</span></a></h1>
+				<h1><a href="<?php echo home_url('/' . $lang); ?>" title="<?php echo bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
+				<p class="slogan"><?php _e('Mapping news on Indonesia environmental crisis', 'ekuatorial'); ?></p>
 			</div>
 		</div>
 		<section id="mastnav" class="clearfix">
@@ -83,6 +72,8 @@
 							</ul>
 						</nav>
 					<?php endif; ?>
+					<?php
+					/*
 					<nav id="social">
 						<ul>
 							<li class="twitter">
@@ -90,6 +81,8 @@
 							</li>
 						</ul>
 					</nav>
+					*/
+					?>
 				</div>
 			</div>
 		</section>

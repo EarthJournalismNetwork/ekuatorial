@@ -1,13 +1,13 @@
 <?php get_header(); ?>
 
-<section id="stage">
+<section id="stage" class="row">
 	<div class="container">
 		<div class="twelve columns">
 			<?php get_template_part('section', 'subheader'); ?>
-			<div id="main-map" class="stage-map">
-				<?php jeo_featured(); ?>
-			</div>
 		</div>
+	</div>
+	<div id="main-map" class="stage-map">
+		<?php jeo_featured(); ?>
 	</div>
 </section>
 
