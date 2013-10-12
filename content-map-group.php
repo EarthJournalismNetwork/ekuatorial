@@ -11,42 +11,38 @@ foreach($mapgroup['maps'] as $map) {
 ?>
 <div class="mapgroup-container">
 	<div id="mapgroup_<?php echo jeo_get_the_ID(); ?>" class="mapgroup">
-		<div class="container">
-			<div class="twelve columns">
-				<ul class="map-nav">
-					<?php
-					foreach($main_maps as $map) :
-						$post = get_post($map['id']);
-						setup_postdata($post);
-						?>
-						<li><a href="<?php the_permalink(); ?>" data-map="<?php the_ID(); ?>"><?php the_title(); ?></a></li>
+		<ul class="map-nav">
+			<?php
+			foreach($main_maps as $map) :
+				$post = get_post($map['id']);
+				setup_postdata($post);
+				?>
+				<li><a href="<?php the_permalink(); ?>" data-map="<?php the_ID(); ?>"><?php the_title(); ?></a></li>
+				<?php
+				wp_reset_postdata();
+			endforeach; ?>
+			<?php if($more_maps) : ?>
+				<li class="more-tab">
+					<a href="#" class="toggle-more"><?php _e('More...', 'infoamazonia'); ?></a>
+					<ul class="more-maps-list">
+						<?php foreach($more_maps as $map) :
+							$post = get_post($map['id']);
+							setup_postdata($post);
+							?>
+							<li class="more-item"><a href="<?php the_permalink(); ?>" data-map="<?php the_ID(); ?>"><?php the_title(); ?></a></li>
+							<?php
+							wp_reset_postdata();
+						endforeach; ?>
 						<?php
-						wp_reset_postdata();
-					endforeach; ?>
-					<?php if($more_maps) : ?>
-						<li class="more-tab">
-							<a href="#" class="toggle-more"><?php _e('More...', 'infoamazonia'); ?></a>
-							<ul class="more-maps-list">
-								<?php foreach($more_maps as $map) :
-									$post = get_post($map['id']);
-									setup_postdata($post);
-									?>
-									<li class="more-item"><a href="<?php the_permalink(); ?>" data-map="<?php the_ID(); ?>"><?php the_title(); ?></a></li>
-									<?php
-									wp_reset_postdata();
-								endforeach; ?>
-								<?php
-								$link = get_post_type_archive_link('map');
-								if(function_exists('qtrans_convertURL'))
-									$link = qtrans_convertURL(get_post_type_archive_link('map'));
-								?>
-								<li><a href="<?php echo $link; ?>"><?php _e('View all maps', 'infoamazonia'); ?></a></li>
-							</ul>
-						</li>
-					<?php endif; ?>
-				</ul>
-			</div>
-		</div>
+						$link = get_post_type_archive_link('map');
+						if(function_exists('qtrans_convertURL'))
+							$link = qtrans_convertURL(get_post_type_archive_link('map'));
+						?>
+						<li><a href="<?php echo $link; ?>"><?php _e('View all maps', 'infoamazonia'); ?></a></li>
+					</ul>
+				</li>
+			<?php endif; ?>
+		</ul>
 		<div class="map-container">
 			<div id="mapgroup_<?php echo jeo_get_the_ID(); ?>_map" class="map">
 			</div>
