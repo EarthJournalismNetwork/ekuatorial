@@ -19,42 +19,51 @@
 		if($highlights) :
 			?>
 			<div class="highlights row">
-				<ul>
-					<?php
-					foreach($highlights as $post) :
-						global $post;
-						setup_postdata($post);
-						?>
-						<li class="highlight" data-postid="<?php the_ID(); ?>">
-							<article id="post-<?php the_ID(); ?>" class="highlight-item">
-								<div class="thumbnail">
-									<?php the_post_thumbnail(); ?>
-								</div>
-								<div class="post-content">
-									<header class="post-header">
-										<p class="date-publisher">
-											<?php
-											echo get_the_date();
-											$publisher = get_the_terms($post->ID, 'publisher');
-											if($publisher) :
-												$publisher = array_shift($publisher);
-												?>
-												- 
-												<a href="<?php echo get_term_link($publisher); ?>"><?php echo $publisher->name; ?></a>
-											<?php endif; ?>
-										</p>
-										<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-										<?php the_excerpt(); ?>
-										<a class="button" href="<?php the_permalink(); ?>"><?php _e('Read more', 'ekuatorial'); ?></a>
-									</header>
-								</div>
-							</article>
-						</li>
+				<div class="highlights-title">
+					<div class="container">
+						<div class="twelve columns">
+							<h2><?php _e('Highlights', 'ekuatorial'); ?></h2>
+						</div>
+					</div>
+				</div>
+				<div class="highlight-content">
+					<ul>
 						<?php
-						wp_reset_postdata();
-					endforeach;
-					?>
-				</ul>
+						foreach($highlights as $post) :
+							global $post;
+							setup_postdata($post);
+							?>
+							<li class="highlight" data-postid="<?php the_ID(); ?>">
+								<article id="post-<?php the_ID(); ?>" class="highlight-item">
+									<div class="thumbnail">
+										<?php the_post_thumbnail(); ?>
+									</div>
+									<div class="post-content">
+										<header class="post-header">
+											<p class="date-publisher">
+												<?php
+												echo get_the_date();
+												$publisher = get_the_terms($post->ID, 'publisher');
+												if($publisher) :
+													$publisher = array_shift($publisher);
+													?>
+													- 
+													<a href="<?php echo get_term_link($publisher); ?>"><?php echo $publisher->name; ?></a>
+												<?php endif; ?>
+											</p>
+											<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+											<?php the_excerpt(); ?>
+											<a class="button" href="<?php the_permalink(); ?>"><?php _e('Read more', 'ekuatorial'); ?></a>
+										</header>
+									</div>
+								</article>
+							</li>
+							<?php
+							wp_reset_postdata();
+						endforeach;
+						?>
+					</ul>
+				</div>
 				<div class="highlight-navigation">
 					<a class="prev" href="#" title="<?php _e('Previous', 'ekuatorial'); ?>"><span class="lsf">&#xE080;</span></a>
 					<a class="next" href="#" title="<?php _e('Next', 'ekuatorial'); ?>"><span class="lsf">&#xE112;</span></a>

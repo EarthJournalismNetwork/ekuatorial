@@ -9,9 +9,10 @@
 
 			$(window).resize(fixItemWidth).resize();
 
-			var sly = new Sly('.highlights', {
+			var sly = new Sly('.highlight-content', {
 				horizontal: 1,
 				itemNav: 'basic',
+				itemSelector: '.highlight',
 				smart: 1,
 				startAt: 0,
 				scrollBy: 0,
