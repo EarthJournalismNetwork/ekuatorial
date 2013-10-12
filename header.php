@@ -40,7 +40,7 @@
 					$lang = qtrans_getLanguage();
 				?>
 				<h1><a href="<?php echo home_url('/' . $lang); ?>" title="<?php echo bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
-				<p class="slogan"><?php _e('Mapping news on Indonesia environmental crisis', 'ekuatorial'); ?></p>
+				<p class="slogan"><?php bloginfo('description'); ?></p>
 				<?php get_search_form(); ?>
 			</div>
 		</div>
