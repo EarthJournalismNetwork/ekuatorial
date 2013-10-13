@@ -83,8 +83,10 @@
 													<a href="<?php echo get_term_link($publisher); ?>"><?php echo $publisher->name; ?></a>
 												<?php endif; ?>
 											</p>
-											<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-											<?php the_excerpt(); ?>
+											<div class="post-cut">
+												<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+												<?php the_excerpt(); ?>
+											</div>
 											<a class="button" href="<?php the_permalink(); ?>"><?php _e('Read more', 'ekuatorial'); ?></a>
 										</header>
 									</div>
