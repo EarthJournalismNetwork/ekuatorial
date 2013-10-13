@@ -137,20 +137,18 @@
 
 		<?php query_posts('post_type=post'); if(have_posts()) : ?>
 
-			<div class="container">
-
-				<section id="last-stories" class="loop-section">
-					<div class="section-title">
-						<div class="container">
-							<div class="twelve columns">
-								<h3><?php _e('Nothing found. Viewing all posts', 'infoamazonia'); ?></h3>
-							</div>
+			<section id="last-stories" class="loop-section">
+				<div class="section-title">
+					<div class="container">
+						<div class="twelve columns">
+							<h3><?php _e('Nothing found. Viewing all posts', 'infoamazonia'); ?></h3>
 						</div>
 					</div>
+				</div>
+				<div class="container">
 					<?php get_template_part('loop'); ?>
-				</section>
-
-			</div>
+				</div>
+			</section>
 
 		<?php endif; wp_reset_query(); ?>
 
