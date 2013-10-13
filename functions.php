@@ -162,12 +162,6 @@ include(STYLESHEETPATH . '/inc/ajax-calendar.php');
 // share feature
 //include(STYLESHEETPATH . '/inc/infoamazonia-widget.php');
 
-// featured map type
-function infoamazonia_featured_map_type() {
-	return 'map-group';
-}
-add_filter('jeo_featured_map_type', 'infoamazonia_featured_map_type');
-
 // story fragment title
 add_filter('wp_title', 'infoamazonia_story_fragment_title', 10, 2);
 function infoamazonia_story_fragment_title($title, $sep) {
@@ -181,13 +175,6 @@ function infoamazonia_story_fragment_title($title, $sep) {
 	}
 	return $title;
 }
-
-// geojson query filter
-function infoamazonia_geojson_api_query($query) {
-	$query['posts_per_page'] = 20;
-	return $query;
-}
-add_filter('jeo_geojson_api_query', 'infoamazonia_geojson_api_query');
 
 // add qtrans filter to get_permalink
 if(function_exists('qtrans_convertURL'))
