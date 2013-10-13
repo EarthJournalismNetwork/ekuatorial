@@ -147,6 +147,7 @@
 			}
 
 			// bind list post events
+			/*
 			listPosts = $('.list-posts');
 			if(listPosts.length) {
 				listPosts.find('li').click(function() {
@@ -161,6 +162,7 @@
 				if(!fStoryID)
 					story = listPosts.find('li:nth-child(1)').attr('id');
 			}
+			*/
 
 			Shadowbox.init({
 				skipSetup: true
@@ -511,6 +513,7 @@
 			}
 
 			// activate post in post list
+			/*
 			var postList = $('.list-posts');
 			if(postList.length) {
 				postList.find('li').removeClass('active');
@@ -519,6 +522,7 @@
 					item.addClass('active');
 				}
 			}
+			*/
 		};
 	}
 

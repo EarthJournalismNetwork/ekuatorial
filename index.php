@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section id="stage" class="row">
+<section id="stage">
 	<div class="container">
 		<div class="twelve columns">
 			<?php get_template_part('section', 'subheader'); ?>
@@ -19,7 +19,7 @@
 	 */
 	if(is_front_page()) :
 		?>
-		<aside id="home-call" class="row">
+		<aside id="home-call">
 			<div class="container">
 				<div class="four columns">
 					<span class="lsf">param</span>
@@ -46,11 +46,11 @@
 	/*
 	 * Highlights
 	 */
-	if(is_front_page()) :
+	if(is_front_page() && !is_paged()) :
 		$highlights = get_posts();
 		if($highlights) :
 			?>
-			<div class="highlights row">
+			<section id="featured-stories" class="highlights">
 				<div class="highlights-title">
 					<div class="container">
 						<div class="twelve columns">
@@ -100,7 +100,7 @@
 					<a class="prev" href="#" title="<?php _e('Previous', 'ekuatorial'); ?>"><span class="lsf">&#xE080;</span></a>
 					<a class="next" href="#" title="<?php _e('Next', 'ekuatorial'); ?>"><span class="lsf">&#xE112;</span></a>
 				</div>
-			</div>
+			</section>
 		<?php
 		endif;
 	endif;
@@ -108,45 +108,28 @@
 
 	<?php get_template_part('section', 'publisher-description'); ?>
 
-	<?php if(is_front_page() && !is_paged()) : ?>
-
-		<?php query_posts(array('meta_key' => 'featured', 'posts_per_page' => 4)); if(have_posts()) : ?>
-
-			<div class="container">
-
-				<section id="highlights" class="loop-section">
-					<div class="twelve columns">
-						<h3><?php _e('Highlights', 'infoamazonia'); ?></h3>
-					</div>
-					<?php get_template_part('loop'); ?>
-				</section>
-
-			</div>
-
-		<?php endif; wp_reset_query(); ?>
-
-	<?php endif; ?>
-
 	<?php if(have_posts()) : ?>
 
-		<div class="container">
-
-			<section id="last-stories" class="loop-section">
-				<div class="twelve columns">
-					<?php if(is_front_page()) : ?>
-						<h3><?php _e('Last stories', 'infoamazonia'); ?></h3>
-					<?php elseif(is_tax('publisher')) : ?>
-						<h3><?php _e('Stories by ', 'infoamazonia'); ?> &ldquo;<?php single_term_title(); ?>&rdquo;</h3>
-					<?php elseif(is_tag()) : ?>
-						<h3><?php _e('Stories on ', 'infoamazonia'); ?> &ldquo;<?php single_tag_title(); ?>&rdquo;</h3>
-					<?php else : ?>
-						<h3><?php _e('Stories', 'infoamazonia'); ?></h3>
-					<?php endif; ?>
+		<section id="last-stories" class="loop-section">
+			<div class="section-title">
+				<div class="container">
+					<div class="twelve columns">
+						<?php if(is_front_page()) : ?>
+							<h3><?php _e('Last stories', 'infoamazonia'); ?></h3>
+						<?php elseif(is_tax('publisher')) : ?>
+							<h3><?php _e('Stories by ', 'infoamazonia'); ?> &ldquo;<?php single_term_title(); ?>&rdquo;</h3>
+						<?php elseif(is_tag()) : ?>
+							<h3><?php _e('Stories on ', 'infoamazonia'); ?> &ldquo;<?php single_tag_title(); ?>&rdquo;</h3>
+						<?php else : ?>
+							<h3><?php _e('Stories', 'infoamazonia'); ?></h3>
+						<?php endif; ?>
+					</div>
 				</div>
+			</div>
+			<div class="container">
 				<?php get_template_part('loop'); ?>
-			</section>
-
-		</div>
+			</div>
+		</section>
 
 	<?php else : ?>
 

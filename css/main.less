@@ -199,6 +199,7 @@ body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
+	background: #f6f6f6;
 }
 
 .clearfix:before,
@@ -1380,7 +1381,6 @@ html#embedded body {
 aside#home-call {
 	background: #222;
 	color: #f0f0f0;
-	margin-top: -40px;
 	padding: 40px 0;
 	.lsf {
 		color: #ce1126;
@@ -1396,6 +1396,7 @@ aside#home-call {
 	}
 	p {
 		color: #999;
+		margin: 0;
 	}
 	.columns:hover {
 		.lsf {
@@ -1405,7 +1406,6 @@ aside#home-call {
 }
 
 .highlights {
-	margin-top: -40px;
 	position: relative;
 	height: 370px;
 	background: #f0f0f0;
@@ -1413,11 +1413,10 @@ aside#home-call {
 	.highlights-title {
 		//background: #ce1126 url(../img/indonesia_bounds_10.png) center no-repeat;
 		background: #fff;
-		padding: 20px 0;
 		border-top: 3px solid #2f2f2f;
 		h2 {
 			color: #333;
-			margin: 10px 0;
+			margin: 35Px 0;
 			font-size: 26px;
 			line-height: 32px;
 		}
@@ -1467,7 +1466,7 @@ aside#home-call {
 				}
 			}
 			.post-content {
-				border-top: 1px solid #aaa;
+				border-top: 1px solid #ddd;
 				header {
 					padding: 40px;
 					.date-publisher {
@@ -1488,28 +1487,26 @@ aside#home-call {
 	}
 }
 
- section.loop-section {
- 	h3 {
- 		font-size: 34px;
- 		line-height: 52px;
- 		margin-bottom: 0;
- 		border-bottom: 1px solid #f0f0f0;
- 		background: #fff;
- 		padding: 15px;
- 	}
- 	&:hover {
- 		h3 {
-			.box-shadow(0 2px 5px rgba(0, 0, 0, 0.05));
- 		}
- 	}
- 	&#highlights {
- 		.navigation {
- 			display: none;
- 		}
- 	}
- }
+.section-title {
+	border-bottom: 1px solid #ddd;
+	background: #fff;
+}
 
- body {
+section.loop-section {
+	h3 {
+		color: #333;
+		margin: 35px 0;
+		font-size: 26px;
+		line-height: 32px;
+	}
+	&#highlights {
+		.navigation {
+			display: none;
+		}
+	}
+}
+
+body {
 	.wp-paginate {
 		float: right;
 		margin: 0 0 30px;
@@ -1529,13 +1526,13 @@ aside#home-call {
 }
 
 .list-posts {
+	padding-top: 30px;
 	.transition(all 25s ease);
 	li {
 		article {
 			cursor: pointer;
 			height: 229px;
 			border-bottom: 1px solid #f0f0f0;
-			padding: 15px;
 			margin: 0;
 			overflow: hidden;
 			.transition(opacity 0.1s linear);
