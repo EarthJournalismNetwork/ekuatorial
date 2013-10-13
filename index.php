@@ -167,10 +167,10 @@
 
 	<?php endif; ?>
 
-	<?php get_template_part('section', 'submit-call'); ?>
+	<?php // get_template_part('section', 'submit-call'); ?>
 
 </section>
 
-<?php //get_template_part('section', 'main-widget'); ?>
+<?php get_template_part('section', 'main-widget'); ?>
 
 <?php get_footer(); ?>
