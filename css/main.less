@@ -1377,6 +1377,33 @@ html#embedded body {
  * LIST POSTS
  */
 
+aside#home-call {
+	background: #222;
+	color: #f0f0f0;
+	margin-top: -40px;
+	padding: 40px 0;
+	.lsf {
+		color: #ce1126;
+		opacity: .6;
+		float: left;
+		font-size: 80px;
+		line-height: 100px;
+		margin-right: 40px;
+		.transition(opacity .2s ease-in-out);
+	}
+	h3 {
+		color: #f0f0f0;
+	}
+	p {
+		color: #999;
+	}
+	.columns:hover {
+		.lsf {
+			opacity: 1;
+		}
+	}
+}
+
 .highlights {
 	margin-top: -40px;
 	position: relative;
@@ -1391,6 +1418,8 @@ html#embedded body {
 		h2 {
 			color: #333;
 			margin: 10px 0;
+			font-size: 26px;
+			line-height: 32px;
 		}
 	}
 	.highlight-navigation {
@@ -1426,7 +1455,7 @@ html#embedded body {
 			float: left;
 			.thumbnail {
 				width: 50%;
-				height: 279px;
+				height: 275px;
 				overflow: hidden;
 				float: left;
 				margin-right: 40px;
