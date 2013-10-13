@@ -140,8 +140,12 @@
 			<div class="container">
 
 				<section id="last-stories" class="loop-section">
-					<div class="six columns">
-						<h3><?php _e('Nothing found. Viewing all posts', 'infoamazonia'); ?></h3>
+					<div class="section-title">
+						<div class="container">
+							<div class="twelve columns">
+								<h3><?php _e('Nothing found. Viewing all posts', 'infoamazonia'); ?></h3>
+							</div>
+						</div>
 					</div>
 					<?php get_template_part('loop'); ?>
 				</section>
