@@ -26,6 +26,8 @@ function infoamazonia_setup() {
 		'name' => __('Main widgets', 'infoamazonia'),
 		'id' => 'main-sidebar',
 		'description' => __('Widgets used on front and inside pages.', 'infoamazonia'),
+		'before_widget' => '<div class="four columns row">',
+		'after_widget' => '</div>',
 		'before_title' => '<h3>',
 		'after_title' => '</h3>'
 	));

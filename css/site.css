@@ -297,7 +297,7 @@ textarea {
         }
 
 .media-limit {
-  height: 120px;
+  height: 180px;
   margin: 0 0 15px;
   overflow: hidden;
   /*background-color: #f5f5f5;*/
@@ -308,7 +308,10 @@ textarea {
 #sidebar img,
 #sidebar video,
 #sidebar iframe {
-  max-width: 100%;
+  width: auto;
+  height: auto;
+  min-height: 100%;
+  min-width: 100%;
   }
 #sidebar h2.title {
   color: #fff;

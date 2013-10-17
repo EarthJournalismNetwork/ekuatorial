@@ -242,16 +242,23 @@ header#masthead {
 		line-height: 14px;
 		margin-top: 20px;
 	}
+	.logo {
+		float: left;
+		width: auto;
+		max-height: 32+120;
+		margin-right: 20px;
+		display: none;
+	}
 	h1 {
 		font-weight: normal;
-		margin: 40px 0;
+		margin: 60px 0;
 		float: left;
 		a {
 			font-family: 'OpenSansCondensedBold';
 			text-transform: uppercase;
 			display: block;
 			line-height: 32px;
-			font-size: 26px;
+			font-size: 32px;
 			color: #fff
 		}
 	}
@@ -259,7 +266,7 @@ header#masthead {
 		float: left;
 		color: #fff;
 		font-style: italic;
-		margin: 40px;
+		margin: 60px 40px;
 		line-height: 32px;
 	}
 	.project-by {
@@ -277,7 +284,7 @@ header#masthead {
 		}
 	}
 	#searchform {
-		margin: 37px 0 36px;
+		margin: 57px 0 0;
 		input[type=text] {
 			border: 0;
 			border-bottom: 1px solid transparent;
@@ -1184,6 +1191,7 @@ header#masthead {
 	height: 100%;
 	width: 35%;
 	min-width: 300px;
+	max-width: 640px;
 	z-index: 1000;
 	word-wrap: break-word;
 	overflow: auto;
@@ -1228,7 +1236,9 @@ header#masthead {
 	object embed,
 	iframe,
 	img {
-		width: 100%;
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
 		height: auto;
 	}
 	.sharing {
@@ -1704,7 +1714,7 @@ aside#submit-call {
 
 aside#main-widgets {
 	background: #111;
-	padding: 15px 0;
+	padding: 30px 0;
 	margin: 0 0 15px;
 	color: #f0f0f0;
 	h3 {
