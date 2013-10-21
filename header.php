@@ -47,7 +47,7 @@
 		</div>
 		<section id="mastnav" class="clearfix">
 			<div class="container">
-				<div class="six columns">
+				<div class="eight columns">
 					<nav>
 						<ul>
 							<?php wp_nav_menu(array(
@@ -56,7 +56,7 @@
 						</ul>
 					</nav>
 				</div>
-				<div class="six columns">
+				<div class="four columns">
 					<?php if(function_exists('qtrans_getLanguage')) : ?>
 						<nav id="langnav">
 							<ul>

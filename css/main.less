@@ -139,6 +139,14 @@ input {
 strong {
 	font-weight: bold;
 }
+.alignleft {
+	float: left;
+	margin: 0 20px 20px 0;
+}
+.alignright {
+	float: right;
+	margin: 0 0 20px 20px;
+}
 .button,
 a.button {
 	background: #ce1126;
@@ -227,7 +235,7 @@ body {
 }
 
 header#masthead {
-	background: #ce1126 url(../img/indonesia_bounds_10.png) center no-repeat;
+	background: #ce1126 url(../img/batik_pattern.png) center;
 	.box-shadow(0 2px 5px rgba(0,0,0,0.05));
 	position: relative;
 	a {
@@ -475,7 +483,6 @@ header#masthead {
 			iframe,
 			object {
 				max-width: 100% !important;
-				margin: 20px 0;
 			}
 			p {
 				margin-bottom: 20px;
@@ -516,7 +523,6 @@ header#masthead {
 		margin: -17px 0 18px;
 		z-index: 200;
 		position: relative;
-		float: left;
 		.title {
 			font-family: 'OpenSansRegular';
 			.font-smoothing(antialiased);
@@ -534,7 +540,8 @@ header#masthead {
 			top: 22px;
 		}
 		.box {
-			min-width: 200px;
+			max-width: 100%;
+			width: 350px;
 			padding: 0 15px;
 			.box-sizing(border-box);
 			border: 1px solid transparent;
@@ -544,7 +551,6 @@ header#masthead {
 			cursor: pointer;
 			position: relative;
 			z-index: 2;
-			float: left;
 			.arrow {
 				background-image: url(../img/sprite.png);
 				background-position: 0 0;
@@ -590,11 +596,12 @@ header#masthead {
 			border-top: 1px solid #ccc;
 			border-left: 1px solid #ccc;
 			border-right: 1px solid #ccc;
-			//.border-radius(4px);
 			.box-sizing(border-box);
 			li {
 				margin: 0;
 				padding: 0;
+				width: 50%;
+				float: left;
 				a {
 					display: block;
 					padding: 10px;
@@ -630,6 +637,8 @@ header#masthead {
 		width: 100%;
 		height: 480px;
 		.box-shadow(0 10px 40px rgba(0,0,0,0.2));
+		position: relative;
+		z-index: 100
 	}
 	.mapgroup-container {
 		padding: 0px;
@@ -639,6 +648,10 @@ header#masthead {
 			color: #999;
 		}
 	}
+}
+
+.sub-header {
+	float: left;
 }
 
 .content-map,
@@ -658,10 +671,7 @@ header#masthead {
 		}
 	}
 	.mapgroup {
-		.map-nav {
-			left: auto;
-			right: 0;
-		}
+		position: relative;
 	}
 }
 
@@ -676,15 +686,17 @@ header#masthead {
 }
 
 .mapgroup {
+	width: 100%;
 	position: relative;
 	.map-nav {
 		position: absolute;
 		top: -41px;
-		right: 35%;
+		right: 0;
 		margin: 0;
 		padding: 0;
 		li {
 			float: left;
+			position: relative;
 			a {
 				font-family: 'OpenSansRegular','Helvetica Neue',Helvetica,Verdana,Arial,sans-serif;
 				.transition(none);
@@ -824,6 +836,14 @@ header#masthead {
 					z-index: 99999999 !important;
 				}
 			}
+		}
+	}
+}
+
+.map-fullscreen {
+	#stage {
+		.stage-map {
+			z-index: 99999;
 		}
 	}
 }
@@ -1184,6 +1204,96 @@ header#masthead {
 	}
 }
 
+.sticky-posts {
+	background: #333;
+	.box-shadow(inset 0 0 30px rgba(0,0,0,0.2));
+	height: 100%;
+	width: 100%;
+	color: #96979C;
+	position: relative;
+	z-index: 10;
+	.sticky-item {
+		height: 25%;
+		width: 100%;
+		border-bottom: 1px solid #3f3f3f;
+		.box-sizing(border-box);
+		.transition(all .2s ease-in-out);
+		cursor: pointer;
+		article {
+			padding: 20px;
+			.post-thumbnail {
+				float: left;
+				margin: -10px 20px -10px -10px;
+				height: 82%;
+				.transition(all .2s ease-in-out);
+				img {
+					display: block;
+					width: auto;
+					height: 100%;
+				}
+			}
+			h2 {
+				color: #999;
+				margin: 0;
+				font-size: 20px;
+				line-height: 28px;
+				.transition(all .2s ease-in-out);
+			}
+			.post-content {
+				display: none;
+			}
+		}
+		&.active,
+		&:hover {
+			background: #3f3f3f;
+			article {
+				h2 {
+					color: #f0f0f0;
+				}
+			}
+		}
+	}
+	&.post-active {
+		.sticky-item {
+			height: 10%;
+			article {
+				.post-thumbnail {
+					margin: -20px 20px -20px -20px;
+					height: 100%;
+				}
+				h2 {
+					font-size: 12px;
+					line-height: 12px;
+					margin: 0;
+					padding: 0;
+				}
+			}
+			&.active {
+				height: 70%;
+				article {
+					.post-thumbnail {
+						margin: 0 20px 20px 0;
+						width: 33%;
+						height: auto;
+						img {
+							width: 100%;
+							height: auto;
+						}
+					}
+					h2 {
+						font-size: 24px;
+						line-height: 28px;
+						margin: 0 0 10px;
+					}
+					.post-content {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}
+
 .map-sidebar {
 	background: #333;
 	.box-shadow(inset 0 0 30px rgba(0,0,0,0.2));
@@ -1194,10 +1304,8 @@ header#masthead {
 	max-width: 640px;
 	z-index: 1000;
 	word-wrap: break-word;
-	overflow: auto;
-	overflow-x: hidden;
-	overflow-y: auto;
-	float: right;
+	overflow: hidden;
+	float: left;
 	a {
 		text-decoration: none;
 		color: #fff;
@@ -1206,15 +1314,6 @@ header#masthead {
 	a.button,
 	.button {
 		color: #fff;
-	}
-	&::-webkit-scrollbar {
-		background: #303030;
-		width: 15px;
-	}
-	&::-webkit-scrollbar-thumb {
-		background: #666;
-		border-radius: 15px;
-		border: 5px #303030 solid;
 	}
 	.button.open-slideshow {
 		padding: 2px 7px;
@@ -1225,8 +1324,59 @@ header#masthead {
 			background: #404040;
 		}
 	}
+	.media-limit {
+		img {
+			max-width: 9999px;
+			width: auto;
+			height: 100%;
+		}
+	}
 	.sidebar-inner {
 		padding: 30px;
+		overflow: auto;
+		height: 100%;
+		.box-sizing(border-box);
+		&::-webkit-scrollbar {
+			background: #303030;
+			width: 15px;
+		}
+		&::-webkit-scrollbar-thumb {
+			background: #666;
+			border-radius: 15px;
+			border: 5px #303030 solid;
+		}
+	}
+	.viewing-post {
+		padding: 30px;
+		height: 100%;
+		.box-sizing(border-box);
+		display: none;
+		overflow: auto;
+		position: relative;
+		.close-story {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			display: block;
+			font-size: 14px;
+			line-height: 26px;
+			padding: 0 9px 0 8px;
+			background: #ce1126;
+			color: #f0f0f0;
+			font-weight: 800;
+		}
+		&::-webkit-scrollbar {
+			background: #303030;
+			width: 15px;
+		}
+		&::-webkit-scrollbar-thumb {
+			background: #666;
+			border-radius: 15px;
+			border: 5px #303030 solid;
+		}
+		&.active {
+			display: block;
+		}
 	}
 	h2 {
 		color: #fff;
@@ -1236,8 +1386,8 @@ header#masthead {
 	object embed,
 	iframe,
 	img {
-		min-width: 100%;
-		min-height: 100%;
+		max-width: 100%;
+		max-height: 100%;
 		width: auto;
 		height: auto;
 	}
@@ -1571,13 +1721,15 @@ body {
 	padding-top: 30px;
 	.transition(all 25s ease);
 	li {
+		height: 229px;
+		overflow: hidden;
 		article {
 			cursor: pointer;
-			height: 229px;
 			border-bottom: 1px solid #f0f0f0;
 			margin: 0;
 			overflow: hidden;
-			.transition(opacity 0.1s linear);
+			.transition(all 0.2s linear);
+			.box-sizing(border-box);
 			&:hover {
 				opacity: .7;
 			}
@@ -1597,6 +1749,7 @@ body {
 		}
 		&.active {
 			article {
+				padding: 15px;
 				border-color: #ce1126;
 				background-color: #ce1126;
 				background-image: -webkit-gradient(linear, left top, left bottom, from(#E5263B), to(#ce1126));

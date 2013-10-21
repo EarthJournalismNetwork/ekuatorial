@@ -22,6 +22,11 @@
 		<aside id="home-call">
 			<div class="container">
 				<div class="four columns">
+					<span class="lsf">edit</span>
+					<h3><?php _e('Submit a story', 'ekuatorial'); ?></h3>
+					<p><?php _e('Do you have news from Indonesia? Contribute to this map by submitting your story.', 'ekuatorial'); ?></p>
+				</div>
+				<div class="four columns">
 					<span class="lsf">param</span>
 					<h3><?php _e('Customize and share', 'ekuatorial'); ?></h3>
 					<p><?php _e('Create a custom map visualization with different news and spread the word.', 'ekuatorial'); ?></p>
@@ -30,11 +35,6 @@
 					<span class="lsf">save</span>
 					<h3><?php _e('Get the data', 'ekuatorial'); ?></h3>
 					<p><?php _e('Download all the researched data used to design our maps and help us remix it into new visualizations.', 'ekuatorial'); ?></p>
-				</div>
-				<div class="four columns">
-					<span class="lsf">edit</span>
-					<h3><?php _e('Submit a story', 'ekuatorial'); ?></h3>
-					<p><?php _e('Do you have news from Indonesia? Contribute to this map by submitting your story.', 'ekuatorial'); ?></p>
 				</div>
 			</div>
 		</aside>
@@ -46,7 +46,8 @@
 	/*
 	 * Highlights
 	 */
-	if(is_front_page() && !is_paged()) :
+	$disable_highlights = true;
+	if(is_front_page() && !is_paged() && !$disable_highlights) :
 		$highlights = get_posts();
 		if($highlights) :
 			?>
@@ -117,7 +118,7 @@
 				<div class="container">
 					<div class="twelve columns">
 						<?php if(is_front_page()) : ?>
-							<h3><?php _e('Last stories', 'infoamazonia'); ?></h3>
+							<h3><?php _e('Latest stories', 'infoamazonia'); ?></h3>
 						<?php elseif(is_tax('publisher')) : ?>
 							<h3><?php _e('Stories by ', 'infoamazonia'); ?> &ldquo;<?php single_term_title(); ?>&rdquo;</h3>
 						<?php elseif(is_tag()) : ?>
@@ -135,7 +136,7 @@
 
 	<?php else : ?>
 
-		<?php query_posts('post_type=post'); if(have_posts()) : ?>
+		<?php query_posts(); if(have_posts()) : ?>
 
 			<section id="last-stories" class="loop-section">
 				<div class="section-title">

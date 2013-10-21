@@ -70,7 +70,7 @@ function infoamazonia_scripts() {
 	// custom marker system
 	global $jeo_markers;
 	wp_deregister_script('jeo.markers');
-	wp_register_script('jeo.markers', get_stylesheet_directory_uri() . '/js/infoamazonia.markers.js', array('jeo', 'underscore', 'shadowbox', 'twttr'), '0.3.8', true);
+	wp_register_script('jeo.markers', get_stylesheet_directory_uri() . '/js/infoamazonia.markers.js', array('jeo', 'underscore', 'shadowbox', 'twttr'), '0.3.14', true);
 	wp_localize_script('jeo.markers', 'infoamazonia_markers', array(
 		'ajaxurl' => admin_url('admin-ajax.php'),
 		'query' => $jeo_markers->query(),
@@ -103,6 +103,8 @@ function infoamazonia_scripts() {
 		'enable_clustering' => jeo_use_clustering() ? true : false,
 		'default_icon' => jeo_formatted_default_marker()
 	));
+
+	wp_enqueue_script('ekuatorial-sticky', get_stylesheet_directory_uri() . '/js/sticky-posts.js', array('jeo.markers', 'jquery'), '0.1.0');
 
 	// styles
 	wp_register_style('site', get_stylesheet_directory_uri() . '/css/site.css', array(), '1.1'); // old styles
@@ -209,7 +211,7 @@ add_filter('jeo_marker_data', 'infoamazonia_marker_data');
 function infoamazonia_get_thumbnail($post_id = false) {
 	global $post;
 	$post_id = $post_id ? $post_id : $post->ID;
-	$thumb_src = wp_get_attachment_image_src(get_post_thumbnail_id(), 'post-thumb');
+	$thumb_src = wp_get_attachment_image_src(get_post_thumbnail_id(), 'medium');
 	if($thumb_src)
 		return $thumb_src[0];
 	else
@@ -240,7 +242,7 @@ function infoamazonia_all_markers_if_none($posts, $query) {
 		$posts = get_posts(array('post_type' => 'post', 'posts_per_page' => 100));
 	return $posts;
 }
-add_filter('jeo_the_markers', 'infoamazonia_all_markers_if_none', 10, 2);
+//add_filter('jeo_the_markers', 'infoamazonia_all_markers_if_none', 10, 2);
 
 // multilanguage publishers
 add_action('publisher_add_form', 'qtrans_modifyTermFormFor');
@@ -421,3 +423,16 @@ function infoamazonia_embed_query($query) {
 	}
 }
 add_action('pre_get_posts', 'infoamazonia_embed_query');
+
+function ekuatorial_test_query($query) {
+	if($query->is_main_query())
+		print_r($query);
+}
+//add_action('pre_get_posts', 'ekuatorial_test_query');
+
+function ekuatorial_ignore_sticky($query) {
+	if($query->is_main_query()) {
+		$query->set('ignore_sticky_posts', true);
+	}
+}
+add_action('pre_get_posts', 'ekuatorial_ignore_sticky');
