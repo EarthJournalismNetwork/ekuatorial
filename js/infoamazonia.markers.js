@@ -161,6 +161,8 @@
 					markers.openMarker(markerID, false);
 					return false;
 				});
+				if(!fStoryID)
+					story = listPosts.find('li:first-child').attr('id');
 			}
 
 			Shadowbox.init({

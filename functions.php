@@ -75,7 +75,7 @@ function infoamazonia_scripts() {
 		'ajaxurl' => admin_url('admin-ajax.php'),
 		'query' => $jeo_markers->query(),
 		'stories_label' => __('stories', 'infoamazonia'),
-		'home' => is_front_page(),
+		'home' => (is_front_page() && !is_paged()),
 		'copy_embed_label' => __('Copy the embed code', 'infoamazonia'),
 		'share_label' => __('Share this', 'infoamazonia'),
 		'print_label' => __('Print', 'infoamazonia'),
