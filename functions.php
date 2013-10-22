@@ -33,7 +33,7 @@ function ekuatorial_acf_repeater_dir() {
 }
 add_filter('acf/add-ons/repeater/get_dir', 'ekuatorial_acf_repeater_dir');
 
-define('ACF_LITE', false);
+define('ACF_LITE', true);
 require_once(STYLESHEETPATH . '/inc/acf/acf.php');
 
 /*

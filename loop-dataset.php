@@ -1,5 +1,5 @@
 <div class="eight columns">
-	<ul class="list-maps">
+	<ul class="list-datasets">
 		<?php while(have_posts()) : the_post(); ?>
 			<li id="post-<?php the_ID(); ?>" <?php post_class('post-item'); ?>>
 				<article class="clearfix">

@@ -12,6 +12,7 @@ class Ekuatorial_DataSets {
 		add_action('init', array($this, 'register_post_type'));
 		add_action('init', array($this, 'register_taxonomies'));
 		add_filter('upload_mimes', array($this, 'upload_mimes'));
+		add_action('init', array($this, 'register_field_groups'));
 
 	}
 
@@ -119,6 +120,106 @@ class Ekuatorial_DataSets {
 		$mimes['json'] = 'application/json';
 
 		return $mimes;
+	}
+
+	function register_field_groups() {
+		if(function_exists("register_field_group"))
+		{
+			register_field_group(array (
+				'id' => 'acf_dataset',
+				'title' => 'Dataset',
+				'fields' => array (
+					array (
+						'key' => 'field_5266b2be18b56',
+						'label' => 'Full download',
+						'name' => 'full_download',
+						'type' => 'file',
+						'instructions' => 'Upload the dataset file',
+						'required' => 1,
+						'save_format' => 'url',
+						'library' => 'all',
+					),
+					array (
+						'key' => 'field_5266b48018b57',
+						'label' => 'Preview url',
+						'name' => 'preview_url',
+						'type' => 'text',
+						'instructions' => 'URL to embed a preview of the file. Can be a public spreadsheet URL from Google Docs, for example.',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'html',
+						'maxlength' => '',
+					),
+				),
+				'location' => array (
+					array (
+						array (
+							'param' => 'post_type',
+							'operator' => '==',
+							'value' => 'dataset',
+							'order_no' => 0,
+							'group_no' => 0,
+						),
+					),
+				),
+				'options' => array (
+					'position' => 'normal',
+					'layout' => 'no_box',
+					'hide_on_screen' => array (
+					),
+				),
+				'menu_order' => 0,
+			));
+			register_field_group(array (
+				'id' => 'acf_term-url',
+				'title' => 'Term url',
+				'fields' => array (
+					array (
+						'key' => 'field_5266b848de720',
+						'label' => 'URL',
+						'name' => 'url',
+						'type' => 'text',
+						'instructions' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'html',
+						'maxlength' => '',
+					),
+				),
+				'location' => array (
+					array (
+						array (
+							'param' => 'ef_taxonomy',
+							'operator' => '==',
+							'value' => 'license',
+							'order_no' => 0,
+							'group_no' => 0,
+						),
+					),
+					array (
+						array (
+							'param' => 'ef_taxonomy',
+							'operator' => '==',
+							'value' => 'source',
+							'order_no' => 0,
+							'group_no' => 1,
+						),
+					),
+				),
+				'options' => array (
+					'position' => 'normal',
+					'layout' => 'no_box',
+					'hide_on_screen' => array (
+					),
+				),
+				'menu_order' => 0,
+			));
+		}
+
 	}
 
 }
