@@ -7,7 +7,7 @@
 			<div class="container">
 				<div class="twelve columns">
 					<header class="post-header">
-						<?php echo get_the_term_list($post->ID, 'publisher', '', ', ', ''); ?>
+						<h2><a href="<?php echo get_post_type_archive_link('dataset'); ?>"><?php _e('Datasets', 'ekuatorial'); ?></a></h2>
 						<h1 class="title"><?php the_title(); ?></h1>
 					</header>
 				</div>
