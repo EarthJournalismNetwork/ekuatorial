@@ -14,6 +14,33 @@ include(STYLESHEETPATH . '/inc/taxonomies.php');
 // taxonomy meta
 include(STYLESHEETPATH . '/inc/taxonomies-meta.php');
 
+/*
+ * Advanced Custom Fields
+ */
+
+function ekuatorial_acf_dir() {
+	return get_stylesheet_directory_uri() . '/inc/acf/';
+}
+add_filter('acf/helpers/get_dir', 'ekuatorial_acf_dir');
+
+function ekuatorial_acf_date_time_picker_dir() {
+	return ekuatorial_acf_dir() . '/add-ons/acf-field-date-time-picker/';
+}
+add_filter('acf/add-ons/date-time-picker/get_dir', 'ekuatorial_acf_date_time_picker_dir');
+
+function ekuatorial_acf_repeater_dir() {
+	return ekuatorial_acf_dir() . '/add-ons/acf-repeater/';
+}
+add_filter('acf/add-ons/repeater/get_dir', 'ekuatorial_acf_repeater_dir');
+
+define('ACF_LITE', false);
+require_once(STYLESHEETPATH . '/inc/acf/acf.php');
+
+/*
+ * Datasets
+ */
+include(STYLESHEETPATH . '/inc/datasets.php');
+
 function infoamazonia_setup() {
 
 	add_theme_support('post-thumbnails');
