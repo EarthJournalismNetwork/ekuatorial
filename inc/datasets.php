@@ -9,8 +9,8 @@ class Ekuatorial_DataSets {
 
 	function __construct() {
 
-		add_action('init', array($this, 'register_post_type'));
 		add_action('init', array($this, 'register_taxonomies'));
+		add_action('init', array($this, 'register_post_type'));
 		add_filter('upload_mimes', array($this, 'upload_mimes'));
 		add_action('init', array($this, 'register_field_groups'));
 

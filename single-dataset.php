@@ -51,7 +51,7 @@
 							?>
 							<div class="row">
 								<h3><?php _e('License', 'ekuatorial'); ?></h3>
-								<p class="license-name"><a href="<?php echo get_field('url', 'license_' . $license->term_id); ?>"><?php echo $license->name; ?></a></p>
+								<p class="license-name"><a target="_blank" href="<?php echo get_field('url', 'license_' . $license->term_id); ?>"><?php echo $license->name; ?></a></p>
 								<p><a class="small" href="<?php echo get_term_link($license); ?>"><?php _e('More data on this license', 'ekuatorial'); ?></a></p>
 							</div>
 							<?php
@@ -64,7 +64,7 @@
 							?>
 							<div class="row">
 								<h3><?php _e('Source', 'ekuatorial'); ?></h3>
-								<p class="source-name"><a href="<?php echo get_field('url', 'source_' . $source->term_id); ?>"><?php echo $source->name; ?></a></p>
+								<p class="source-name"><a target="_blank" href="<?php echo get_field('url', 'source_' . $source->term_id); ?>"><?php echo $source->name; ?></a></p>
 								<p><a class="small" href="<?php echo get_term_link($source); ?>"><?php _e('More data from this source', 'ekuatorial'); ?></a></p>
 							</div>
 							<?php
