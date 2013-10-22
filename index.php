@@ -17,29 +17,8 @@
 	/*
 	 * Side content (get data, share map, contribute)
 	 */
-	if(is_front_page()) :
-		?>
-		<aside id="home-call">
-			<div class="container">
-				<div class="four columns">
-					<span class="lsf">edit</span>
-					<h3><?php _e('Submit a story', 'ekuatorial'); ?></h3>
-					<p><?php _e('Do you have news from Indonesia? Contribute to this map by submitting your story.', 'ekuatorial'); ?></p>
-				</div>
-				<div class="four columns">
-					<span class="lsf">param</span>
-					<h3><?php _e('Customize and share', 'ekuatorial'); ?></h3>
-					<p><?php _e('Create a custom map visualization with different news and spread the word.', 'ekuatorial'); ?></p>
-				</div>
-				<div class="four columns">
-					<span class="lsf">save</span>
-					<h3><?php _e('Get the data', 'ekuatorial'); ?></h3>
-					<p><?php _e('Download all the researched data used to design our maps and help us remix it into new visualizations.', 'ekuatorial'); ?></p>
-				</div>
-			</div>
-		</aside>
-		<?php
-	endif;
+	if(is_front_page() && !is_paged())
+		get_template_part('section', 'actions');
 	?>
 
 	<?php
@@ -117,15 +96,19 @@
 			<div class="section-title">
 				<div class="container">
 					<div class="twelve columns">
-						<?php if(is_front_page()) : ?>
-							<h3><?php _e('Latest stories', 'infoamazonia'); ?></h3>
+						<h3><?php if(is_front_page()) : ?>
+							<?php _e('Latest stories', 'infoamazonia'); ?>
 						<?php elseif(is_tax('publisher')) : ?>
-							<h3><?php _e('Stories by ', 'infoamazonia'); ?> &ldquo;<?php single_term_title(); ?>&rdquo;</h3>
+							<?php _e('Stories by ', 'infoamazonia'); ?> &ldquo;<?php single_term_title(); ?>&rdquo;
 						<?php elseif(is_tag()) : ?>
-							<h3><?php _e('Stories on ', 'infoamazonia'); ?> &ldquo;<?php single_tag_title(); ?>&rdquo;</h3>
+							<?php _e('Stories on ', 'infoamazonia'); ?> &ldquo;<?php single_tag_title(); ?>&rdquo;
 						<?php else : ?>
-							<h3><?php _e('Stories', 'infoamazonia'); ?></h3>
+							<?php _e('Stories', 'infoamazonia'); ?>
 						<?php endif; ?>
+						<?php if(is_paged()) : ?>
+							- <?php printf(__('Page %d', 'ekuatorial'), get_query_var('paged')); ?>
+						<?php endif; ?>
+						</h3>
 					</div>
 				</div>
 			</div>
@@ -156,6 +139,14 @@
 	<?php endif; ?>
 
 	<?php // get_template_part('section', 'submit-call'); ?>
+
+	<?php
+	/*
+	 * Side content (get data, share map, contribute)
+	 */
+	if(is_front_page() && is_paged())
+		get_template_part('section', 'actions');
+	?>
 
 </section>
 

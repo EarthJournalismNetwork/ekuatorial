@@ -5,6 +5,8 @@ include(STYLESHEETPATH . '/inc/metaboxes/metaboxes.php');
 
 include(STYLESHEETPATH . '/inc/category-feeds-widget.php');
 
+include(STYLESHEETPATH . '/inc/advanced-navigation.php');
+
 // infoamazonia setup
 
 // register taxonomies
@@ -54,7 +56,7 @@ function infoamazonia_scripts() {
 	wp_register_style('shadowbox', get_stylesheet_directory_uri() . '/lib/shadowbox/shadowbox.css', array(), '3.0.3');
 
 	/* Chosen */
-	wp_register_script('chosen', get_stylesheet_directory_uri() . '/lib/chosen.jquery.min.js', array('jquery'), '0.9.12');
+	wp_register_script('chosen', get_stylesheet_directory_uri() . '/lib/chosen.jquery.min.js', array('jquery'), '1.0.0');
 
 	// scripts
 	wp_register_script('html5', get_stylesheet_directory_uri() . '/js/html5shiv.js', array(), '3.6.2');
@@ -436,3 +438,29 @@ function ekuatorial_ignore_sticky($query) {
 	}
 }
 add_action('pre_get_posts', 'ekuatorial_ignore_sticky');
+
+/*
+ * CUSTOM IMPLEMENTATION OF WP_DATE_QUERY
+ */
+
+if(!class_exists('WP_Date_Query')) {
+
+	require(STYLESHEETPATH . '/inc/date.php');
+	add_filter('query_vars', 'ekuatorial_date_query_var');
+	add_filter('posts_clauses', 'ekuatorial_date_query_clauses', 10, 2);
+
+}
+
+function ekuatorial_date_query_var($vars) {
+	$vars[] = 'date_query';
+	return $vars;
+}
+
+function ekuatorial_date_query_clauses($clauses, $query) {
+
+	if($query->get('date_query')) {
+		$date_query = new WP_Date_Query($query->get('date_query'));
+		$clauses['where'] .= $date_query->get_sql();
+	}
+	return $clauses;
+}

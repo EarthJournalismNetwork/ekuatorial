@@ -1,5 +1,13 @@
 <div class="sub-header clearfix">
-	<?php if(is_front_page() || is_tax('publisher')) : ?>
+
+	<?php if(get_query_var('ekuatorial_advanced_nav')) :
+
+		?>
+		<h1 class="title"><?php _e('Advanced filters', 'ekuatorial'); ?></h1>
+		<?php
+		ekuatorial_adv_nav_filters();
+
+	elseif(is_front_page() || is_tax('publisher')) : ?>
 		<div class="choose-filter">
 			<?php
 			$publishers = get_terms('publisher');

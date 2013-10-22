@@ -212,3 +212,9 @@ footer#colophon ul li.label{position:absolute;top:-30px;left:0;}footer#colophon 
 #sb-nav #sb-nav-next{position:fixed;top:50%;right:50px;margin:0;padding:0;width:50px;height:80px;background:url(../img/shadowbox-next.png);margin-top:-25px;}
 #sb-nav #sb-nav-previous{position:fixed;top:50%;left:50px;margin:0;padding:0;width:50px;height:80px;background:url(../img/shadowbox-previous.png);margin-top:-25px;}
 .page-header{padding:20px 0;}.page-header h1{margin:0;}
+.advanced-nav-filters{margin-top:20px;padding-bottom:20px;}.advanced-nav-filters label{display:inline;color:#f0f0f0;cursor:pointer;}
+.advanced-nav-filters input{width:100%;}
+.advanced-nav-filters .date-input .date-range-inputs>div{width:50%;float:left;}.advanced-nav-filters .date-input .date-range-inputs>div .sublabel{float:left;line-height:30px;padding-right:10px;font-size:10px;}
+.advanced-nav-filters .date-input .date-range-inputs>div input{float:left;width:auto;}
+.advanced-nav-filters .adv-nav-input{margin:0 0 20px;}
+.advanced-nav-filters input[type=submit]{margin-top:35px;}
