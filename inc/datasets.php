@@ -74,7 +74,7 @@ class Ekuatorial_DataSets {
 			'labels' => $labels,
 			'public' => true,
 			'show_admin_column' => true,
-			'hierarchical' => false,
+			'hierarchical' => true,
 			'query_var' => 'license',
 			'rewrite' => array('slug' => 'datasets/licenses', 'with_front' => false)
 		);
@@ -104,7 +104,7 @@ class Ekuatorial_DataSets {
 			'labels' => $labels,
 			'public' => true,
 			'show_admin_column' => true,
-			'hierarchical' => false,
+			'hierarchical' => true,
 			'query_var' => 'source',
 			'rewrite' => array('slug' => 'datasets/sources', 'with_front' => false)
 		);
