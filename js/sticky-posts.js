@@ -53,6 +53,10 @@
 				closeSticky();
 			});
 
+			map.on('click mouseup', function() {
+				clearInterval(t);
+			});
+
 			setTimeout(function() {
 				openSticky($('.sticky-posts .sticky-item:first-child').data('postid'));
 				t = setInterval(runSticky, 8000);
