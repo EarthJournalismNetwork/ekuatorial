@@ -191,6 +191,7 @@ footer#colophon{margin-top:20px;padding:50px 0 0;height:120px;background:#fff;co
 footer#colophon ul li a.icon.internews{background-position:-367px -55px;width:133px;margin-right:65px;}
 footer#colophon ul li a.icon.packard{background:url(../img/packard-logo.jpg);width:126px;}
 footer#colophon ul li a.icon.siej{background:url(../img/siej-logo.png);width:87px;}
+footer#colophon ul li a.icon.ecolab{background:url(../img/ecolab.png) center no-repeat;width:110px;}
 footer#colophon ul li.label{position:absolute;top:-30px;left:0;}footer#colophon ul li.label.supported{left:auto;right:20px;}
 #geocode-box{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0, 0, 0, 0.8);z-index:9999999;display:none;}#geocode-box.active{display:block;}
 #geocode-box .geocode-box-container{width:500px;position:absolute;padding:20px;overflow:auto;top:15%;left:50%;max-height:60%;margin-left:-260px;background:#f0f0f0;-webkit-box-shadow:0 0 0px 10px rgba(0, 0, 0, 0.2);-khtml-box-shadow:0 0 0px 10px rgba(0, 0, 0, 0.2);-moz-box-shadow:0 0 0px 10px rgba(0, 0, 0, 0.2);-o-box-shadow:0 0 0px 10px rgba(0, 0, 0, 0.2);box-shadow:0 0 0px 10px rgba(0, 0, 0, 0.2);}#geocode-box .geocode-box-container input#geocode_address{width:100%;}
