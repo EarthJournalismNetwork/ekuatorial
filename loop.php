@@ -51,5 +51,16 @@
 
 			});
 		});
+
+		jeo.mapReady(function(map) {
+			$('.list-posts li').click(function() {
+				var markerID = $(this).attr('id');
+				$('html,body').animate({
+					scrollTop: $('#stage').offset().top
+				}, 400);
+				markers.openMarker(markerID, false);
+				return false;
+			});
+		});
 	})(jQuery);
 </script>

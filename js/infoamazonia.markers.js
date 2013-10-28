@@ -153,14 +153,6 @@
 			// bind list post events
 			listPosts = $('.list-posts');
 			if(listPosts.length) {
-				listPosts.find('li').click(function() {
-					var markerID = $(this).attr('id');
-					$('html,body').animate({
-						scrollTop: $('#stage').offset().top
-					}, 400);
-					markers.openMarker(markerID, false);
-					return false;
-				});
 				if(!fStoryID)
 					story = listPosts.find('li:first-child').attr('id');
 			}

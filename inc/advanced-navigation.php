@@ -37,6 +37,8 @@ class Ekuatorial_AdvancedNav {
 
 			$query->is_home = false;
 
+			$query->set('posts_per_page', 30);
+
 			if(isset($_GET[$this->prefix . 's'])) {
 
 				$query->set('s', $_GET[$this->prefix . 's']);
