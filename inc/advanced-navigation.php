@@ -53,13 +53,22 @@ class Ekuatorial_AdvancedNav {
 
 			if(isset($_GET[$this->prefix . 'date_start'])) {
 
-				$query->set('date_query', array(
-					array(
-						'after' => date('Y-m-d H:i:s', strtotime($_GET[$this->prefix . 'date_start'])),
-						'before' => date('Y-m-d H:i:s', strtotime($_GET[$this->prefix . 'date_end'])),
-						'inclusive' => true
-					)
-				));
+				$after = $_GET[$this->prefix . 'date_start'];
+				$before = $_GET[$this->prefix . 'date_end'];
+
+				if($start) {
+
+					if(!$before)
+						$before = date('Y-m-d H:i:s');
+
+					$query->set('date_query', array(
+						array(
+							'after' => date('Y-m-d H:i:s', strtotime($_GET[$this->prefix . 'date_start'])),
+							'before' => date('Y-m-d H:i:s', strtotime($_GET[$this->prefix . 'date_end'])),
+							'inclusive' => true
+						)
+					));
+				}
 
 			}
 
