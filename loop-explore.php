@@ -29,6 +29,7 @@ wp_enqueue_script('lockfixed', get_stylesheet_directory_uri() . '/js/jquery.lock
 								?>
 							</a>
 							<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+							<a class="button" href="<?php the_permalink(); ?>"><?php _e('Read more', 'ekuatorial'); ?></a>
 						</header>
 					</article>
 				</li>
@@ -81,6 +82,9 @@ wp_enqueue_script('lockfixed', get_stylesheet_directory_uri() . '/js/jquery.lock
 		jeo.mapReady(function(map) {
 			listPosts = $('.list-posts');
 			if(listPosts.length) {
+				listPosts.find('.button').click(function() {
+					window.location = $(this).attr('href');
+				});
 				listPosts.find('li').click(function(e) {
 					e.preventDefault();
 					var markerID = $(this).attr('id');

@@ -1762,6 +1762,11 @@ body {
 				&:hover {
 					opacity: 1;
 				}
+				.button {
+					background: #f0f0f0;
+					color: #333;
+					text-shadow: 1px 1px 1px #fff;
+				}
 			}
 		}
 	}
@@ -2315,22 +2320,20 @@ footer#colophon {
 }
 
 .explore-loop {
+	.list-posts {
+		li {
+			height: 260px;
+		}
+	}
 	.map-sidebar {
 		display: none;
 	}
 	.mapgroup {
-		/*
-		margin-top: -35px;
 		.map-nav {
-			top: -26px;
 			li {
 				a {
-					font-size: 10px;
-					line-height: 25px;
-					padding: 0 10px;
-					height: auto;
 					background: #f0f0f0;
-					.box-shadow(0 0 0);
+					.box-shadow(inset 0 10px 10px rgba(0,0,0,0.05));
 					&.active {
 						background-color: #ce1126;
 						background-image: -webkit-gradient(linear, left top, left bottom, from(#e5263b), to(#ce1126));
@@ -2340,18 +2343,14 @@ footer#colophon {
 						background-image: -o-linear-gradient(top, #e5263b, #ce1126);
 						background-image: linear-gradient(to bottom, #e5263b, #ce1126);
 					}
-					&.toggle-more:before {
-						margin-top: 10px;
-					}
 					&:hover {
 						color: #333;
 					}
 				}
 				&.more-tab {
 					ul {
-						top: 26px;
 						background: #f0f0f0;
-						.box-shadow(0 0 0);
+						.box-shadow(inset 0 10px 10px rgba(0,0,0,0.05));
 						border-color: #ccc;
 						li {
 							a {
@@ -2362,6 +2361,5 @@ footer#colophon {
 				}
 			}
 		}
-		*/
 	}
 }
