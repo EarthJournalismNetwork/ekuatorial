@@ -58,7 +58,7 @@
 				$('html,body').animate({
 					scrollTop: $('#stage').offset().top
 				}, 400);
-				markers.openMarker(markerID, false);
+				map.markers.openMarker(markerID, false);
 				return false;
 			});
 		});
