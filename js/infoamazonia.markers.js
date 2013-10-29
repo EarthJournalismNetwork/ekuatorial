@@ -236,6 +236,9 @@
 				zoom = map.conf.zoom;
 			}
 
+			if(typeof marker.properties.zoom !== 'undefined')
+				zoom = marker.properties.zoom;
+
 			if(!center || isNaN(center[0]))
 				center = [0,0];
 

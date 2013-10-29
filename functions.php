@@ -7,6 +7,8 @@ include(STYLESHEETPATH . '/inc/category-feeds-widget.php');
 
 include(STYLESHEETPATH . '/inc/advanced-navigation.php');
 
+include(STYLESHEETPATH . '/inc/jeo-post-zoom.php');
+
 // infoamazonia setup
 
 // register taxonomies
@@ -225,6 +227,8 @@ function infoamazonia_marker_data($data) {
 	$data['url'] = get_post_meta($post->ID, 'url', true) ? get_post_meta($post->ID, 'url', true) : $data['permalink'];
 	$data['content'] = get_the_excerpt();
 	$data['slideshow'] = infoamazonia_get_content_media();
+	if(get_post_meta($post->ID, 'geocode_zoom', true))
+		$data['zoom'] = get_post_meta($post->ID, 'geocode_zoom', true);
 	// source
 	$publishers = get_the_terms($post->ID, 'publisher');
 	if($publishers) {
