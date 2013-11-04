@@ -40,7 +40,7 @@
 				if(function_exists('qtrans_getLanguage'))
 					$lang = qtrans_getLanguage();
 				?>
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo_03b.png" class="logo" />
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" class="logo" />
 				<h1><a href="<?php echo home_url('/' . $lang); ?>" title="<?php echo bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
 				<p class="slogan"><?php bloginfo('description'); ?></p>
 				<?php get_search_form(); ?>

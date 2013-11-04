@@ -151,6 +151,7 @@ function infoamazonia_scripts() {
 	// styles
 	wp_enqueue_style('site');
 	//wp_enqueue_style('reset');
+	wp_enqueue_style('webfont-lato', 'http://fonts.googleapis.com/css?family=Lato:900');
 	wp_enqueue_style('main');
 	wp_enqueue_style('shadowbox');
 
@@ -193,9 +194,6 @@ include(STYLESHEETPATH . '/inc/slideshow.php');
 
 // ajax calendar
 include(STYLESHEETPATH . '/inc/ajax-calendar.php');
-
-// share feature
-//include(STYLESHEETPATH . '/inc/infoamazonia-widget.php');
 
 // story fragment title
 add_filter('wp_title', 'infoamazonia_story_fragment_title', 10, 2);
@@ -449,19 +447,14 @@ add_filter('jeo_embed_url', 'infoamazonia_convert_url');
 add_filter('jeo_share_url', 'infoamazonia_convert_url');
 
 function infoamazonia_embed_query($query) {
-	if($query->is_main_query() && $query->get('jeo_map_embed')) {
+	if(get_query_var('jeo_map_embed')) {
 		if($query->get('p') || $query->get('tax_query')) {
+			error_log($query->get('p'));
 			$query->set('without_map_query', 1);
 		}
 	}
 }
 add_action('pre_get_posts', 'infoamazonia_embed_query');
-
-function ekuatorial_test_query($query) {
-	if($query->is_main_query())
-		print_r($query);
-}
-//add_action('pre_get_posts', 'ekuatorial_test_query');
 
 function ekuatorial_ignore_sticky($query) {
 	if($query->is_main_query()) {
