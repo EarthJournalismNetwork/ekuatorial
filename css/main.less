@@ -1236,7 +1236,8 @@ header#masthead {
 				line-height: 28px;
 				.transition(all .2s ease-in-out);
 			}
-			.post-content {
+			.post-content,
+			.post-actions {
 				display: none;
 			}
 		}
@@ -1282,7 +1283,13 @@ header#masthead {
 						line-height: 28px;
 						margin: 0 0 10px;
 					}
-					.post-content {
+					.post-area {
+						height: 238px;
+						margin-bottom: 15px;
+						overflow: hidden;
+					}
+					.post-content,
+					.post-actions {
 						display: block;
 					}
 				}
@@ -1573,13 +1580,22 @@ aside#home-call {
 		line-height: 100px;
 		margin-right: 40px;
 		.transition(opacity .2s ease-in-out);
+		a {
+			color: #ce1126;
+		}
 	}
 	h3 {
 		color: #f0f0f0;
+		a {
+			color: #f0f0f0;
+		}
 	}
 	p {
 		color: #999;
 		margin: 0;
+		a {
+			color: #999;
+		}
 	}
 	.columns:hover {
 		.lsf {

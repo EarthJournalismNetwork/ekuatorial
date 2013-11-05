@@ -10,19 +10,23 @@ if($sticky->have_posts()) :
 		<?php while($sticky->have_posts()) : $sticky->the_post(); ?>
 			<div class="sticky-item" data-postid="<?php the_ID(); ?>">
 				<article id="sticky-post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<header class="post-header">
-						<?php if(has_post_thumbnail()) : ?>
-							<div class="post-thumbnail">
-								<?php the_post_thumbnail('thumbnail'); ?>
-							</div>
-						<?php endif; ?>
-						<h2><?php the_title(); ?></h2>
-					</header>
-					<section class="post-content">
-						<?php the_excerpt(); ?>
+					<div class="post-area">
+						<header class="post-header">
+							<?php if(has_post_thumbnail()) : ?>
+								<div class="post-thumbnail">
+									<?php the_post_thumbnail('thumbnail'); ?>
+								</div>
+							<?php endif; ?>
+							<h2><?php the_title(); ?></h2>
+						</header>
+						<section class="post-content">
+							<?php the_excerpt(); ?>
+						</section>
+					</div>
+					<footer class="post-actions">
 						<a class="button" href="<?php the_permalink(); ?>"><?php _e('Read more', 'ekuatorial'); ?></a>
 						<a class="button" href="<?php echo jeo_get_share_url(array('p' => get_the_ID())); ?>"><?php _e('Share', 'ekuatorial'); ?></a>
-					</section>
+					</footer>
 				</article>
 			</div>
 		<?php endwhile; ?>
