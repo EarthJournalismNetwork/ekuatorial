@@ -2,13 +2,14 @@
 wp_enqueue_script('lockfixed', get_stylesheet_directory_uri() . '/js/jquery.lockfixed.min.js', array('jquery'), '0.1');
 ?>
 <div class="explore-loop row">
-	<div class="eight columns">
+	<div class="four columns">
 		<ul class="list-posts">
 			<?php
 			$i = 0;
 			while(have_posts()) : the_post();
 				$i++;
 				$post_class = (($i % 2) ? 'alpha' : 'omega') . ' four columns';
+				$post_class = 'alpha omega four columns';
 				?>
 				<li id="post-<?php the_ID(); ?>" <?php post_class('post-item ' . $post_class); ?>>
 					<article>
@@ -60,7 +61,7 @@ wp_enqueue_script('lockfixed', get_stylesheet_directory_uri() . '/js/jquery.lock
 			<?php if(function_exists('wp_paginate')) wp_paginate(); ?>
 		</div>
 	</div>
-	<div class="four columns">
+	<div class="eight columns">
 		<div class="explore-map">
 			<?php jeo_featured(); ?>
 		</div>

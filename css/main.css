@@ -156,7 +156,7 @@ aside#home-call .columns:hover .lsf{opacity:1;}
 .highlights ul li .post-content{border-top:1px solid #ddd;}.highlights ul li .post-content header{padding:40px;}.highlights ul li .post-content header .date-publisher{font-size:12px;margin:0;}
 .highlights ul li .post-content header .post-cut{height:144px;margin-bottom:30px;overflow:hidden;}.highlights ul li .post-content header .post-cut h3{font-size:52px;line-height:72px;margin:0;}
 .highlights ul li .post-content header .post-cut p{font-size:14px;line-height:24px;}
-.section-title{border-bottom:1px solid #ddd;background:#fff;}
+.section-title{border-bottom:1px solid #ddd;background:#fff;}.section-title .query-actions{float:right;margin:40px 0;}.section-title .query-actions a{float:left;display:block;background:#f0f0f0;padding:5px 10px;margin-left:5px;}
 section.loop-section h3{color:#333;margin:35px 0;font-size:26px;line-height:32px;}
 section.loop-section#highlights .navigation{display:none;}
 body .wp-paginate{float:right;margin:0 0 30px;}body .wp-paginate .current{background:#e5263b;border:1px solid #ce1126;padding:7px 12px;}
