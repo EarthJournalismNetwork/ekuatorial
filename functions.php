@@ -46,7 +46,7 @@ include(STYLESHEETPATH . '/inc/datasets.php');
 function infoamazonia_setup() {
 
 	add_theme_support('post-thumbnails');
-	add_image_size('post-thumb', 245, 90, true);
+	add_image_size('post-thumb', 360, 121, true);
 	add_image_size('map-thumb', 200, 200, true);
 
 	// text domain
@@ -242,7 +242,7 @@ add_filter('jeo_marker_data', 'infoamazonia_marker_data');
 function infoamazonia_get_thumbnail($post_id = false) {
 	global $post;
 	$post_id = $post_id ? $post_id : $post->ID;
-	$thumb_src = wp_get_attachment_image_src(get_post_thumbnail_id(), 'medium');
+	$thumb_src = wp_get_attachment_image_src(get_post_thumbnail_id(), 'post-thumb');
 	if($thumb_src)
 		return $thumb_src[0];
 	else

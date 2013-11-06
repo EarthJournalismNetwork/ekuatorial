@@ -13,13 +13,6 @@ wp_enqueue_script('lockfixed', get_stylesheet_directory_uri() . '/js/jquery.lock
 				<li id="post-<?php the_ID(); ?>" <?php post_class('post-item ' . $post_class); ?>>
 					<article>
 						<header class="post-header">
-							<p class="meta">
-								<?php echo get_the_date(_x('m/d/Y', 'reduced date format', 'infoamazonia')); ?> - 
-								<?php
-								if(get_the_terms($post->ID, 'publisher'))
-									echo array_shift(get_the_terms($post->ID, 'publisher'))->name;
-								?>
-							</p>
 							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 								<?php
 								if(has_post_thumbnail())
@@ -29,8 +22,36 @@ wp_enqueue_script('lockfixed', get_stylesheet_directory_uri() . '/js/jquery.lock
 								?>
 							</a>
 							<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-							<a class="button" href="<?php the_permalink(); ?>"><?php _e('Read more', 'ekuatorial'); ?></a>
+							<p class="meta clearfix">
+								<span class="date">
+									<span class="lsf">&#xE15e;</span>
+									<span class="date-content"><?php echo get_the_date(_x('m/d/Y', 'reduced date format', 'infoamazonia')); ?></span>
+								</span>
+								<?php
+								if(get_the_terms($post->ID, 'publisher')) :
+									?>
+									<span class="publisher">
+										<span class="lsf">clip</span>
+										<span class="publisher-content">
+											<?php
+											echo array_shift(get_the_terms($post->ID, 'publisher'))->name;
+											?>
+										</span>
+									</span>
+									<?php
+								endif;
+								?>
+							</p>
 						</header>
+						<section class="post-content">
+							<?php the_excerpt(); ?>
+						</section>
+						<footer class="post-actions">
+							<div class="buttons">
+								<a class="button" href="<?php the_permalink(); ?>"><?php _e('Read more', 'ekuatorial'); ?></a>
+								<a class="button" href="<?php echo jeo_get_share_url(array('p' => $post->ID)); ?>"><?php _e('Share', 'ekuatorial'); ?></a>
+							</div>
+						</footer>
 					</article>
 				</li>
 			<?php endwhile; ?>
