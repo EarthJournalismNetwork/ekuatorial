@@ -123,7 +123,7 @@ header#masthead #searchform input[type="submit"]{display:none;}
 .map-sidebar a.button,.map-sidebar .button{color:#fff;}
 .map-sidebar .button.open-slideshow{padding:2px 7px;font-size:10px;background:#444;border-color:#555;}.map-sidebar .button.open-slideshow:hover{background:#404040;}
 .map-sidebar .buttons{position:absolute;bottom:0;left:0;right:0;background:#333;padding:10px;}.map-sidebar .buttons .button{width:1%;display:table-cell;border:0;border-right:2px solid #333;padding:10px 0;}.map-sidebar .buttons .button:last-child{border-right:0;}
-.map-sidebar .media-limit img{max-width:9999px;width:auto;height:100%;}
+.map-sidebar .media-limit img{max-width:9999px;width:100%;height:auto;}
 .map-sidebar .sidebar-inner{height:100%;position:relative;}
 .map-sidebar .viewing-post{display:none;position:relative;height:100%;}.map-sidebar .viewing-post .close-story{position:absolute;top:20px;right:20px;display:block;font-size:14px;line-height:26px;padding:0 9px 0 8px;background:#ce1126;color:#f0f0f0;font-weight:800;}
 .map-sidebar .viewing-post.active{display:block;}
