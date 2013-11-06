@@ -441,6 +441,10 @@ add_action('jeo_init', 'infoamazonia_flush_rewrite');
 function infoamazonia_convert_url($url) {
 	if(function_exists('qtrans_convertURL'))
 		$url = qtrans_convertURL($url);
+
+	$pos = strpos($url, '?');
+	if($pos === false)
+		$url .= '?';
 	return $url;
 }
 add_filter('jeo_embed_url', 'infoamazonia_convert_url');
