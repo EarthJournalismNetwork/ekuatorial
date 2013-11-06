@@ -38,6 +38,7 @@ class Ekuatorial_AdvancedNav {
 			$query->is_home = false;
 
 			$query->set('posts_per_page', 30);
+			$query->set('ignore_sticky_posts', true);
 
 			if(isset($_GET[$this->prefix . 's'])) {
 
@@ -56,15 +57,15 @@ class Ekuatorial_AdvancedNav {
 				$after = $_GET[$this->prefix . 'date_start'];
 				$before = $_GET[$this->prefix . 'date_end'];
 
-				if($start) {
+				if($after) {
 
 					if(!$before)
 						$before = date('Y-m-d H:i:s');
 
 					$query->set('date_query', array(
 						array(
-							'after' => date('Y-m-d H:i:s', strtotime($_GET[$this->prefix . 'date_start'])),
-							'before' => date('Y-m-d H:i:s', strtotime($_GET[$this->prefix . 'date_end'])),
+							'after' => date('Y-m-d H:i:s', strtotime($after)),
+							'before' => date('Y-m-d H:i:s', strtotime($before)),
 							'inclusive' => true
 						)
 					));

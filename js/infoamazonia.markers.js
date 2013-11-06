@@ -379,7 +379,6 @@
 				if(media)
 					story += '<a class="button open-slideshow" href="#">' + lightbox_label + '</a>';
 				story += '<div class="story-content"><p>' + storyData.content + '</p></div>';
-				story += ' <a href="' + storyData.url + '" target="_blank" rel="external">' + infoamazonia_markers.read_more_label + '</a>';
 
 				var $story = $(story);
 
@@ -439,11 +438,12 @@
 				// add share button
 				if(!map.$.sidebar.share) {
 
-					map.$.sidebar.append('<div class="sharing" />');
-					map.$.sidebar.share = map.$.sidebar.find('.sharing');
+					map.$.sidebar.append('<div class="buttons" />');
+					map.$.sidebar.share = map.$.sidebar.find('.buttons');
 
 					var shareContent = '';
-					shareContent += '<a class="button share-button" href="#" target="_blank">' + infoamazonia_markers.share_label + '</a>';
+					shareContent += '<a class="button read-button" href="' + storyData.url + '">' + infoamazonia_markers.read_more_label + '</a>';
+					shareContent += '<a class="button share-button" href="#">' + infoamazonia_markers.share_label + '</a>';
 					shareContent += '<a class="button print-button" href="#" target="_blank">' + infoamazonia_markers.print_label + '</a>';
 
 					map.$.sidebar.share.append(shareContent);
