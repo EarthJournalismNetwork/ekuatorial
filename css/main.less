@@ -2410,10 +2410,14 @@ footer#colophon {
 	}
 	.mapgroup {
 		.map-nav {
+			top: 0;
+			z-index: 100;
 			li {
 				a {
 					background: #f0f0f0;
 					.box-shadow(inset 0 10px 10px rgba(0,0,0,0.05));
+					margin-left: 0;
+					border-right: 1px solid #fff;
 					&.active {
 						background-color: #ce1126;
 						background-image: -webkit-gradient(linear, left top, left bottom, from(#e5263b), to(#ce1126));
@@ -2422,6 +2426,7 @@ footer#colophon {
 						background-image: -ms-linear-gradient(top, #e5263b, #ce1126);
 						background-image: -o-linear-gradient(top, #e5263b, #ce1126);
 						background-image: linear-gradient(to bottom, #e5263b, #ce1126);
+						border-color: #ce1126 !important;
 					}
 					&:hover {
 						color: #333;

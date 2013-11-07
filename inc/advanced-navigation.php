@@ -14,6 +14,7 @@ class Ekuatorial_AdvancedNav {
 	function __construct() {
 
 		add_filter('query_vars', array($this, 'query_vars'));
+		add_filter('body_class', array($this, 'body_class'));
 		add_action('pre_get_posts', array($this, 'pre_get_posts'));
 		add_action('generate_rewrite_rules', array($this, 'generate_rewrite_rules'));
 
@@ -22,6 +23,12 @@ class Ekuatorial_AdvancedNav {
 	function query_vars($vars) {
 		$vars[] = 'ekuatorial_advanced_nav';
 		return $vars;
+	}
+
+	function body_class($class) {
+		if(get_query_var('ekuatorial_advanced_nav'))
+			$class[] = 'advanced-nav';
+		return $class;
 	}
 
 	function generate_rewrite_rules($wp_rewrite) {
