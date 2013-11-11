@@ -492,3 +492,10 @@ function ekuatorial_date_query_clauses($clauses, $query) {
 	}
 	return $clauses;
 }
+
+function ekuatorial_home_url($path = '') {
+	if(function_exists('qtrans_convertURL'))
+		return qtrans_convertURL(home_url($path));
+	else
+		return home_url($path);
+}

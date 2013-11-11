@@ -85,6 +85,13 @@
 							</li>
 						</ul>
 					</nav>
+					<nav id="feedback">
+						<ul>
+							<li>
+								<a href="<?php echo ekuatorial_home_url('/mail-us/'); ?>" title="<?php _e('Feedback', 'ekuatorial'); ?>"><?php _e('Contact', 'ekuatorial'); ?></a>
+							</li>
+						</ul>
+					</nav>
 				</div>
 			</div>
 		</section>
