@@ -406,9 +406,12 @@ header#masthead {
 	}
 	nav#social {
 		float: right;
-		border-right: 1px solid #ddd;
+		border-right: 1px solid rgba(0,0,0,0.8);
 		padding-right: 10px;
 		margin-right: 5px;
+		a {
+			padding: 10px 15px;
+		}
 		.twitter {
 			a {
 				display: block;
@@ -416,18 +419,17 @@ header#masthead {
 				width: 0;
 				overflow: hidden;
 				position: relative;
-				background: url(../img/twitter.png) right center no-repeat;
-				span {
-					top: 6px;
-					width: 80px;
-					right: 10px;
-					position: absolute;
-					color: #ce1126;
-				}
-				&:hover {
-					width: 100px;
-
-				}
+				background: url(../img/twitter_01.png) right center no-repeat;
+			}
+		}
+		.fb {
+			a {
+				display: block;
+				height: 18px;
+				width: 0;
+				overflow: hidden;
+				position: relative;
+				background: url(../img/fb.png) right center no-repeat;
 			}
 		}
 	}
