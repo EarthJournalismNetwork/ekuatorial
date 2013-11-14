@@ -22,6 +22,14 @@
 							<?php
 						endif;
 						?>
+						<?php
+						$data = get_field('source_url');
+						if($data) :
+							?>
+							<a href="<?php echo $data; ?>" class="button download"><?php _e('Download from source', 'ekuatorial'); ?></a>
+							<?php
+						endif;
+						?>
 					</section>
 				</article>
 			</li>

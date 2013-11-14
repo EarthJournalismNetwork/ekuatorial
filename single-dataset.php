@@ -43,6 +43,14 @@
 							</div>
 							<?php
 						endif;
+                        $source_url = get_field('source_url');
+                        if($source_url) :
+                            ?>
+                            <div class="row">
+                                <a href="<?php echo $source_url; ?>" class="button download" rel="external" target="_blank"><?php _e('Download from source', 'ekuatorial'); ?></a>
+                            </div>
+                            <?php
+                        endif;
 						?>
 						<?php
 						$license = get_the_terms($post->ID, 'license');
