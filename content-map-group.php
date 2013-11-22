@@ -2,11 +2,13 @@
 $mapgroup = jeo_get_mapgroup_data();
 $main_maps = $more_maps = array();
 // separate main maps from "more" maps
-foreach($mapgroup['maps'] as $map) {
-	if(!isset($map['more']))
-		$main_maps[] = $map;
-	else
-		$more_maps[] = $map;
+if(is_array($mapgroup['maps'])) {
+	foreach($mapgroup['maps'] as $map) {
+		if(!isset($map['more']))
+			$main_maps[] = $map;
+		else
+			$more_maps[] = $map;
+	}
 }
 ?>
 <div class="mapgroup-container">
