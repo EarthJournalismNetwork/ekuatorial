@@ -1,26 +1,20 @@
-# Copyright (C) 2013 memeLab
+# Copyright (C) 2013 ecoLab
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
 "Project-Id-Version: Ekuatorial 0.0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/ekuatorial-wptheme\n"
 "POT-Creation-Date: 2013-12-05 18:18:06+00:00\n"
-"PO-Revision-Date: 2013-12-05 16:23-0300\n"
-"Last-Translator: Miguel Peixe <miguel@cardume.art.br>\n"
-"Language-Team: Cardume\n"
-"Language: en_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c\n"
-"X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 1.5.4\n"
-"X-Poedit-SearchPath-0: ..\n"
+"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 
 #: 404.php:7
 msgid "Page not found"
-msgstr "Página não encontrada"
+msgstr ""
 
 #: archive-dataset.php:11 inc/datasets.php:22 inc/datasets.php:32
 #: single-dataset.php:10 taxonomy-license.php:11
@@ -37,92 +31,90 @@ msgstr ""
 
 #: archive-map.php:10
 msgid "Maps"
-msgstr "Mapas"
+msgstr ""
 
 #: content-embed.php:16 header.php:17
 #: inc/acf/core/views/meta_box_location.php:78
 #: inc/acf/core/views/meta_box_location.php:79
 msgid "Page"
-msgstr "Página"
+msgstr ""
 
 #: content-map-group.php:28
 msgid "More..."
-msgstr "Mais..."
+msgstr ""
 
 #: content-map-group.php:43
 msgid "View all maps"
-msgstr "Ver todos os mapas"
+msgstr ""
 
 #: content-marker-bubble.php:11
 msgctxt "map bubble date format"
 msgid "m/d/Y"
-msgstr "d/m/Y"
+msgstr ""
 
 #: functions.php:57
 msgid "Main widgets"
-msgstr "Widgets principais"
+msgstr ""
 
 #: functions.php:59
 msgid "Widgets used on front and inside pages."
-msgstr "Widgets utilizados na página inicial e internas."
+msgstr ""
 
 #: functions.php:108
 msgid "stories"
-msgstr "artigos"
+msgstr ""
 
 #: functions.php:110
 msgid "Copy the embed code"
-msgstr "Copie o código de incorporação"
+msgstr ""
 
 #: functions.php:111 loop-explore.php:53 loop.php:42
 #: section-sticky-posts.php:28
 msgid "Share"
-msgstr "Compartilhar"
+msgstr ""
 
 #: functions.php:112 single.php:40
 msgid "Print"
-msgstr "Imprimir"
+msgstr ""
 
 #: functions.php:124 loop-explore.php:52 loop.php:41
 #: section-sticky-posts.php:27
 msgid "Read more"
-msgstr "Leia mais"
+msgstr ""
 
 #: functions.php:126
 msgid "Open slideshow"
-msgstr "Abrir slideshow"
+msgstr ""
 
 #: functions.php:127
 msgid "Watch video gallery"
-msgstr "Assistir vídeos"
+msgstr ""
 
 #: functions.php:128
 msgid "Watch video"
-msgstr "Assistir vídeo"
+msgstr ""
 
 #: functions.php:129
 msgid "View image gallery"
-msgstr "Ver galeria de imagens"
+msgstr ""
 
 #: functions.php:130
 msgid "View fullscreen image"
-msgstr "Ver imagem em tela cheia"
+msgstr ""
 
 #: functions.php:131
 msgid "View infographic"
-msgstr "Ver infográfico"
+msgstr ""
 
 #: functions.php:132
 msgid "View infographics"
-msgstr "Ver infográficos"
+msgstr ""
 
 #: functions.php:160
 msgid ""
 "Success! Thank you, your story will be reviewed by one of our editors and "
 "soon will be online."
 msgstr ""
-"Obrigado! Seu artigo será revisado por um dos nossos editores e em breve "
-"estará online."
 
 #: functions.php:161
 msgid "You're being redirect to the home page in 4 seconds."
@@ -130,24 +122,24 @@ msgstr ""
 
 #: functions.php:163
 msgid "Oops, please try again in a few minutes."
-msgstr "Ops, tente novamente em alguns minutos."
+msgstr ""
 
 #: functions.php:309 searchform.php:3
 msgid "Search for stories"
-msgstr "Busque por notícias"
+msgstr ""
 
 #: functions.php:311
 msgid "Search for stories on this map"
-msgstr "Buscar notícias neste mapa"
+msgstr ""
 
 #: functions.php:313
 msgid "Search for stories on this publisher"
-msgstr "Buscar notícias neste editor"
+msgstr ""
 
 #: header.php:55 inc/submit-story.php:14 section-actions.php:5
 #: section-submit-call.php:6
 msgid "Submit a story"
-msgstr "Envie um artigo"
+msgstr ""
 
 #: header.php:91
 msgid "Feedback"
@@ -244,11 +236,11 @@ msgstr ""
 
 #: inc/acf/acf.php:623
 msgid "Medium"
-msgstr "Médio"
+msgstr ""
 
 #: inc/acf/acf.php:624
 msgid "Large"
-msgstr "Grande"
+msgstr ""
 
 #: inc/acf/acf.php:625
 msgid "Full"
@@ -740,7 +732,7 @@ msgstr ""
 #: inc/tax-meta-class/tax-meta-class.php:250
 #: inc/tax-meta-class/tax-meta-class.php:882
 msgid "Delete"
-msgstr "Deletar"
+msgstr ""
 
 #: inc/acf/add-ons/acf-repeater/repeater.php:491
 #: inc/acf/core/views/meta_box_fields.php:142
@@ -1182,7 +1174,7 @@ msgstr ""
 #: inc/acf/core/controllers/field_groups.php:147
 #: inc/category-feeds-widget.php:14
 msgid "Title"
-msgstr "Título"
+msgstr ""
 
 #: inc/acf/core/controllers/field_groups.php:216
 #: inc/acf/core/controllers/field_groups.php:257
@@ -1764,7 +1756,7 @@ msgstr ""
 #: inc/acf/core/fields/image.php:83 inc/tax-meta-class/tax-meta-class.php:582
 #: inc/tax-meta-class/tax-meta-class.php:629
 msgid "Remove"
-msgstr "Remover"
+msgstr ""
 
 #: inc/acf/core/fields/image.php:90
 msgid "No image selected"
@@ -1932,7 +1924,7 @@ msgstr ""
 
 #: inc/acf/core/fields/relationship.php:647 searchform.php:4
 msgid "Search"
-msgstr "Buscar"
+msgstr ""
 
 #: inc/acf/core/fields/relationship.php:648
 msgid "Post Type Select"
@@ -2226,7 +2218,7 @@ msgstr ""
 
 #: inc/acf/core/views/meta_box_location.php:146
 msgid "and"
-msgstr "e"
+msgstr ""
 
 #: inc/acf/core/views/meta_box_location.php:161
 msgid "Add rule group"
@@ -2348,40 +2340,40 @@ msgstr ""
 
 #: inc/ajax-calendar.php:15
 msgid "AJAX Powered Calendar"
-msgstr "Calendário ajax"
+msgstr ""
 
 #: inc/ajax-calendar.php:18 inc/ajax-calendar.php:28 inc/ajax-calendar.php:46
 #: inc/ajax-calendar.php:113
 msgid "AJAX Calendar"
-msgstr "Calendário ajax"
+msgstr ""
 
 #: inc/ajax-calendar.php:75
 msgid "Stories calendar"
-msgstr "Calendário de notícias"
+msgstr ""
 
 #: inc/ajax-calendar.php:118
 msgid "Category IDs:"
-msgstr "IDs de categorias:"
+msgstr ""
 
 #: inc/category-feeds-widget.php:5
 msgid "RSS Feeds by selected categories"
-msgstr "RSS Feeds por categorias selecionadas"
+msgstr ""
 
 #: inc/category-feeds-widget.php:6
 msgid "Category Feed Links"
-msgstr "Links do feed de categorias"
+msgstr ""
 
 #: inc/category-feeds-widget.php:10
 msgid "RSS Feeds"
-msgstr "RSS Feeds"
+msgstr ""
 
 #: inc/category-feeds-widget.php:15
 msgid "Categories separated by comma"
-msgstr "Categorias separadas por vírgula"
+msgstr ""
 
 #: inc/category-feeds-widget.php:43 index.php:56 single-map.php:47
 msgid "RSS Feed"
-msgstr "RSS Feed"
+msgstr ""
 
 #: inc/datasets.php:23
 msgid "Dataset"
@@ -2553,60 +2545,60 @@ msgstr ""
 
 #: inc/datasets.php:100
 msgid "No sources found"
-msgstr "Nenhuma origem encontrada"
+msgstr ""
 
 #: inc/geocode-box.php:17 inc/submit-story.php:13
 msgid "Close"
-msgstr "Fechar"
+msgstr ""
 
 #: inc/geocode-box.php:19
 msgid "Finish geocoding"
-msgstr "Finalizar geocodificação"
+msgstr ""
 
 #: inc/jeo-post-zoom.php:20
 msgid "Zoom"
-msgstr "Zoom"
+msgstr ""
 
 #: inc/metaboxes/featured/featured.php:9
 msgid "Featured post"
-msgstr "Notícia destacada"
+msgstr ""
 
 #: inc/metaboxes/featured/featured.php:21
 msgid "This post is featured"
-msgstr "Esta notícia está destacada"
+msgstr ""
 
 #: inc/metaboxes/story/story-meta.php:9
 msgid "Story data"
-msgstr "Dados do artigo"
+msgstr ""
 
 #: inc/metaboxes/story/story-meta.php:28
 msgid "Author name"
-msgstr "Nome do autor"
+msgstr ""
 
 #: inc/metaboxes/story/story-meta.php:32
 msgid "Author email"
-msgstr "Email do autor"
+msgstr ""
 
 #: inc/metaboxes/story/story-meta.php:36 inc/submit-story.php:35
 msgid "Reporter"
-msgstr "Repórter"
+msgstr ""
 
 #: inc/metaboxes/story/story-meta.php:40 inc/submit-story.php:47
 #: inc/submit-story.php:93
 msgid "Story url"
-msgstr "Link da notícia"
+msgstr ""
 
 #: inc/metaboxes/story/story-meta.php:44 inc/submit-story.php:51
 msgid "Lead picture"
-msgstr "Imagem principal"
+msgstr ""
 
 #: inc/metaboxes/story/story-meta.php:48 inc/submit-story.php:73
 msgid "Publishing date"
-msgstr "Data de publicação"
+msgstr ""
 
 #: inc/metaboxes/story/story-meta.php:52 inc/submit-story.php:77
 msgid "Notes to the ekuatorial editor"
-msgstr "Notas para o editor do ekuatorial"
+msgstr ""
 
 #: inc/submit-story.php:15 section-submit-call.php:4
 msgid ""
@@ -2614,173 +2606,170 @@ msgid ""
 "submitting your story. Help broaden the understanding of the global impact "
 "of this important region in the world."
 msgstr ""
-"Você tem alguma notícia para compartilhar sobre a Amazônia? Contribua para "
-"este mapa enviando uma reportagem. Ajude a ampliar o entendimento do impacto "
-"global desta importante região."
 
 #: inc/submit-story.php:20
 msgid "Submit a url"
-msgstr "Envie uma URL"
+msgstr ""
 
 #: inc/submit-story.php:21
 msgid "Submit full story"
-msgstr "Envie uma história completa"
+msgstr ""
 
 #: inc/submit-story.php:27 inc/submit-story.php:85
 msgid "Your full name"
-msgstr "Nome completo"
+msgstr ""
 
 #: inc/submit-story.php:31 inc/submit-story.php:89
 msgid "E-mail"
-msgstr "Email"
+msgstr ""
 
 #: inc/submit-story.php:39
 msgid "Story title"
-msgstr "Título da notícia"
+msgstr ""
 
 #: inc/submit-story.php:43
 msgid "Story text"
-msgstr "Texto da notícia"
+msgstr ""
 
 #: inc/submit-story.php:56 inc/submit-story.php:98
 msgid "Story location"
-msgstr "Localização da notícia"
+msgstr ""
 
 #: inc/submit-story.php:58 inc/submit-story.php:100
 msgid "Find location on map"
-msgstr "Encontre localização no mapa"
+msgstr ""
 
 #: inc/submit-story.php:63 inc/submit-story.php:105
 msgid "Latitude:"
-msgstr "Latitude:"
+msgstr ""
 
 #: inc/submit-story.php:64 inc/submit-story.php:106
 msgid "Longitude:"
-msgstr "Longitude:"
+msgstr ""
 
 #: inc/submit-story.php:80 inc/submit-story.php:114
 msgid "Send story"
-msgstr "Enviar notícia"
+msgstr ""
 
 #: inc/submit-story.php:135
 msgid "Missing information. Please fill all the required fields!"
-msgstr "Preencha todos os campos requeridos"
+msgstr ""
 
 #: inc/submit-story.php:144
 msgid "Could not save submission"
-msgstr "Não pôde salvar envio"
+msgstr ""
 
 #: inc/tax-meta-class/tax-meta-class.php:250
 msgid "Delete this image"
-msgstr "Remover esta imagem"
+msgstr ""
 
 #: inc/tax-meta-class/tax-meta-class.php:357
 msgid "Cannot delete file. Something's wrong."
-msgstr "Arquivo não pôde ser deletado. Algo está errado."
+msgstr ""
 
 #: inc/tax-meta-class/tax-meta-class.php:595
 msgid "Add"
-msgstr "Adicionar"
+msgstr ""
 
 #: inc/tax-meta-class/tax-meta-class.php:878
 msgid "Uploaded files"
-msgstr "Arquivos enviados"
+msgstr ""
 
 #: inc/tax-meta-class/tax-meta-class.php:889
 msgid "Upload new files"
-msgstr "Enviar novos arquivos"
+msgstr ""
 
 #: inc/tax-meta-class/tax-meta-class.php:895
 msgid "Add more files"
-msgstr "Adicionar mais arquivos"
+msgstr ""
 
 #: inc/tax-meta-class/tax-meta-class.php:947
 msgid "Select a color"
-msgstr "Selecione uma cor"
+msgstr ""
 
 #: inc/taxonomies-meta.php:10
 msgid "Publisher information"
-msgstr "Informações do editor"
+msgstr ""
 
 #: inc/taxonomies-meta.php:17
 msgid "Publisher url"
-msgstr "Site do url"
+msgstr ""
 
 #: inc/taxonomies.php:9 inc/taxonomies.php:23
 msgid "Publishers"
-msgstr "Editores"
+msgstr ""
 
 #: inc/taxonomies.php:10
 msgid "Publisher"
-msgstr "Editor"
+msgstr ""
 
 #: inc/taxonomies.php:11
 msgid "Search publishers"
-msgstr "Buscar editores"
+msgstr ""
 
 #: inc/taxonomies.php:12
 msgid "Popular publishers"
-msgstr "Editores populares"
+msgstr ""
 
 #: inc/taxonomies.php:13
 msgid "All publishers"
-msgstr "Todos os editores"
+msgstr ""
 
 #: inc/taxonomies.php:14
 msgid "Parent publisher"
-msgstr "Editor pai"
+msgstr ""
 
 #: inc/taxonomies.php:15
 msgid "Parent publisher:"
-msgstr "Editor pai:"
+msgstr ""
 
 #: inc/taxonomies.php:16
 msgid "Edit publisher"
-msgstr "Editar editor"
+msgstr ""
 
 #: inc/taxonomies.php:17
 msgid "Update publisher"
-msgstr "Atualizar editor"
+msgstr ""
 
 #: inc/taxonomies.php:18
 msgid "Add new publisher"
-msgstr "Adicionar novo editor"
+msgstr ""
 
 #: inc/taxonomies.php:19
 msgid "New publisher name"
-msgstr "Novo nome de editor"
+msgstr ""
 
 #: inc/taxonomies.php:20
 msgid "Separate publishers with commas"
-msgstr "Separar editores com vírgulas"
+msgstr ""
 
 #: inc/taxonomies.php:21
 msgid "Add or remove publishers"
-msgstr "Adicionar ou remover editores"
+msgstr ""
 
 #: inc/taxonomies.php:22
 msgid "Choose from most used publishers"
-msgstr "Escolher entre os editores mais utilizados"
+msgstr ""
 
 #: index.php:35
 msgid "Latest stories"
-msgstr "Últimas notícias"
+msgstr ""
 
 #: index.php:37
 msgid "Stories by "
-msgstr "Notícias por"
+msgstr ""
 
 #: index.php:39
 msgid "Stories on "
-msgstr "Notícias em "
+msgstr ""
 
 #: index.php:41
 msgid "Stories"
-msgstr "Notícias"
+msgstr ""
 
 #: index.php:44
 msgid "Page %d"
-msgstr "Página %d"
+msgstr ""
 
 #: index.php:57 single-map.php:48
 msgid "Get GeoJSON"
@@ -2788,11 +2777,11 @@ msgstr ""
 
 #: index.php:81
 msgid "Nothing found. Viewing all posts"
-msgstr "Nada encontrado. Visualizando todas as notícias"
+msgstr ""
 
 #: loop-dataset.php:16
 msgid "View this data"
-msgstr "Ver este dado"
+msgstr ""
 
 #: loop-dataset.php:29 single-dataset.php:50
 msgid "Download from source"
@@ -2801,11 +2790,11 @@ msgstr ""
 #: loop-explore.php:29 loop.php:18
 msgctxt "reduced date format"
 msgid "m/d/Y"
-msgstr "d/m/Y"
+msgstr ""
 
 #: loop-maps.php:15
 msgid "View this map"
-msgstr "Ver este mapa"
+msgstr ""
 
 #: section-actions.php:6
 msgid ""
@@ -2834,57 +2823,57 @@ msgstr ""
 
 #: section-publisher-description.php:10
 msgid "Visit"
-msgstr "Visite"
+msgstr ""
 
 #: section-subheader.php:6
 msgid "Advanced filters"
-msgstr "Filtros avançados"
+msgstr ""
 
 #: section-subheader.php:14
 msgid "Choose a publisher"
-msgstr "Escolha um editor"
+msgstr ""
 
 #: section-subheader.php:28
 msgid "All stories"
-msgstr "Todas as notícias"
+msgstr ""
 
 #: section-subheader.php:51
 msgid "Nothing found for: "
-msgstr "Nada encontrado para:"
+msgstr ""
 
 #: section-subheader.php:53
 msgid "Search results for: "
-msgstr "Resultados da busca por:"
+msgstr ""
 
 #: section-subheader.php:66
 msgid "Daily Archives: %s"
-msgstr "Arquivo do dia: %s"
+msgstr ""
 
 #: section-subheader.php:68
 msgid "Monthly Archives: %s"
-msgstr "Arquivo do mês: %s"
+msgstr ""
 
 #: section-subheader.php:68
 msgctxt "monthly archives date format"
 msgid "F Y"
-msgstr "F,  Y"
+msgstr ""
 
 #: section-subheader.php:70
 msgid "Yearly Archives: %s"
-msgstr "Arquivos do ano: %s"
+msgstr ""
 
 #: section-subheader.php:70
 msgctxt "yearly archives date format"
 msgid "Y"
-msgstr "Y"
+msgstr ""
 
 #: section-subheader.php:72
 msgid "Archives"
-msgstr "Arquivos"
+msgstr ""
 
 #: single-dataset.php:28
 msgid "Preview data"
-msgstr "Pré-visualizar dado"
+msgstr ""
 
 #: single-dataset.php:42
 msgid "Download this data"
@@ -2908,23 +2897,23 @@ msgstr ""
 
 #: single-map.php:14
 msgid "Embed this map"
-msgstr "Incorporar este mapa"
+msgstr ""
 
 #: single-map.php:37
 msgid "Stories on"
-msgstr "Artigos em"
+msgstr ""
 
 #: single.php:37
 msgid "Go to the original article"
-msgstr "Ir para a notícia original"
+msgstr ""
 
 #: single.php:39
 msgid "Embed this story"
-msgstr "Incorporar notícia"
+msgstr ""
 
 #. Theme Name of the plugin/theme
 msgid "Ekuatorial"
-msgstr "Ekuatorial"
+msgstr ""
 
 #. Theme URI of the plugin/theme
 msgid "http://ekuatorial.com/"
@@ -2943,210 +2932,3 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "http://ecolab.oeco.org.br/"
 msgstr ""
-
-#~ msgid "by"
-#~ msgstr "por"
-
-#~ msgid "Embed"
-#~ msgstr "Incorporar"
-
-#~ msgid "Choose any map from the list"
-#~ msgstr "Escolha qualquer mapa da lista"
-
-#~ msgid "Select layers from this map"
-#~ msgstr "Selecione camadas deste mapa"
-
-#~ msgid "Select layers from"
-#~ msgstr "Selecione camadas de"
-
-#~ msgid "Choose any layers from the list"
-#~ msgstr "Escolha camadas da lista"
-
-#~ msgid "Back to default layer configuration"
-#~ msgstr "Voltar para as camadas padrões"
-
-#~ msgid "Select a story"
-#~ msgstr "Selecione notícia"
-
-#~ msgid "Choose a story from a variety of different sources"
-#~ msgstr "Escolha notícias de diferentes editores"
-
-#~ msgid "Select stories"
-#~ msgstr "Selecione notícias"
-
-#~ msgid "Selected story"
-#~ msgstr "Notícia selecionada"
-
-#~ msgid "General stories"
-#~ msgstr "Notícias"
-
-#~ msgid "No stories"
-#~ msgstr "Nenhuma notícia"
-
-#~ msgid "By publishers"
-#~ msgstr "Por editores"
-
-#~ msgid "Width & Height"
-#~ msgstr "Altura e largura"
-
-#~ msgid ""
-#~ "Select the width and height proportions you would like to embed to be."
-#~ msgstr "Selecione a altura e largura para o seu mapa incorporado"
-
-#~ msgid "HTML Output"
-#~ msgstr "Código HTML"
-
-#~ msgid "Copy and paste this code into an HTML page"
-#~ msgstr "Copie e cole este código em uma página HTML"
-
-#~ msgid "Highlights"
-#~ msgstr "Destaques"
-
-#~ msgid "Last stories"
-#~ msgstr "Últimas notícias"
-
-#~ msgid "Share a map"
-#~ msgstr "Compartilhe mapas"
-
-#~ msgid "Geolocate"
-#~ msgstr "Geolocalizar"
-
-#~ msgid "Result"
-#~ msgstr "Resultado"
-
-#~ msgid "Latitude"
-#~ msgstr "Latitude"
-
-#~ msgid "Longitude"
-#~ msgstr "Longitude"
-
-#~ msgid "Results"
-#~ msgstr "Resultados"
-
-#~ msgid "Map"
-#~ msgstr "Mapa"
-
-#~ msgid "New map"
-#~ msgstr "Novo mapa"
-
-#~ msgid "MapBox Maps"
-#~ msgstr "Mapas do MapBox"
-
-#~ msgid "Map groups"
-#~ msgstr "Grupos de mapa"
-
-#~ msgid "Map group"
-#~ msgstr "Grupo de mapa"
-
-#~ msgid "Add new map group"
-#~ msgstr "Adicionar novo grupo de mapa"
-
-#~ msgid "MapBox maps agroupment"
-#~ msgstr "Agrupamento de mapas do MapBox"
-
-#~ msgid ""
-#~ "Select which maps this post belongs to. If you don't mark any they will "
-#~ "appear in all maps."
-#~ msgstr ""
-#~ "Selecione os mapas correspondentes a este post. Se você não marcar "
-#~ "nenhum, este post aparecerá em todos os mapas."
-
-#~ msgid "You haven't created any map, yet!"
-#~ msgstr "Você não criou mapas, ainda!"
-
-#~ msgid "Address and geolocation"
-#~ msgstr "Endereço e geolocalização"
-
-#~ msgid "Drag the marker for a more precise result"
-#~ msgstr "Arraste o marcador para um resultado mais preciso"
-
-#~ msgid "Add to \"more\" tab"
-#~ msgstr "Adicionar à aba \"mais\""
-
-#~ msgid "Select a map to add to your map group"
-#~ msgstr "Selecione um mapa para adicionar ao seu grupo de mapas"
-
-#~ msgid "Map legend"
-#~ msgstr "Legenda do mapa"
-
-#~ msgid "Enter your HTML code to use as legend on the map"
-#~ msgstr "Entre com código HTML para usar como legenda do mapa"
-
-#~ msgid "Fixed"
-#~ msgstr "Fixa"
-
-#~ msgid "Layer title"
-#~ msgstr "Título da layer"
-
-#~ msgid "Hidden"
-#~ msgstr "Escondida"
-
-#~ msgid "MapBox Setup"
-#~ msgstr "Configurações do MapBox"
-
-#~ msgid ""
-#~ "First, define your map server. Most likely you will be using the MapBox "
-#~ "default servers. If not and you know what you are doing, feel free to "
-#~ "type your own TileStream server url below."
-#~ msgstr ""
-#~ "Primeiro, defina seu servidor de mapa. Muito provavelmente você estará "
-#~ "usando os servidores do MapBox. Caso contrário e você sabe o que está "
-#~ "fazendo, fique a vontade para configurar seu próprio servidor TileStream "
-#~ "abaixo."
-
-#~ msgid "Use MapBox servers"
-#~ msgstr "Utilize os servidores do MapBox"
-
-#~ msgid "Use custom TileStream server"
-#~ msgstr "Utilize um servidor TileStream customizado"
-
-#~ msgid ""
-#~ "Edit the default layer and fill the IDs of the maps to overlay layers of "
-#~ "your map, in order of appearance"
-#~ msgstr ""
-#~ "Altere a layer padrão e preencha com os IDs dos mapas para sobrepor "
-#~ "camadas em seu mapa, em order de exibição."
-
-#~ msgid "Currently viewing"
-#~ msgstr "Atualmente visualizando"
-
-#~ msgid "Center"
-#~ msgstr "Centro"
-
-#~ msgid "East"
-#~ msgstr "Leste"
-
-#~ msgid "North"
-#~ msgstr "Norte"
-
-#~ msgid "South"
-#~ msgstr "Sul"
-
-#~ msgid "West"
-#~ msgstr "Oeste"
-
-#~ msgid "Set current as map center & zoom"
-#~ msgstr "Defina o atual como centro e zoom do mapa"
-
-#~ msgid "Min zoom"
-#~ msgstr "Zoom mín."
-
-#~ msgid "Current"
-#~ msgstr "Atual"
-
-#~ msgid "Pan limits"
-#~ msgstr "Limites de margem"
-
-#~ msgid "Set current as map panning limits"
-#~ msgstr "Defina o atual como limite de margem do mapa"
-
-#~ msgid "Enable geocoding service"
-#~ msgstr "Ativar serviço de geocoding"
-
-#~ msgid "Enable geocode search service"
-#~ msgstr "Ativar serviço de busca de localização"
-
-#~ msgid "(preview mode doesn't apply zoom range nor pan limits setup)"
-#~ msgstr ""
-#~ "(o modo de pré-visualização não aplica os limites de zoom e margem "
-#~ "configurados para o mapa)"
