@@ -135,7 +135,7 @@ function infoamazonia_scripts() {
 		'default_icon' => jeo_formatted_default_marker()
 	));
 
-	wp_enqueue_script('ekuatorial-sticky', get_stylesheet_directory_uri() . '/js/sticky-posts.js', array('jeo.markers', 'jquery'), '0.1.1');
+	wp_enqueue_script('ekuatorial-sticky', get_stylesheet_directory_uri() . '/js/sticky-posts.js', array('jeo.markers', 'jquery'), '0.1.2');
 
 	// styles
 	wp_register_style('site', get_stylesheet_directory_uri() . '/css/site.css', array(), '1.1'); // old styles
