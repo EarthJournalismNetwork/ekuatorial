@@ -14,7 +14,7 @@
 		echo " | $site_description";
 
 	if ( $paged >= 2 || $page >= 2 )
-		echo ' | ' . __('Page', 'infoamazonia') . max($paged, $page);
+		echo ' | ' . __('Page', 'ekuatorial') . max($paged, $page);
 
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -52,7 +52,7 @@
 					<nav>
 						<ul>
 							<?php wp_nav_menu(array(
-								'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s<li><a href="#submit" class="submit-story">' . __('Submit a story', 'infoamazonia') . '</a></li></ul>'
+								'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s<li><a href="#submit" class="submit-story">' . __('Submit a story', 'ekuatorial') . '</a></li></ul>'
 							)); ?>
 						</ul>
 					</nav>

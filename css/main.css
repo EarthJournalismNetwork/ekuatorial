@@ -2060,36 +2060,36 @@ aside#main-widgets ul.widgets > li .textwidget h3 {
 aside#main-widgets ul.widgets > li .textwidget .button {
   margin-top: 10px;
 }
-aside#main-widgets ul.widgets > li #infoamazonia-calendar {
+aside#main-widgets ul.widgets > li #ekuatorial-calendar {
   margin-left: 0;
 }
-aside#main-widgets ul.widgets > li #infoamazonia-calendar table {
+aside#main-widgets ul.widgets > li #ekuatorial-calendar table {
   background: #1f1f1f;
   width: 100%;
   margin-bottom: 10px;
 }
-aside#main-widgets ul.widgets > li #infoamazonia-calendar table caption {
+aside#main-widgets ul.widgets > li #ekuatorial-calendar table caption {
   color: #f0f0f0;
   font-weight: 800;
   padding: 5px 0;
   background: #333;
 }
-aside#main-widgets ul.widgets > li #infoamazonia-calendar table th,
-aside#main-widgets ul.widgets > li #infoamazonia-calendar table td {
+aside#main-widgets ul.widgets > li #ekuatorial-calendar table th,
+aside#main-widgets ul.widgets > li #ekuatorial-calendar table td {
   padding: 0 5px;
   text-align: center;
 }
-aside#main-widgets ul.widgets > li #infoamazonia-calendar table thead {
+aside#main-widgets ul.widgets > li #ekuatorial-calendar table thead {
   border-bottom: 2px solid #202020;
 }
-aside#main-widgets ul.widgets > li #infoamazonia-calendar table thead th {
+aside#main-widgets ul.widgets > li #ekuatorial-calendar table thead th {
   color: #f0f0f0;
 }
-aside#main-widgets ul.widgets > li #infoamazonia-calendar table td#prev {
+aside#main-widgets ul.widgets > li #ekuatorial-calendar table td#prev {
   text-align: left;
   padding: 2px 10px;
 }
-aside#main-widgets ul.widgets > li #infoamazonia-calendar table td#next {
+aside#main-widgets ul.widgets > li #ekuatorial-calendar table td#next {
   text-align: right;
   padding: 2px 10px;
 }

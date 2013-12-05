@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: InfoAmazonia 0.0.1\n"
+"Project-Id-Version: ekuatorial 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-05-06 20:06-0300\n"
 "PO-Revision-Date: 2013-05-06 20:06-0300\n"
@@ -407,11 +407,11 @@ msgstr "Adicionar ou remover editores"
 msgid "Choose from most used publishers"
 msgstr "Escolher entre os editores mais utilizados"
 
-#: ../inc/infoamazonia-widget.php:46
+#: ../inc/ekuatorial-widget.php:46
 msgid "default"
 msgstr "padrão"
 
-#: ../inc/infoamazonia-widget.php:54
+#: ../inc/ekuatorial-widget.php:54
 msgid "Share a map"
 msgstr "Compartilhe mapas"
 
@@ -515,8 +515,8 @@ msgid "Publishing date"
 msgstr "Data de publicação"
 
 #: ../inc/submit-story.php:77
-msgid "Notes to the InfoAmazonia editor"
-msgstr "Notas para o editor do InfoAmazonia"
+msgid "Notes to the ekuatorial editor"
+msgstr "Notas para o editor do ekuatorial"
 
 #: ../inc/submit-story.php:80
 #: ../inc/submit-story.php:114

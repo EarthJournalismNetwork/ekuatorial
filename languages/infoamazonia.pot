@@ -2,8 +2,8 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: InfoAmazonia 0.0.1\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tags/infoamazonia-wptheme\n"
+"Project-Id-Version: ekuatorial 0.0.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/ekuatorial-wptheme\n"
 "POT-Creation-Date: 2013-02-14 19:48:56+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -472,11 +472,11 @@ msgid "Archives"
 msgstr ""
 
 #. Theme Name of the plugin/theme
-msgid "InfoAmazonia"
+msgid "ekuatorial"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://infoamazonia.org/"
+msgid "http://ekuatorial.org/"
 msgstr ""
 
 #. Description of the plugin/theme

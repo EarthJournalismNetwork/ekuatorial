@@ -8,10 +8,10 @@
 					<div class="fb-like" data-href="<?php the_permalink(); ?>" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana" data-action="recommend"></div>
 				</li>
 				<li class="twitter">
-					<a href="https://twitter.com/share" class="twitter-share-button" data-via="InfoAmazonia" data-lang="<?php if(function_exists('qtrans_getLanguage')) echo qtrans_getLanguage(); ?>">Tweet</a>
+					<a href="https://twitter.com/share" class="twitter-share-button" data-via="ekuatorial" data-lang="<?php if(function_exists('qtrans_getLanguage')) echo qtrans_getLanguage(); ?>">Tweet</a>
 				</li>
 				<li class="share">
-					<a class="button share-button" href="<?php echo jeo_get_share_url(array('map_id' => $post->ID)); ?>"><?php _e('Embed this map', 'infoamazonia'); ?></a>
+					<a class="button share-button" href="<?php echo jeo_get_share_url(array('map_id' => $post->ID)); ?>"><?php _e('Embed this map', 'ekuatorial'); ?></a>
 				</li>
 			</ul>
 			<h1 class="title"><?php the_title(); ?></h1>
@@ -34,7 +34,7 @@
             <div class="section-title">
                 <div class="container">
                     <div class="twelve columns">
-                        <h3><?php _e('Stories on', 'infoamazonia'); ?> &ldquo;<?php the_title(); ?>&ldquo;</h3>
+                        <h3><?php _e('Stories on', 'ekuatorial'); ?> &ldquo;<?php the_title(); ?>&ldquo;</h3>
                         <div class="query-actions">
                             <?php
                             global $wp_query;
