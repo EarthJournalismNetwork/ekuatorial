@@ -171,7 +171,7 @@ function infoamazonia_scripts() {
 
 
 }
-add_action('wp_enqueue_scripts', 'infoamazonia_scripts');
+add_action('wp_enqueue_scripts', 'infoamazonia_scripts', 100);
 
 function infoamazonia_enqueue_marker_script() {
 	wp_enqueue_script('infoamazonia.markers');
