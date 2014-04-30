@@ -499,3 +499,12 @@ function ekuatorial_home_url($path = '') {
 	else
 		return home_url($path);
 }
+
+// do not use map query on front page
+
+function ekuatorial_home_query($query) {
+	if($query->is_main_query() && $query->is_home) {
+		$query->set('without_map_query', 1);
+	}
+}
+add_action('pre_get_posts', 'ekuatorial_home_query');
