@@ -11,7 +11,7 @@
 		<div class="choose-filter">
 			<?php
 			$publishers = get_terms('publisher');
-			$title = '<span class="title">' . __('Choose a publisher', 'infoamazonia') . '</span>';
+			$title = '<span class="title">' . __('Choose a publisher', 'ekuatorial') . '</span>';
 			$current_publisher = false;
 			if(is_tax('publisher')) {
 				$current_publisher = get_query_var('publisher');
@@ -25,7 +25,7 @@
 				</div>
 				<ul>
 					<?php if($current_publisher) : ?>
-						<li class="filter"><a href="<?php echo home_url('/'); ?>" title="<?php _e('All stories', 'infoamazonia'); ?>"><?php _e('All stories', 'infoamazonia'); ?></a></li>
+						<li class="filter"><a href="<?php echo home_url('/'); ?>" title="<?php _e('All stories', 'ekuatorial'); ?>"><?php _e('All stories', 'ekuatorial'); ?></a></li>
 					<?php endif; ?>
 					<?php foreach($publishers as $publisher) : ?>
 						<?php if($current_publisher && $publisher->slug == $current_publisher->slug) continue; ?>
@@ -48,9 +48,9 @@
 		<?php
 		global $wp_query;
 		if(empty($wp_query->posts))
-			echo '<h1 class="title">' . __('Nothing found for: ', 'infoamazonia') . '"' . $_REQUEST['s'] . '"</h1>';
+			echo '<h1 class="title">' . __('Nothing found for: ', 'ekuatorial') . '"' . $_REQUEST['s'] . '"</h1>';
 		else
-			echo '<h1 class="title">' . __('Search results for: ', 'infoamazonia') . '"' . $_REQUEST['s'] . '"</h1>';
+			echo '<h1 class="title">' . __('Search results for: ', 'ekuatorial') . '"' . $_REQUEST['s'] . '"</h1>';
 		?>
 
 	<?php elseif(is_category()) : ?>
@@ -63,11 +63,11 @@
 
 	<?php elseif(is_archive()) :
 		if (is_day()) :
-			printf('<h1 class="title">' . __('Daily Archives: %s', 'infoamazonia' ), get_the_date() . '</h1>' );
+			printf('<h1 class="title">' . __('Daily Archives: %s', 'ekuatorial' ), get_the_date() . '</h1>' );
 		elseif (is_month()) :
-			printf('<h1 class="title">' . __( 'Monthly Archives: %s', 'infoamazonia' ), get_the_date(_x('F Y', 'monthly archives date format', 'infoamazonia')) . '</h1>');
+			printf('<h1 class="title">' . __( 'Monthly Archives: %s', 'ekuatorial' ), get_the_date(_x('F Y', 'monthly archives date format', 'ekuatorial')) . '</h1>');
 		elseif (is_year()) :
-			printf('<h1 class="title">' . __('Yearly Archives: %s', 'infoamazonia'), get_the_date(_x('Y', 'yearly archives date format', 'infoamazonia')) . '</h1>');
+			printf('<h1 class="title">' . __('Yearly Archives: %s', 'ekuatorial'), get_the_date(_x('Y', 'yearly archives date format', 'ekuatorial')) . '</h1>');
 		else :
 			echo '<h1 class="title">' . __('Archives', 'twentytwelve') . '</h1>';
 		endif;

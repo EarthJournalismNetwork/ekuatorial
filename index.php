@@ -32,13 +32,13 @@
 				<div class="container">
 					<div class="twelve columns">
 						<h3><?php if(is_front_page()) : ?>
-							<?php _e('Latest stories', 'infoamazonia'); ?>
+							<?php _e('Latest stories', 'ekuatorial'); ?>
 						<?php elseif(is_tax('publisher')) : ?>
-							<?php _e('Stories by ', 'infoamazonia'); ?> &ldquo;<?php single_term_title(); ?>&rdquo;
+							<?php _e('Stories by ', 'ekuatorial'); ?> &ldquo;<?php single_term_title(); ?>&rdquo;
 						<?php elseif(is_tag()) : ?>
-							<?php _e('Stories on ', 'infoamazonia'); ?> &ldquo;<?php single_tag_title(); ?>&rdquo;
+							<?php _e('Stories on ', 'ekuatorial'); ?> &ldquo;<?php single_tag_title(); ?>&rdquo;
 						<?php else : ?>
-							<?php _e('Stories', 'infoamazonia'); ?>
+							<?php _e('Stories', 'ekuatorial'); ?>
 						<?php endif; ?>
 						<?php if(is_paged()) : ?>
 							- <?php printf(__('Page %d', 'ekuatorial'), get_query_var('paged')); ?>
@@ -78,7 +78,7 @@
 				<div class="section-title">
 					<div class="container">
 						<div class="twelve columns">
-							<h3><?php _e('Nothing found. Viewing all posts', 'infoamazonia'); ?></h3>
+							<h3><?php _e('Nothing found. Viewing all posts', 'ekuatorial'); ?></h3>
 						</div>
 					</div>
 				</div>

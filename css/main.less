@@ -491,8 +491,8 @@ header#masthead {
 			}
 		}
 		.post-description {
-			font-size: 16px;
-			line-height: 26px;
+			font-size: 14px;
+			line-height: 20px;
 			img,
 			iframe,
 			object {
@@ -825,12 +825,12 @@ header#masthead {
  */
 
 .content-map.fullscreen {
-	z-index: 9999999;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
+	z-index: 999999;
+	position: relative !important;
+	top: auto !important;
+	left: auto !important;
+	right: auto !important;
+	bottom: auto !important;
 	.map-container {
 		z-index: 100;
 		.map-fullscreen-map {
@@ -848,10 +848,32 @@ header#masthead {
 	}
 }
 
+body.map-fullscreen .fullscreen-map, body.map-fullscreen .fullscreen-map.map-container {
+	position: relative !important;
+	top: auto !important;
+	left: auto !important;
+	right: auto !important;
+	bottom: auto !important;
+	width: auto !important;
+	height: 100% !important;
+}
+
+
+.fullscreen-map .leaflet-control .map-fullscreen {
+	background-position: -23px -33px !important;
+}
+
 .map-fullscreen {
 	#stage {
 		.stage-map {
-			z-index: 99999;
+			z-index: 9999999;
+			position: fixed !important;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: auto !important;
+			height: auto !important;
 		}
 	}
 }
@@ -2018,7 +2040,7 @@ aside#main-widgets {
 					margin-top: 10px;
 				}
 			}
-			#infoamazonia-calendar {
+			#ekuatorial-calendar {
 				margin-left: 0;
 				table {
 					background: #1f1f1f;

@@ -14,7 +14,7 @@
 		echo " | $site_description";
 
 	if ( $paged >= 2 || $page >= 2 )
-		echo ' | ' . __('Page', 'infoamazonia') . max($paged, $page);
+		echo ' | ' . __('Page', 'ekuatorial') . max($paged, $page);
 
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -22,14 +22,18 @@
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.ico" type="image/x-icon" />
 <?php wp_head(); ?>
-</head>
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/nepal.css" type="text/css" media="screen" />
+<meta name="description" content="www.ekuatorial.com | Geojurnalism tools focused on environmental issues in Indonesia. A project by the Society of Indonesian Environmental Journalists">
+<meta name="keywords" content="forest fire indonesia, indonesia maps google, biodiversity in indonesia, environment of indonesia, pidato global warming, earthquake in indonesia, oil palm plantation, ekuatorial">
+<meta name="google-site-verification" content="Gt9ft3DRZNjR5KmXawaw8m7cdJU64_OZVhdQvhhRuac" />
+</head> 
 <body <?php body_class(get_bloginfo('language')); ?>>
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];
 	  if (d.getElementById(id)) return;
 	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1&appId=459964104075857";
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=459964104075857";
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
 	<header id="masthead">
@@ -52,7 +56,7 @@
 					<nav>
 						<ul>
 							<?php wp_nav_menu(array(
-								'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s<li><a href="#submit" class="submit-story">' . __('Submit a story', 'infoamazonia') . '</a></li></ul>'
+								'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s<li><a href="#submit" class="submit-story">' . __('Submit a story', 'ekuatorial') . '</a></li></ul>'
 							)); ?>
 						</ul>
 					</nav>
