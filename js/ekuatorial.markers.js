@@ -216,13 +216,10 @@
 
 			marker = markers.activateMarker(markers.getMarker(marker));
 
-			if(typeof marker === 'undefined')
-				return false;
-
 			var center,
 				zoom;
 
-			if(marker && marker.geometry) {
+			if(marker.geometry) {
 				center = [
 					marker.geometry.coordinates[1],
 					marker.geometry.coordinates[0]
@@ -239,7 +236,7 @@
 				zoom = map.conf.zoom;
 			}
 
-			if(marker && typeof marker.properties.zoom !== 'undefined')
+			if(typeof marker.properties.zoom !== 'undefined')
 				zoom = marker.properties.zoom;
 
 			if(!center || isNaN(center[0]))
@@ -282,9 +279,6 @@
 		markers.openMarker = function(marker, silent) {
 
 			marker = markers.getMarker(marker);
-
-			if(typeof marker === 'undefined')
-				return false;
 
 			if(!silent) {
 
