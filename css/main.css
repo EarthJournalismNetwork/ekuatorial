@@ -190,7 +190,8 @@ body {
   padding: 0 20px;
 }
 header#masthead {
-  background: #995812 url(../img/batik_pattern.png) center;
+  /*background: #995812 url(../img/batik_pattern.png) center;*/
+  background: #995812 url(../img/banner_new.jpg) center;
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   -khtml-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
@@ -2106,7 +2107,7 @@ footer#colophon {
 footer#colophon ul {
   position: relative;
   margin: 0 auto;
-  width: 566px;
+  width: 450px;
 }
 footer#colophon ul li a.icon {
   height: 50px;
@@ -2121,11 +2122,23 @@ footer#colophon ul li a.icon.internews {
   background-position: -367px -55px;
   width: 133px;
   margin-right: 65px;
+  margin-left: 65px;
 }
 footer#colophon ul li a.icon.packard {
   background: url(../img/packard-logo.jpg);
   width: 126px;
 }
+
+footer#colophon ul li a.icon.ejn {
+  background-position: -406px -269px;
+  width: 95px;
+}
+footer#colophon ul li a.icon.third {
+  background-position: -425px -196px;
+  width: 75px;
+  margin: 0;
+}
+
 footer#colophon ul li a.icon.siej {
   background: url(../img/siej-logo.png);
   width: 87px;

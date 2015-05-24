@@ -22,6 +22,7 @@
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.ico" type="image/x-icon" />
 <?php wp_head(); ?>
+
 <meta name="description" content="www.ekuatorial.com | Geojurnalism tools focused on environmental issues in Indonesia. A project by the Society of Indonesian Environmental Journalists">
 <meta name="keywords" content="forest fire indonesia, indonesia maps google, biodiversity in indonesia, environment of indonesia, pidato global warming, earthquake in indonesia, oil palm plantation, ekuatorial">
 <meta name="google-site-verification" content="Gt9ft3DRZNjR5KmXawaw8m7cdJU64_OZVhdQvhhRuac" />
@@ -43,7 +44,7 @@
 				if(function_exists('qtrans_getLanguage'))
 					$lang = qtrans_getLanguage();
 				?>
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" class="logo" />
+				<!-- <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" class="logo" /> -->
 				<h1><a href="<?php echo home_url('/' . $lang); ?>" title="<?php echo bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
 				<p class="slogan"><?php bloginfo('description'); ?></p>
 				<?php get_search_form(); ?>

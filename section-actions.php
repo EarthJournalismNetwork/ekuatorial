@@ -3,7 +3,7 @@
 		<div class="four columns">
 			<span class="lsf"><a class="submit-story" href="#">edit</a></span>
 			<h3><a href="#" class="submit-story"><?php _e('Submit a story', 'ekuatorial'); ?></a></h3>
-			<p><a href="#" class="submit-story"><?php _e('Do you have news from Indonesia? Contribute to this map by submitting your story.', 'ekuatorial'); ?></a></p>
+			<p><a href="#" class="submit-story"><?php _e('Do you have news from Nepal? Contribute to this map by submitting your story.', 'ekuatorial'); ?></a></p>
 		</div>
 		<div class="four columns">
 			<span class="lsf"><a href="<?php echo jeo_get_share_url(); ?>">param</a></span>
