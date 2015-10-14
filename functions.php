@@ -338,9 +338,11 @@ add_filter('jeo_featured_map_type', 'ekuatorial_embed_type');
 function ekuatorial_share_meta() {
 
 	if(is_singular('post')) {
-		$image = jeo_get_mapbox_image(false, 435, 375, jeo_get_marker_latitude(), jeo_get_marker_longitude(), 7);
+		if(function_exists('jeo_get_mapbox_image'))
+			$image = jeo_get_mapbox_image(false, 435, 375, jeo_get_marker_latitude(), jeo_get_marker_longitude(), 7);
 	} elseif(is_singular('map')) {
-		$image = jeo_get_mapbox_image(false, 435, 375);
+		if(function_exists('jeo_get_mapbox_image'))
+			$image = jeo_get_mapbox_image(false, 435, 375);
 	} elseif(isset($_GET['_escaped_fragment_'])) {
 
 		$fragment = $_GET['_escaped_fragment_'];
