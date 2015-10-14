@@ -315,7 +315,7 @@ function ekuatorial_search_placeholder() {
 	return $placeholder;
 }
 
-// embed custom stuff 
+// embed custom stuff
 
 function ekuatorial_before_embed() {
 	remove_action('wp_footer', 'ekuatorial_submit');
@@ -381,7 +381,8 @@ function ekuatorial_share_meta() {
 			$zoom = $query['zoom'];
 		}
 
-		$image = jeo_get_mapbox_image($map_id, 435, 375, $lat, $lng, $zoom);
+		if(function_exists('jeo_get_mapbox_image'))
+			$image = jeo_get_mapbox_image($map_id, 435, 375, $lat, $lng, $zoom);
 
 	}
 
