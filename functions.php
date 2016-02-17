@@ -94,8 +94,8 @@ function ekuatorial_scripts() {
 	wp_register_script('twttr', 'http://platform.twitter.com/widgets.js');
 
 	$lang = '';
-	if(function_exists('qtrans_getLanguage')) {
-		$lang = qtrans_getLanguage();
+	if(function_exists('qtranxf_getLanguage')) {
+		$lang = qtranxf_getLanguage();
 	}
 
 	// custom marker system
@@ -178,17 +178,6 @@ function ekuatorial_enqueue_marker_script() {
 }
 add_action('wp_footer', 'ekuatorial_enqueue_marker_script');
 
-function ekuatorial_map_data($data, $map) {
-	$map_data = get_post_meta($map->ID, 'map_data', true);
-	$layers = $map_data['layers'];
-	foreach($layers as &$layer) {
-		$layer['title'] = __($layer['title']);
-	}
-	$data['layers'] = $layers;
-	return $data;
-}
-add_filter('jeo_map_data', 'ekuatorial_map_data', 10, 2);
-
 // slideshow
 include(STYLESHEETPATH . '/inc/slideshow.php');
 
@@ -209,17 +198,17 @@ function ekuatorial_story_fragment_title($title, $sep) {
 	return $title;
 }
 
-// add qtrans filter to get_permalink
-if(function_exists('qtrans_convertURL'))
-	add_filter('post_type_link', 'qtrans_convertURL');
+// add qtranxf filter to get_permalink
+if(function_exists('qtranxf_convertURL'))
+	add_filter('post_type_link', 'qtranxf_convertURL');
 
 // custom marker data
 function ekuatorial_marker_data($data) {
 	global $post;
 
 	$permalink = $data['url'];
-	if(function_exists('qtrans_getLanguage'))
-		$permalink = qtrans_convertURL($data['url'], qtrans_getLanguage());
+	if(function_exists('qtranxf_getLanguage'))
+		$permalink = qtranxf_convertURL($data['url'], qtranxf_getLanguage());
 
 	$data['permalink'] = $permalink;
 	$data['url'] = get_post_meta($post->ID, 'url', true) ? get_post_meta($post->ID, 'url', true) : $data['permalink'];
@@ -276,8 +265,8 @@ function ekuatorial_all_markers_if_none($posts, $query) {
 //add_filter('jeo_the_markers', 'ekuatorial_all_markers_if_none', 10, 2);
 
 // multilanguage publishers
-add_action('publisher_add_form', 'qtrans_modifyTermFormFor');
-add_action('publisher_edit_form', 'qtrans_modifyTermFormFor');
+add_action('publisher_add_form', 'qtranxf_modifyTermFormFor');
+add_action('publisher_edit_form', 'qtranxf_modifyTermFormFor');
 
 // limit markers per page
 function ekuatorial_markers_limit() {
@@ -412,15 +401,15 @@ add_action('wp_head', 'ekuatorial_share_meta');
  */
 
 function ekuatorial_geojson_key($key) {
-	if(function_exists('qtrans_getLanguage'))
-		$key = '_ia_geojson_' . qtrans_getLanguage();
+	if(function_exists('qtranxf_getLanguage'))
+		$key = '_ia_geojson_' . qtranxf_getLanguage();
 
 	return $key;
 }
 add_filter('jeo_markers_geojson_key', 'ekuatorial_geojson_key');
 
 function ekuatorial_geojson_keys($keys) {
-	if(function_exists('qtrans_getLanguage')) {
+	if(function_exists('qtranxf_getLanguage')) {
 		global $q_config;
 		$keys = array();
 		foreach($q_config['enabled_languages'] as $lang) {
@@ -442,8 +431,8 @@ function ekuatorial_flush_rewrite() {
 add_action('jeo_init', 'ekuatorial_flush_rewrite');
 
 function ekuatorial_convert_url($url) {
-	if(function_exists('qtrans_convertURL'))
-		$url = qtrans_convertURL($url);
+	if(function_exists('qtranxf_convertURL'))
+		$url = qtranxf_convertURL($url);
 
 	$pos = strpos($url, '?');
 	if($pos === false)
@@ -497,8 +486,8 @@ function ekuatorial_date_query_clauses($clauses, $query) {
 }
 
 function ekuatorial_home_url($path = '') {
-	if(function_exists('qtrans_convertURL'))
-		return qtrans_convertURL(home_url($path));
+	if(function_exists('qtranxf_convertURL'))
+		return qtranxf_convertURL(home_url($path));
 	else
 		return home_url($path);
 }
