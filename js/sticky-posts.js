@@ -13,7 +13,7 @@
 			$('.sticky-posts').addClass('post-active');
 			$('.sticky-posts .sticky-item').removeClass('active');
 			item.addClass('active');
-			
+
 			adjustImageSize();
 
 		}
@@ -21,7 +21,7 @@
 		function closeSticky() {
 			$('.sticky-posts').removeClass('post-active');
 			$('.sticky-posts .sticky-item').removeClass('active');
-			
+
 			adjustImageSize();
 		}
 
@@ -41,41 +41,29 @@
 			openSticky(toGo.data('postid'));
 
 		}
-		
+
 		function adjustImageSize() {
 
 			var opened = $('.sticky-posts .sticky-item.active img');
 			var closed = $('.sticky-posts .sticky-item img');
-			
-			if(opened.length) {
-				//opened.attr('style', '');
-			}
-			
-			console.log(closed.length);
-			
+
 			closed.each(function() {
-				
+
 				var img = $(this);
-				
+
 				if(!img.parents('.sticky-item').is('.active')) {
-					
-					var imgT = setInterval(function() {
-						img.css({
-							width: img.parents('.sticky-item').innerHeight(),
-							height: img.parents('.sticky-item').innerHeight()
-						});
-					}, 10);
-					
-					setTimeout(function() {
-						clearInterval(imgT);
-					}, 250);
-					
+
+					img.css({
+						width: img.parents('.sticky-item').innerHeight(),
+						height: img.parents('.sticky-item').innerHeight()
+					});
+
 				} else {
 					img.attr('style', '');
 				}
-				
+
 			});
-			
+
 		}
 
 		$('.sticky-posts .sticky-item').click(function() {
