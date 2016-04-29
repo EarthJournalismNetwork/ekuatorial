@@ -91,7 +91,7 @@ function ekuatorial_scripts() {
 	wp_register_script('html5', get_stylesheet_directory_uri() . '/js/html5shiv.js', array(), '3.6.2');
 	wp_register_script('submit-story', get_stylesheet_directory_uri() . '/js/submit-story.js', array('jquery'), '0.1.1');
 
-	wp_register_script('twttr', 'http://platform.twitter.com/widgets.js');
+	wp_register_script('twttr', '//platform.twitter.com/widgets.js');
 
 	$lang = '';
 	if(function_exists('qtranxf_getLanguage')) {
