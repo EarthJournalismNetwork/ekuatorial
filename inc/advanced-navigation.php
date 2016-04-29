@@ -90,7 +90,7 @@ class Ekuatorial_AdvancedNav {
 		wp_enqueue_script('moment-js');
 		wp_enqueue_style('chosen', get_stylesheet_directory_uri() . '/css/chosen.css');
 		wp_enqueue_script('jquery-ui-datepicker');
-		wp_enqueue_style('jquery-ui-smoothness', 'http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css');
+		wp_enqueue_style('jquery-ui-smoothness', '//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css');
 		?>
 		<form class="advanced-nav-filters row">
 			<div class="three columns alpha">
@@ -166,7 +166,7 @@ class Ekuatorial_AdvancedNav {
 						numberOfMonths: 1,
 						maxDate: max,
 						minDate: min
-					});	
+					});
 
 				});
 

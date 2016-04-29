@@ -151,7 +151,7 @@ function ekuatorial_scripts() {
 	// styles
 	wp_enqueue_style('site');
 	//wp_enqueue_style('reset');
-	wp_enqueue_style('webfont-lato', 'http://fonts.googleapis.com/css?family=Lato:900');
+	wp_enqueue_style('webfont-lato', '//fonts.googleapis.com/css?family=Lato:900');
 	wp_enqueue_style('main');
 	wp_enqueue_style('shadowbox');
 
