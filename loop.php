@@ -15,7 +15,7 @@
 					<p class="meta clearfix">
 						<span class="date">
 							<span class="lsf">&#xE15e;</span>
-							<span class="date-content"><?php echo get_the_date(_x('m/d/Y', 'reduced date format', 'ekuatorial')); ?></span>
+							<span class="date-content"><?php echo get_the_date('m/d/Y'); ?></span>
 						</span>
 						<?php
 						if(get_the_terms($post->ID, 'publisher')) :
