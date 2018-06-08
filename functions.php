@@ -500,3 +500,10 @@ function ekuatorial_home_query($query) {
 	}
 }
 add_action('pre_get_posts', 'ekuatorial_home_query');
+
+if(class_exists('SiteOrigin_Widget')) {
+	include_once(STYLESHEETPATH . '/inc/siteorigin-widgets/highlight-carousel/highlight-carousel.php');
+	include_once(STYLESHEETPATH . '/inc/siteorigin-widgets/square-posts/square-posts.php');
+	include_once(STYLESHEETPATH . '/inc/siteorigin-widgets/list-posts/list-posts.php');
+	include_once(STYLESHEETPATH . '/inc/siteorigin-widgets/list-images/list-images.php');
+}
