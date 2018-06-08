@@ -47,23 +47,6 @@
 					</div>
 				</div>
 
-				<script type="text/javascript">
-					var embedUrl = jQuery('.embed-button').attr('href');
-					var printUrl = jQuery('.print-button').attr('href');
-					jeo.mapReady(function(map) {
-						if(map.conf.postID) {
-							jQuery('.print-button').attr('href', printUrl + '&map_id=' + map.conf.postID + '#print');
-							jQuery('.embed-button').attr('href', embedUrl + '&map_id=' + map.conf.postID);
-						}
-					});
-					jeo.groupReady(function(group) {
-						jQuery('.print-button').attr('href', printUrl + '&map_id=' + group.currentMapID + '#print');
-						jeo.groupChanged(function(group, prevMap) {
-							jQuery('.print-button').attr('href', printUrl + '&map_id=' + group.currentMapID + '#print');
-						});
-					});
-				</script>
-
 			</div>
 		</section>
 	</article>

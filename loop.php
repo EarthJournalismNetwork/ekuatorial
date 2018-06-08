@@ -73,19 +73,5 @@
 
 			});
 		});
-
-		jeo.mapReady(function(map) {
-			$('.list-posts li').click(function() {
-				var markerID = $(this).attr('id');
-				$('html,body').animate({
-					scrollTop: $('#stage').offset().top
-				}, 400);
-				map.markers.openMarker(markerID, false);
-				return false;
-			});
-			$('.list-posts li .button').click(function() {
-				window.location = $(this).attr('href');
-			});
-		});
 	})(jQuery);
 </script>

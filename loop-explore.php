@@ -101,21 +101,6 @@ wp_enqueue_script('lockfixed', get_stylesheet_directory_uri() . '/js/jquery.lock
 
 		});
 
-		jeo.mapReady(function(map) {
-			listPosts = $('.list-posts');
-			if(listPosts.length) {
-				listPosts.find('.button').click(function() {
-					window.location = $(this).attr('href');
-				});
-				listPosts.find('li').click(function(e) {
-					e.preventDefault();
-					var markerID = $(this).attr('id');
-					map.markers.openMarker(markerID, false);
-					return false;
-				});
-			}
-		});
-
 		function mapSize() {
 
 			var map = $('.explore-map');
