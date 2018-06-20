@@ -23,13 +23,13 @@
 <link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.ico" type="image/x-icon" />
 <?php wp_head(); ?>
 </head>
-<body <?php body_class(get_bloginfo('language')); ?>>
+<body <?php body_class(get_bloginfo('language')); $currentLang = get_locale();?>>
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];
 	  if (d.getElementById(id)) return;
 	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1&appId=459964104075857";
+	  js.src = "//connect.facebook.net/<?php echo $currentLang; ?>/all.js#xfbml=1&appId=459964104075857";
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
 	<header id="masthead">
