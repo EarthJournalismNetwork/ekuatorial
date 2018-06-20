@@ -38,6 +38,10 @@ add_filter('acf/add-ons/repeater/get_dir', 'ekuatorial_acf_repeater_dir');
 define('ACF_LITE', true);
 //require_once(STYLESHEETPATH . '/inc/acf/acf.php');
 
+function newsroom_main_scripts() {
+	wp_register_script('hammer.js', get_stylesheet_directory_uri() . '/lib/hammerjs/hammer.min.js');
+}
+add_action('wp_enqueue_scripts', 'newsroom_main_scripts');
 /*
  * Datasets
  */
@@ -503,7 +507,21 @@ add_action('pre_get_posts', 'ekuatorial_home_query');
 
 if(class_exists('SiteOrigin_Widget')) {
 	include_once(STYLESHEETPATH . '/inc/siteorigin-widgets/highlight-carousel/highlight-carousel.php');
-	include_once(STYLESHEETPATH . '/inc/siteorigin-widgets/square-posts/square-posts.php');
-	include_once(STYLESHEETPATH . '/inc/siteorigin-widgets/list-posts/list-posts.php');
-	include_once(STYLESHEETPATH . '/inc/siteorigin-widgets/list-images/list-images.php');
+}
+
+function newsroom_pb_parse_query($pb_query) {
+	$query = wp_parse_args($pb_query);
+	if($query['tax_query']) {
+		$tax_args = explode(',', $query['tax_query']);
+		$query['tax_query'] = array();
+		foreach($tax_args as $tax_arg) {
+			$tax_arg = explode(':', $tax_arg);
+			$query['tax_query'][] = array(
+				'taxonomy' => $tax_arg[0],
+				'field' => 'slug',
+				'terms' => $tax_arg[1]
+			);
+		}
+	}
+	return $query;
 }
