@@ -10,10 +10,16 @@
 						<?php echo get_the_term_list($post->ID, 'publisher', '', ', ', ''); ?>
 						<h1 class="title"><?php the_title(); ?></h1>
 					</header>
-					<?php if(jeo_has_marker_location()) : ?>
-						<div id="main-map" class="stage-map">
-							<?php jeo_map(); ?>
+					<?php 
+					$thumbnail = ekuatorial_get_thumbnail();
+					if($thumbnail) : ?>
+						<div class="center" style="width: 1200px;">
+							<img src="<?php echo $thumbnail; ?>" />
 						</div>
+						<?php 
+							$description = get_post_meta($post->ID, 'newsroom_img_desc', true);
+							echo '<div class="image-caption">' . apply_filters('the_content', $description) . '</div>';
+						?>
 					<?php endif; ?>
 				</div>
 			</div>
@@ -29,20 +35,29 @@
 						</div>
 					</div>
 					<div class="five columns">
-						<?php $thumbnail = ekuatorial_get_thumbnail(); ?>
+
+						
 						<div class="thumbnail">
-							<?php if($thumbnail) : ?>
-								<img src="<?php echo $thumbnail; ?>" />
+							<?php if(jeo_has_marker_location()) : ?>
+								<div id="main-map" class="stage-map">
+									<?php jeo_map(); ?>
+								</div>
 							<?php endif; ?>
+							
 							<a class="button" href="<?php echo get_post_meta($post->ID, 'url', true); ?>" target="_blank"><?php _e('Go to the original article', 'ekuatorial'); ?></a>
 							<p class="buttons">
 								<a class="button embed-button" href="<?php echo jeo_get_share_url(array('p' => $post->ID)); ?>" target="_blank"><?php _e('Embed this story', 'ekuatorial'); ?></a>
 								<a class="button print-button" href="<?php echo jeo_get_embed_url(array('p' => $post->ID)); ?>" target="_blank"><?php _e('Print', 'ekuatorial'); ?></a>
 							</p>
-							<div class="fb-like" data-href="<?php the_permalink(); ?>" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana" data-action="recommend"></div>
+							<div class="fb-share-button" 
+							    data-href="<?php the_permalink(); ?>" 
+							    data-layout="button_count" style="padding-bottom: 5px;">
+							  </div>
 							<div class="twitter-button">
 								<a href="https://twitter.com/share" class="twitter-share-button" data-via="ekuatorial" <?php if(function_exists('qtranxf_getLanguage')) : ?>data-lang="<?php echo qtranxf_getLanguage(); ?>"<?php endif; ?>>Tweet</a>
 							</div>
+							<script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+							<script type="IN/Share" data-url="<?php the_permalink(); ?>"></script>
 						</div>
 					</div>
 				</div>
