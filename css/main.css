@@ -2340,20 +2340,24 @@ footer#colophon ul li a.icon.oeco {
   width: 110px
 }
 
-footer#colophon ul li a.icon.internews {
-  background-position: -367px -55px;
-  width: 133px;
-  margin-right: 65px
-}
-
 footer#colophon ul li a.icon.packard {
   background: url(../img/packard-logo.jpg);
   width: 126px
 }
 
 footer#colophon ul li a.icon.siej {
-  background: url(../img/siej-logo.png);
-  width: 87px
+  background: url(../img/SIEJ-250px.png);
+  width: 250px
+}
+
+footer#colophon ul li a.icon.internews {
+  background: url(../img/Internews-250px.png);
+  width: 250;
+}
+
+footer#colophon ul li a.icon.ejn {
+  background: url(../img/EJN-250px.png);
+  width: 250px
 }
 
 footer#colophon ul li a.icon.ecolab {
