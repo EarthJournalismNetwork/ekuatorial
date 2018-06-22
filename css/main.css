@@ -2318,7 +2318,7 @@ aside#main-widgets ul.widgets>li #ekuatorial-calendar table td#next {
 footer#colophon {
   margin-top: 20px;
   padding: 50px 0 0;
-  height: 120px;
+  height: 200;
   background: #fff;
   color: #96979c
 }
@@ -2326,7 +2326,11 @@ footer#colophon {
 footer#colophon ul {
   position: relative;
   margin: 0 auto;
-  width: 566px
+  width: 45%
+}
+
+.nav.clearfix li {
+  padding: 15px;
 }
 
 footer#colophon ul li a.icon {
@@ -2347,26 +2351,26 @@ footer#colophon ul li a.icon.packard {
 
 footer#colophon ul li a.icon.siej {
   background: url(../img/SIEJ-250px.png);
-  width: 200px;
-  height: 106px;
+  width: 150px;
+  height: 90px;
   background-repeat: no-repeat;
-  background-size: 200px 106px;
+  background-size: 150px 90px;
 }
 
 footer#colophon ul li a.icon.internews {
   background: url(../img/Internews-250px.png);
-  width: 200px;
-  height: 106px;
+  width: 150px;
+  height: 50px;
   background-repeat: no-repeat;
-  background-size: 200px 106px;
+  background-size: 150px 50px;
 }
 
 footer#colophon ul li a.icon.ejn {
   background: url(../img/EJN-250px.png);
-  width: 200px;
-  height: 106px;
+  width: 150px;
+  height: 90px;
   background-repeat: no-repeat;
-  background-size: 200px 106px;
+  background-size: 150px 90px;
 }
 
 footer#colophon ul li a.icon.ecolab {
