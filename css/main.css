@@ -2347,17 +2347,26 @@ footer#colophon ul li a.icon.packard {
 
 footer#colophon ul li a.icon.siej {
   background: url(../img/SIEJ-250px.png);
-  width: 250px
+  width: 200px;
+  height: 106px;
+  background-repeat: no-repeat;
+  background-size: 200px 106px;
 }
 
 footer#colophon ul li a.icon.internews {
   background: url(../img/Internews-250px.png);
-  width: 250;
+  width: 200px;
+  height: 106px;
+  background-repeat: no-repeat;
+  background-size: 200px 106px;
 }
 
 footer#colophon ul li a.icon.ejn {
   background: url(../img/EJN-250px.png);
-  width: 250px
+  width: 200px;
+  height: 106px;
+  background-repeat: no-repeat;
+  background-size: 200px 106px;
 }
 
 footer#colophon ul li a.icon.ecolab {
