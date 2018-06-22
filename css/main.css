@@ -2326,7 +2326,7 @@ footer#colophon {
 footer#colophon ul {
   position: relative;
   margin: 0 auto;
-  width: 45%
+  width: 35%
 }
 
 .nav.clearfix li {
@@ -2363,6 +2363,7 @@ footer#colophon ul li a.icon.internews {
   height: 50px;
   background-repeat: no-repeat;
   background-size: 150px 50px;
+  margin-top: 20px;
 }
 
 footer#colophon ul li a.icon.ejn {
