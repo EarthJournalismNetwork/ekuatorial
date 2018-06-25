@@ -18,17 +18,17 @@
 						</div>
 						<div class="container single-article img-desc">
 							<div class="six columns">
-							<?php 
-								$description = get_post_meta($post->ID, 'newsroom_img_desc', true);
-								echo '<div class="image-caption">' . apply_filters('the_content', $description) . '</div>';
-							?>
-							</div>
-							<div class="six columns">
 								<?php if(jeo_has_marker_location()) : ?>
 									<div id="main-map" class="stage-map">
 										<?php jeo_map(); ?>
 									</div>
 								<?php endif; ?>
+							</div>
+							<div class="six columns">
+							<?php 
+								$description = get_post_meta($post->ID, 'newsroom_img_desc', true);
+								echo '<div class="image-caption">' . apply_filters('the_content', $description) . '</div>';
+							?>
 							</div>
 						</div>
 					<?php endif; ?>
