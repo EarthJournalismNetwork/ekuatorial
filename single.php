@@ -14,12 +14,23 @@
 					$thumbnail = ekuatorial_get_thumbnail();
 					if($thumbnail) : ?>
 						<div class="center" style="width: 1200px;">
-							<img src="<?php echo $thumbnail; ?>" />
+							<img width="1140" src="<?php echo $thumbnail; ?>" />
 						</div>
-						<?php 
-							$description = get_post_meta($post->ID, 'newsroom_img_desc', true);
-							echo '<div class="image-caption">' . apply_filters('the_content', $description) . '</div>';
-						?>
+						<div class="container single-article">
+							<div class="six columns">
+							<?php 
+								$description = get_post_meta($post->ID, 'newsroom_img_desc', true);
+								echo '<div class="image-caption">' . apply_filters('the_content', $description) . '</div>';
+							?>
+							</div>
+							<div class="six columns">
+								<?php if(jeo_has_marker_location()) : ?>
+									<div id="main-map" class="stage-map">
+										<?php jeo_map(); ?>
+									</div>
+								<?php endif; ?>
+							</div>
+						</div>
 					<?php endif; ?>
 				</div>
 			</div>
@@ -28,40 +39,29 @@
 		<section id="content">
 			<div class="container row">
 				<div class="post-content">
-					<div class="seven columns">
-						<div class="post-description">
-							<p class="date"><strong><?php echo get_the_date(); ?></strong></p>
-							<?php the_content(); ?>
-						</div>
-					</div>
-					<div class="five columns">
-
-						
-						<div class="thumbnail">
-							<?php if(jeo_has_marker_location()) : ?>
-								<div id="main-map" class="stage-map">
-									<?php jeo_map(); ?>
-								</div>
-							<?php endif; ?>
-							
-							<a class="button" href="<?php echo get_post_meta($post->ID, 'url', true); ?>" target="_blank"><?php _e('Go to the original article', 'ekuatorial'); ?></a>
-							<p class="buttons">
-								<a class="button embed-button" href="<?php echo jeo_get_share_url(array('p' => $post->ID)); ?>" target="_blank"><?php _e('Embed this story', 'ekuatorial'); ?></a>
-								<a class="button print-button" href="<?php echo jeo_get_embed_url(array('p' => $post->ID)); ?>" target="_blank"><?php _e('Print', 'ekuatorial'); ?></a>
-							</p>
-							<div class="fb-share-button" 
-							    data-href="<?php the_permalink(); ?>" 
-							    data-layout="button_count" style="padding-bottom: 5px;">
-							  </div>
-							<div class="twitter-button">
-								<a href="https://twitter.com/share" class="twitter-share-button" data-via="ekuatorial" <?php if(function_exists('qtranxf_getLanguage')) : ?>data-lang="<?php echo qtranxf_getLanguage(); ?>"<?php endif; ?>>Tweet</a>
-							</div>
-							<script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
-							<script type="IN/Share" data-url="<?php the_permalink(); ?>"></script>
-						</div>
+					<div class="post-description">
+						<p class="date"><strong><?php echo get_the_date(); ?></strong></p>
+						<?php the_content(); ?>
 					</div>
 				</div>
-
+			</div>
+			<div class="container row">
+				<div class="thumbnail">
+					<a class="button" href="<?php echo get_post_meta($post->ID, 'url', true); ?>" target="_blank"><?php _e('Go to the original article', 'ekuatorial'); ?></a>
+					<p class="buttons">
+						<a class="button embed-button" href="<?php echo jeo_get_share_url(array('p' => $post->ID)); ?>" target="_blank"><?php _e('Embed this story', 'ekuatorial'); ?></a>
+						<a class="button print-button" href="<?php echo jeo_get_embed_url(array('p' => $post->ID)); ?>" target="_blank"><?php _e('Print', 'ekuatorial'); ?></a>
+					</p>
+					<div class="fb-share-button" 
+					    data-href="<?php the_permalink(); ?>" 
+					    data-layout="button_count" style="padding-bottom: 5px;">
+					  </div>
+					<div class="twitter-button">
+						<a href="https://twitter.com/share" class="twitter-share-button" data-via="ekuatorial" <?php if(function_exists('qtranxf_getLanguage')) : ?>data-lang="<?php echo qtranxf_getLanguage(); ?>"<?php endif; ?>>Tweet</a>
+					</div>
+					<script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+					<script type="IN/Share" data-url="<?php the_permalink(); ?>"></script>
+				</div>
 			</div>
 		</section>
 	</article>
