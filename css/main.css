@@ -695,7 +695,7 @@ header#masthead #searchform input[type="submit"] {
 
 #stage .stage-map {
   width: 100%;
-  height: 200;
+  height: 200px;
   -webkit-box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
   -khtml-box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
