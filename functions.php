@@ -16,28 +16,6 @@ include(STYLESHEETPATH . '/inc/taxonomies.php');
 // taxonomy meta
 include(STYLESHEETPATH . '/inc/taxonomies-meta.php');
 
-/*
- * Advanced Custom Fields
- */
-
-function ekuatorial_acf_dir() {
-	return get_stylesheet_directory_uri() . '/inc/acf/';
-}
-add_filter('acf/helpers/get_dir', 'ekuatorial_acf_dir');
-
-function ekuatorial_acf_date_time_picker_dir() {
-	return ekuatorial_acf_dir() . '/add-ons/acf-field-date-time-picker/';
-}
-add_filter('acf/add-ons/date-time-picker/get_dir', 'ekuatorial_acf_date_time_picker_dir');
-
-function ekuatorial_acf_repeater_dir() {
-	return ekuatorial_acf_dir() . '/add-ons/acf-repeater/';
-}
-add_filter('acf/add-ons/repeater/get_dir', 'ekuatorial_acf_repeater_dir');
-
-define('ACF_LITE', true);
-//require_once(STYLESHEETPATH . '/inc/acf/acf.php');
-
 function newsroom_main_scripts() {
 	wp_register_script('hammer.js', get_stylesheet_directory_uri() . '/lib/hammerjs/hammer.min.js');
 }
@@ -525,3 +503,20 @@ function newsroom_pb_parse_query($pb_query) {
 	}
 	return $query;
 }
+
+function ek_publishing_date( $the_date, $d, $post ) {
+	$value = get_field( "publishing_date" );
+	if ( $value == false ) {
+		$value = $the_date;
+	} else {
+		if ( $d == '' ) {
+			$format = 'l F jS, Y';
+		} else {
+			$format = $d;
+		}
+		$date = DateTime::createFromFormat( 'd-m-Y', $value );
+		$value = $date->format($format);
+	}
+	return $value;
+}
+add_action( 'get_the_date', 'ek_publishing_date', 99, 3 );
