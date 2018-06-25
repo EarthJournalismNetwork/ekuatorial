@@ -46,12 +46,14 @@
 				</div>
 			</div>
 			<div class="container row">
-				<div class="thumbnail">
+				<div class="thumbnail share">
 					<a class="button" href="<?php echo get_post_meta($post->ID, 'url', true); ?>" target="_blank"><?php _e('Go to the original article', 'ekuatorial'); ?></a>
 					<p class="buttons">
 						<a class="button embed-button" href="<?php echo jeo_get_share_url(array('p' => $post->ID)); ?>" target="_blank"><?php _e('Embed this story', 'ekuatorial'); ?></a>
 						<a class="button print-button" href="<?php echo jeo_get_embed_url(array('p' => $post->ID)); ?>" target="_blank"><?php _e('Print', 'ekuatorial'); ?></a>
 					</p>
+				</div>
+				<div class="thumbnail social">
 					<div class="fb-share-button" 
 					    data-href="<?php the_permalink(); ?>" 
 					    data-layout="button_count" style="padding-bottom: 5px;">
