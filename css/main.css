@@ -2782,3 +2782,14 @@ footer#colophon ul li.label.supported {
 .image.center img {
   padding: 20px 0px;
 }
+.thumbnail.share {
+  display: flex;
+}
+.thumbnail.share p a {
+    padding: 10px;
+    margin: 0px 10px 0px 0px;
+}
+
+.thumbnail.social * {
+    padding-right: 10px;
+}
