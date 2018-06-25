@@ -13,10 +13,10 @@
 					<?php 
 					$thumbnail = ekuatorial_get_thumbnail();
 					if($thumbnail) : ?>
-						<div class="center" style="width: 1200px;">
-							<img width="1140" src="<?php echo $thumbnail; ?>" />
+						<div class="center image" style="width: 1200px;">
+							<img width="1180" src="<?php echo $thumbnail; ?>" />
 						</div>
-						<div class="container single-article">
+						<div class="container single-article img-desc">
 							<div class="six columns">
 							<?php 
 								$description = get_post_meta($post->ID, 'newsroom_img_desc', true);
