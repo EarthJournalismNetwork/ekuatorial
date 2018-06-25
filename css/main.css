@@ -2782,7 +2782,7 @@ footer#colophon ul li.label.supported {
 .image.center img {
   padding: 20px 0px;
 }
-.thumbnail.share {
+.thumbnail.share, .thumbnail.social {
   display: flex;
 }
 .thumbnail.share p a {
