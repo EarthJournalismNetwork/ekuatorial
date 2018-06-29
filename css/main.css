@@ -398,8 +398,12 @@ header#masthead #searchform input[type="submit"] {
 #mastnav nav#social {
   float: right;
   border-right: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 0px 15px 0 0;
+  padding: 10px 15px 0 0;
   margin-right: 5px
+}
+
+#mastnav nav#social a {
+  padding: 10px 15px
 }
 
 #mastnav nav#social .twitter a {
