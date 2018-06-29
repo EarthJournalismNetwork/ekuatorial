@@ -2035,6 +2035,7 @@ body .wp-paginate a {
   margin-bottom: 10px;
   padding-bottom: 10px;
   border-bottom: 1px dotted rgba(0, 0, 0, 0.2)
+  min-height: 80px;
 }
 
 .list-posts li article p.meta {
@@ -2324,9 +2325,9 @@ footer#colophon {
 }
 
 footer#colophon ul {
-  position: relative;
-  margin: 0 auto;
-  width: 35%
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav.clearfix li {
