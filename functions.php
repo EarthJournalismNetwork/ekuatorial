@@ -505,18 +505,16 @@ function newsroom_pb_parse_query($pb_query) {
 }
 
 function ek_publishing_date( $the_date, $d, $post ) {
+	$currentLang = get_locale();
+	setlocale(LC_TIME, $currentLang);
 	$value = get_field( "publishing_date" );
 	if ( $value == false ) {
-		$value = $the_date;
+		$ts = mysql2date('U', $post->post_date);
 	} else {
-		if ( $d == '' ) {
-			$format = 'l F jS, Y';
-		} else {
-			$format = $d;
-		}
 		$date = DateTime::createFromFormat( 'd-m-Y', $value );
-		$value = $date->format($format);
+		$ts = $date->format('U');
 	}
+	$value = strftime("%B %d, %Y", $ts);
 	return $value;
 }
 add_action( 'get_the_date', 'ek_publishing_date', 99, 3 );
