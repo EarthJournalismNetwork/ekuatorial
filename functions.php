@@ -511,7 +511,7 @@ function ek_publishing_date( $the_date, $d, $post ) {
 		$date = DateTime::createFromFormat( 'd-m-Y', $value );
 		$ts = $date->format('U');
 	}
-	$value = strftime("%B %d, %Y", $ts);
+	$value = date_i18n("F d, Y", $ts);
 	return $value;
 }
 add_action( 'get_the_date', 'ek_publishing_date', 99, 3 );
