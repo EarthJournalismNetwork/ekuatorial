@@ -2365,6 +2365,14 @@ footer#colophon ul li a.icon.siej {
   background-size: 150px 90px;
 }
 
+footer#colophon ul li a.icon.sida {
+  background: url(../img/SIDA-Logo.png);
+  width: 150px;
+  height: 90px;
+  background-repeat: no-repeat;
+  background-size: 150px 90px;
+}
+
 footer#colophon ul li a.icon.internews {
   background: url(../img/Internews-250px.png);
   width: 150px;
