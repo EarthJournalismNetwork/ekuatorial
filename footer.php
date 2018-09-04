@@ -6,7 +6,6 @@
 		<li><a class="icon siej" href="http://www.siej.or.id" target="_blank">Society of Indonesian Environmental Journalists</a></li>
 		<li><a class="icon ejn" href="https://earthjournalism.net" target="_blank">Earth Journalism Network</a></li>
 		<li><a class="icon internews" href="http://www.internews.org" target="_blank">Internews</a></li>
-		<li><a class="icon sida" href="https://www.sida.se/English" target="_blank">Sweden Sveriage</a></li>
 	</ul>
 </footer>
 <?php wp_footer(); ?>
