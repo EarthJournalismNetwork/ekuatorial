@@ -13,6 +13,7 @@
 			'post_type' => 'post',
 			'orderby' => 'date',
 			'order'   => 'DESC',
+			'posts_per_page' => 12
 		) );
 		?>
 	</div>
