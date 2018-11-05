@@ -13,7 +13,8 @@
 			'post_type' => 'post',
 			'orderby' => 'date',
 			'order'   => 'DESC',
-			'posts_per_page' => 12
+			'posts_per_page' => 12,
+			'paged' => $wp_query->query['paged'],
 		) );
 		?>
 	</div>
