@@ -22,7 +22,12 @@ wp_enqueue_script('lockfixed', get_stylesheet_directory_uri() . '/js/jquery.lock
 									echo '<img src="' . get_post_meta($post->ID, 'picture', true) . '" />';
 								?>
 							</a>
-							<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+							<h2>
+								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+								<?php if (get_post_meta($post->ID, 'is_label', true) == "1") ?>
+								<a href="#"><span class="label">Belt, Road & the Environment</span></a>
+								<?php endif ?>
+							</h2>
 							<p class="meta clearfix">
 								<span class="date">
 									<span class="lsf">&#xE15e;</span>
