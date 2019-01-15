@@ -14,7 +14,7 @@
 					$thumbnail = ekuatorial_get_thumbnail();
 					if($thumbnail) : ?>
 						<div class="center image" style="width: 1200px;">
-							<img width="1180" src="<?php echo $thumbnail; ?>" />
+							<?php the_post_thumbnail('highlight-carousel'); ?>
 						</div>
 						<div class="container single-article img-desc">
 							<div class="six columns">
