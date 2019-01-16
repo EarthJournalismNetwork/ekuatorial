@@ -24,9 +24,9 @@ wp_enqueue_script('lockfixed', get_stylesheet_directory_uri() . '/js/jquery.lock
 							</a>
 							<h2>
 								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-								<?php if (get_post_meta($post->ID, 'is_label', true) == "1") ?>
+								<?php if (get_post_meta($post->ID, 'is_label', true) == "1"): ?>
 								<a href="https://earthjournalism.net/"><span class="label">Belt, Road & the Environment</span></a>
-								<?php endif ?>
+								<?php endif; ?>
 							</h2>
 							<p class="meta clearfix">
 								<span class="date">
