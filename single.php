@@ -8,7 +8,11 @@
 				<div class="twelve columns">
 					<header class="post-header">
 						<?php echo get_the_term_list($post->ID, 'publisher', '', ', ', ''); ?>
-						<h1 class="title"><?php the_title(); ?></h1>
+						<h1 class="title"><?php the_title(); ?>
+							<?php if (get_post_meta($post->ID, 'is_label', true) == "1"): ?>
+							<br><a href="#"><span class="label">Belt, Road & the Environment</span></a>
+							<?php endif; ?>
+						</h1>
 					</header>
 					<?php 
 					$thumbnail = ekuatorial_get_thumbnail();
