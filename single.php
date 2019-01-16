@@ -13,7 +13,7 @@
 					<?php 
 					$thumbnail = ekuatorial_get_thumbnail();
 					if($thumbnail) : ?>
-						<div class="center image" style="width: 1200px;">
+						<div class="center image">
 							<?php the_post_thumbnail('full'); ?>
 						</div>
 						<div class="container single-article img-desc">
