@@ -22,14 +22,17 @@
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.ico" type="image/x-icon" />
 <?php wp_head(); ?>
+<meta name="description" content="www.ekuatorial.com | Geojurnalism tools focused on environmental issues in Indonesia. A project by the Society of Indonesian Environmental Journalists">
+<meta name="keywords" content="forest fire indonesia, indonesia maps google, biodiversity in indonesia, environment of indonesia, pidato global warming, earthquake in indonesia, oil palm plantation, ekuatorial">
+<meta name="google-site-verification" content="Gt9ft3DRZNjR5KmXawaw8m7cdJU64_OZVhdQvhhRuac" />
 </head>
-<body <?php body_class(get_bloginfo('language')); $currentLang = get_locale();?>>
+<body <?php body_class(get_bloginfo('language')); ?>>
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];
 	  if (d.getElementById(id)) return;
 	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/<?php echo $currentLang; ?>/all.js#xfbml=1&appId=459964104075857";
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=459964104075857";
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
 	<header id="masthead">
@@ -37,10 +40,10 @@
 			<div class="twelve columns">
 				<?php
 				$lang = '';
-				if(function_exists('qtranxf_getLanguage'))
-					$lang = qtranxf_getLanguage();
+				if(function_exists('qtrans_getLanguage'))
+					$lang = qtrans_getLanguage();
 				?>
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" class="logo" />
+				<!-- <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" class="logo" /> -->
 				<h1><a href="<?php echo home_url('/' . $lang); ?>" title="<?php echo bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
 				<p class="slogan"><?php bloginfo('description'); ?></p>
 				<?php get_search_form(); ?>
@@ -58,18 +61,18 @@
 					</nav>
 				</div>
 				<div class="four columns">
-					<?php if(function_exists('qtranxf_getLanguage')) : ?>
+					<?php if(function_exists('qtrans_getLanguage')) : ?>
 						<nav id="langnav">
 							<ul>
 								<?php
 								global $q_config;
 								if(is_404()) $url = get_option('home'); else $url = '';
-								$current = qtranxf_getLanguage();
+								$current = qtrans_getLanguage();
 								foreach($q_config['enabled_languages'] as $language) {
 									$attrs = '';
 									if($language == $current)
 										$attrs = 'class="active"';
-									echo '<li><a href="' . qtranxf_convertURL($url, $language) . '" ' . $attrs . '>' . $language . '</a></li>';
+									echo '<li><a href="' . qtrans_convertURL($url, $language) . '" ' . $attrs . '>' . $language . '</a></li>';
 								}
 								?>
 							</ul>

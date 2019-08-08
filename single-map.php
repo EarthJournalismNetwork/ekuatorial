@@ -25,6 +25,7 @@
 	$paged = get_query_var('paged') ? get_query_var('paged') : 1;
 	$query = array(
 		'paged' => $paged,
+		'ignore_sticky_posts' => true,
 		's' => isset($_GET['s']) ? $_GET['s'] : null
 	);
 	query_posts($query);
@@ -59,8 +60,7 @@
 	<?php
 	endif;
 	wp_reset_query(); ?>
-
-	<?php get_template_part('section', 'submit-call'); ?>
+	
 </section>
 
 <?php get_template_part('section', 'main-widget'); ?>

@@ -16,10 +16,28 @@ include(STYLESHEETPATH . '/inc/taxonomies.php');
 // taxonomy meta
 include(STYLESHEETPATH . '/inc/taxonomies-meta.php');
 
-function newsroom_main_scripts() {
-	wp_register_script('hammer.js', get_stylesheet_directory_uri() . '/lib/hammerjs/hammer.min.js');
+/*
+ * Advanced Custom Fields
+ */
+
+function ekuatorial_acf_dir() {
+	return get_stylesheet_directory_uri() . '/inc/acf/';
 }
-add_action('wp_enqueue_scripts', 'newsroom_main_scripts');
+add_filter('acf/helpers/get_dir', 'ekuatorial_acf_dir');
+
+function ekuatorial_acf_date_time_picker_dir() {
+	return ekuatorial_acf_dir() . '/add-ons/acf-field-date-time-picker/';
+}
+add_filter('acf/add-ons/date-time-picker/get_dir', 'ekuatorial_acf_date_time_picker_dir');
+
+function ekuatorial_acf_repeater_dir() {
+	return ekuatorial_acf_dir() . '/add-ons/acf-repeater/';
+}
+add_filter('acf/add-ons/repeater/get_dir', 'ekuatorial_acf_repeater_dir');
+
+define('ACF_LITE', true);
+require_once(STYLESHEETPATH . '/inc/acf/acf.php');
+
 /*
  * Datasets
  */
@@ -73,17 +91,17 @@ function ekuatorial_scripts() {
 	wp_register_script('html5', get_stylesheet_directory_uri() . '/js/html5shiv.js', array(), '3.6.2');
 	wp_register_script('submit-story', get_stylesheet_directory_uri() . '/js/submit-story.js', array('jquery'), '0.1.1');
 
-	wp_register_script('twttr', '//platform.twitter.com/widgets.js');
+	wp_register_script('twttr', 'http://platform.twitter.com/widgets.js');
 
 	$lang = '';
-	if(function_exists('qtranxf_getLanguage')) {
-		$lang = qtranxf_getLanguage();
+	if(function_exists('qtrans_getLanguage')) {
+		$lang = qtrans_getLanguage();
 	}
 
 	// custom marker system
 	global $jeo_markers;
 	wp_deregister_script('jeo.markers');
-	wp_register_script('jeo.markers', get_stylesheet_directory_uri() . '/js/ekuatorial.markers.js', array('jeo', 'underscore', 'shadowbox', 'twttr'), '0.3.16', true);
+	wp_register_script('jeo.markers', get_stylesheet_directory_uri() . '/js/ekuatorial.markers.js', array('jeo', 'underscore', 'shadowbox', 'twttr'), '0.3.17', true);
 	wp_localize_script('jeo.markers', 'ekuatorial_markers', array(
 		'ajaxurl' => admin_url('admin-ajax.php'),
 		'query' => $jeo_markers->query(),
@@ -133,7 +151,7 @@ function ekuatorial_scripts() {
 	// styles
 	wp_enqueue_style('site');
 	//wp_enqueue_style('reset');
-	wp_enqueue_style('webfont-lato', '//fonts.googleapis.com/css?family=Lato:900');
+	wp_enqueue_style('webfont-lato', 'http://fonts.googleapis.com/css?family=Lato:900');
 	wp_enqueue_style('main');
 	wp_enqueue_style('shadowbox');
 
@@ -160,6 +178,20 @@ function ekuatorial_enqueue_marker_script() {
 }
 add_action('wp_footer', 'ekuatorial_enqueue_marker_script');
 
+function ekuatorial_map_data($data, $map) {
+	$map_data = get_post_meta($map->ID, 'map_data', true);
+	$layers = $map_data['layers'];
+	foreach($layers as &$layer) {
+		$layer['title'] = __($layer['title']);
+	}
+	$data['layers'] = $layers;
+	return $data;
+}
+add_filter('jeo_map_data', 'ekuatorial_map_data', 10, 2);
+
+// slideshow
+include(STYLESHEETPATH . '/inc/slideshow.php');
+
 // ajax calendar
 include(STYLESHEETPATH . '/inc/ajax-calendar.php');
 
@@ -177,17 +209,17 @@ function ekuatorial_story_fragment_title($title, $sep) {
 	return $title;
 }
 
-// add qtranxf filter to get_permalink
-if(function_exists('qtranxf_convertURL'))
-	add_filter('post_type_link', 'qtranxf_convertURL');
+// add qtrans filter to get_permalink
+if(function_exists('qtrans_convertURL'))
+	add_filter('post_type_link', 'qtrans_convertURL');
 
 // custom marker data
 function ekuatorial_marker_data($data) {
 	global $post;
 
 	$permalink = $data['url'];
-	if(function_exists('qtranxf_getLanguage'))
-		$permalink = qtranxf_convertURL($data['url'], qtranxf_getLanguage());
+	if(function_exists('qtrans_getLanguage'))
+		$permalink = qtrans_convertURL($data['url'], qtrans_getLanguage());
 
 	$data['permalink'] = $permalink;
 	$data['url'] = get_post_meta($post->ID, 'url', true) ? get_post_meta($post->ID, 'url', true) : $data['permalink'];
@@ -244,8 +276,8 @@ function ekuatorial_all_markers_if_none($posts, $query) {
 //add_filter('jeo_the_markers', 'ekuatorial_all_markers_if_none', 10, 2);
 
 // multilanguage publishers
-add_action('publisher_add_form', 'qtranxf_modifyTermFormFor');
-add_action('publisher_edit_form', 'qtranxf_modifyTermFormFor');
+add_action('publisher_add_form', 'qtrans_modifyTermFormFor');
+add_action('publisher_edit_form', 'qtrans_modifyTermFormFor');
 
 // limit markers per page
 function ekuatorial_markers_limit() {
@@ -306,11 +338,9 @@ add_filter('jeo_featured_map_type', 'ekuatorial_embed_type');
 function ekuatorial_share_meta() {
 
 	if(is_singular('post')) {
-		if(function_exists('jeo_get_mapbox_image'))
-			$image = jeo_get_mapbox_image(false, 435, 375, jeo_get_marker_latitude(), jeo_get_marker_longitude(), 7);
+		$image = jeo_get_mapbox_image(false, 435, 375, jeo_get_marker_latitude(), jeo_get_marker_longitude(), 7);
 	} elseif(is_singular('map')) {
-		if(function_exists('jeo_get_mapbox_image'))
-			$image = jeo_get_mapbox_image(false, 435, 375);
+		$image = jeo_get_mapbox_image(false, 435, 375);
 	} elseif(isset($_GET['_escaped_fragment_'])) {
 
 		$fragment = $_GET['_escaped_fragment_'];
@@ -351,8 +381,7 @@ function ekuatorial_share_meta() {
 			$zoom = $query['zoom'];
 		}
 
-		if(function_exists('jeo_get_mapbox_image'))
-			$image = jeo_get_mapbox_image($map_id, 435, 375, $lat, $lng, $zoom);
+		$image = jeo_get_mapbox_image($map_id, 435, 375, $lat, $lng, $zoom);
 
 	}
 
@@ -380,15 +409,15 @@ add_action('wp_head', 'ekuatorial_share_meta');
  */
 
 function ekuatorial_geojson_key($key) {
-	if(function_exists('qtranxf_getLanguage'))
-		$key = '_ia_geojson_' . qtranxf_getLanguage();
+	if(function_exists('qtrans_getLanguage'))
+		$key = '_ia_geojson_' . qtrans_getLanguage();
 
 	return $key;
 }
 add_filter('jeo_markers_geojson_key', 'ekuatorial_geojson_key');
 
 function ekuatorial_geojson_keys($keys) {
-	if(function_exists('qtranxf_getLanguage')) {
+	if(function_exists('qtrans_getLanguage')) {
 		global $q_config;
 		$keys = array();
 		foreach($q_config['enabled_languages'] as $lang) {
@@ -410,8 +439,8 @@ function ekuatorial_flush_rewrite() {
 add_action('jeo_init', 'ekuatorial_flush_rewrite');
 
 function ekuatorial_convert_url($url) {
-	if(function_exists('qtranxf_convertURL'))
-		$url = qtranxf_convertURL($url);
+	if(function_exists('qtrans_convertURL'))
+		$url = qtrans_convertURL($url);
 
 	$pos = strpos($url, '?');
 	if($pos === false)
@@ -465,11 +494,21 @@ function ekuatorial_date_query_clauses($clauses, $query) {
 }
 
 function ekuatorial_home_url($path = '') {
-	if(function_exists('qtranxf_convertURL'))
-		return qtranxf_convertURL(home_url($path));
+	if(function_exists('qtrans_convertURL'))
+		return qtrans_convertURL(home_url($path));
 	else
 		return home_url($path);
 }
+
+// convert local URLs in custom menu items
+function qtrans_menuitem( $menu_item ) {
+	if ($menu_item->type == 'custom' && stripos($menu_item->url, get_site_url()) !== false){
+		$menu_item->url = qtrans_convertURL($menu_item->url);
+	}
+	return $menu_item;
+}
+
+ add_filter('wp_setup_nav_menu_item', 'qtrans_menuitem', 0);
 
 // do not use map query on front page
 
@@ -479,48 +518,3 @@ function ekuatorial_home_query($query) {
 	}
 }
 add_action('pre_get_posts', 'ekuatorial_home_query');
-
-if(class_exists('SiteOrigin_Widget')) {
-	include_once(STYLESHEETPATH . '/inc/siteorigin-widgets/highlight-carousel/highlight-carousel.php');
-}
-
-function newsroom_pb_parse_query($pb_query) {
-	$query = wp_parse_args($pb_query);
-	if($query['tax_query']) {
-		$tax_args = explode(',', $query['tax_query']);
-		$query['tax_query'] = array();
-		foreach($tax_args as $tax_arg) {
-			$tax_arg = explode(':', $tax_arg);
-			if ( '-' == substr($tax_arg[1], 0, 1) ) {
-				$query['tax_query'][] = array(
-					'taxonomy' => $tax_arg[0],
-					'field' => 'slug',
-					'terms' => substr($tax_arg[1], 1),
-					'operator' => 'NOT IN',
-				);
-			} else {
-				$query['tax_query'][] = array(
-					'taxonomy' => $tax_arg[0],
-					'field' => 'slug',
-					'terms' => $tax_arg[1]
-				);	
-			}
-		}
-	}
-	return $query;
-}
-
-function ek_publishing_date( $the_date, $d, $post ) {
-	$currentLang = get_locale();
-	setlocale(LC_TIME, $currentLang);
-	$value = get_field( "publishing_date" );
-	if ( $value == false ) {
-		$ts = mysql2date('U', $post->post_date);
-	} else {
-		$date = DateTime::createFromFormat( 'd-m-Y', $value );
-		$ts = $date->format('U');
-	}
-	$value = date_i18n("F d, Y", $ts);
-	return $value;
-}
-add_action( 'get_the_date', 'ek_publishing_date', 99, 3 );
