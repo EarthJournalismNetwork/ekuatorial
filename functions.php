@@ -524,3 +524,12 @@ function ek_publishing_date( $the_date, $d, $post ) {
 	return $value;
 }
 add_action( 'get_the_date', 'ek_publishing_date', 99, 3 );
+
+function wpb_custom_new_menu() {
+  register_nav_menus(
+    array(
+      'footer-section-1' => __( 'Footer section 1' ),
+    )
+  );
+}
+add_action( 'init', 'wpb_custom_new_menu' );
