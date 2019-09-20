@@ -1,5 +1,10 @@
 	</section><!-- #main-content -->
 <footer id="colophon">
+	<nav class="footer">
+		<ul>
+			<?php wp_nav_menu( array( 'theme_location' => 'footer-section-1' ) ); ?>
+		</ul>
+	</nav>
 	<ul class="nav clearfix">
 		<!-- <li class="label by">Project by</li> -->
 		<!--<li class="label supported">Supported by</li> -->
