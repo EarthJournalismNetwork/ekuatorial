@@ -2,19 +2,19 @@
 
 <section id="stage">
 	<div class="container">
-		<?php 
+		<?php
 		$post_id = get_the_ID();
 		$content_post = get_post($post_id);
 		$content = $content_post->post_content;
 		$content = apply_filters('the_content', $content);
 		echo $content;
 		global $wp_query;
-		$wp_query = new WP_Query( array( 
+		$wp_query = new WP_Query( array(
 			'post_type' => 'post',
 			'orderby' => 'date',
 			'order'   => 'DESC',
 			'posts_per_page' => 12,
-			'paged' => $wp_query->query['paged'],
+			'paged' => isset($wp_query->query['paged']) ? $wp_query->query['paged'] : 1,
 		) );
 		?>
 	</div>
@@ -79,7 +79,9 @@
 
 	<?php else : ?>
 
-		<?php query_posts(); if(have_posts()) : ?>
+		<?php
+            /* by mohjak 2019-11-21 issue#120 */
+            query_posts('posts_per_page=-1'); if(have_posts()) : ?>
 
 			<section id="last-stories" class="loop-section">
 				<div class="section-title">
