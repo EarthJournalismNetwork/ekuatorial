@@ -43,7 +43,7 @@ class Newsroom_List_Images_Widget extends SiteOrigin_Widget {
           )
         )
       ),
-      plugin_dir_path(STYLESHEETPATH . '/inc/siteorigin-widgets/list-images')
+      plugin_dir_path(STYLESHEETPATH . '/siteorigin-widgets/list-images')
     );
   }
   function get_template_name($instance) {
@@ -58,7 +58,7 @@ class Newsroom_List_Images_Widget extends SiteOrigin_Widget {
   function initialize() {
     $this->register_frontend_styles(
       array(
-        array( 'newsroom-list-images', get_stylesheet_directory_uri() . '/inc/siteorigin-widgets/list-images/list-images.css', array(), '0.0.1' )
+        array( 'newsroom-list-images', get_stylesheet_directory_uri() . '/siteorigin-widgets/list-images/list-images.css', array(), '0.0.1' )
       )
     );
   }

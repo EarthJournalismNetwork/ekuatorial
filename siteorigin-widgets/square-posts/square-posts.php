@@ -38,7 +38,7 @@ class Newsroom_Square_Posts_Widget extends SiteOrigin_Widget {
           'default' => 4
         )
       ),
-      plugin_dir_path(STYLESHEETPATH . '/inc/siteorigin-widgets/square-posts')
+      plugin_dir_path(STYLESHEETPATH . '/siteorigin-widgets/square-posts')
     );
   }
   function get_template_name($instance) {
@@ -58,7 +58,7 @@ class Newsroom_Square_Posts_Widget extends SiteOrigin_Widget {
   function initialize() {
     $this->register_frontend_styles(
       array(
-        array( 'newsroom-square-posts', get_stylesheet_directory_uri() . '/inc/siteorigin-widgets/square-posts/square-posts.css', array(), '0.0.1' )
+        array( 'newsroom-square-posts', get_stylesheet_directory_uri() . '/siteorigin-widgets/square-posts/square-posts.css', array(), '0.0.1' )
       )
     );
   }

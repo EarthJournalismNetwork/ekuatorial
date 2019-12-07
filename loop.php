@@ -29,7 +29,11 @@
 								<span class="lsf">clip</span>
 								<span class="publisher-content">
 									<?php
-									echo array_shift(get_the_terms($post->ID, 'publisher'))->name;
+                                    $terms_arr = get_the_terms($post->ID, 'publisher');
+                                    $first_term = array_shift($terms_arr);
+                                    // by mohjak: 2019-11-21 excel line 23 issue#120
+                                    $first_term_name = $first_term->name;
+                                    echo $first_term_name;
 									?>
 								</span>
 							</span>

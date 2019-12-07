@@ -85,8 +85,9 @@ function ekuatorial_scripts() {
 	wp_deregister_script('jeo.markers');
 	wp_register_script('jeo.markers', get_stylesheet_directory_uri() . '/js/ekuatorial.markers.js', array('jeo', 'underscore', 'shadowbox', 'twttr'), '0.3.16', true);
 	wp_localize_script('jeo.markers', 'ekuatorial_markers', array(
-		'ajaxurl' => admin_url('admin-ajax.php'),
-		'query' => $jeo_markers->query(),
+        'ajaxurl' => admin_url('admin-ajax.php'),
+        // by mohjak 2019-10-04
+		'query' => $jeo_markers && isset($jeo_markers) ? $jeo_markers->query() : null,
 		'stories_label' => __('stories', 'ekuatorial'),
 		'home' => (is_front_page() && !is_paged()),
 		'copy_embed_label' => __('Copy the embed code', 'ekuatorial'),
@@ -191,8 +192,11 @@ function ekuatorial_marker_data($data) {
 
 	$data['permalink'] = $permalink;
 	$data['url'] = get_post_meta($post->ID, 'url', true) ? get_post_meta($post->ID, 'url', true) : $data['permalink'];
-	$data['content'] = get_the_excerpt();
-	$data['slideshow'] = ekuatorial_get_content_media();
+    $data['content'] = get_the_excerpt();
+    // by mohjak: 2019-11-21 excel line 19 issue#120
+    if (function_exists('ekuatorial_get_content_media')) {
+        $data['slideshow'] = ekuatorial_get_content_media();
+    }
 	if(get_post_meta($post->ID, 'geocode_zoom', true))
 		$data['zoom'] = get_post_meta($post->ID, 'geocode_zoom', true);
 	// source
@@ -365,11 +369,11 @@ function ekuatorial_share_meta() {
 
 	<meta property="og:title" content="<?php the_title(); ?>" />
 	<meta property="og:description" content="<?php the_excerpt(); ?>" />
-	<meta property="og:image" content="<?php echo $image; ?>" />
+	<meta property="og:image" content="<?php echo isset($image) ? $image : ''; ?>" />
 
 	<?php
 
-	if($query['story'])
+	if(isset($query) && $query['story'])
 		wp_reset_postdata();
 
 }
@@ -401,7 +405,8 @@ add_filter('jeo_markers_geojson_keys', 'ekuatorial_geojson_keys');
 
 function ekuatorial_flush_rewrite() {
 	global $pagenow;
-	if(is_admin() && $_REQUEST['activated'] && $pagenow == 'themes.php') {
+    // by mohjak 2019-10-03 bug fix tagged 2019-10-10
+	if(is_admin() && isset($_REQUEST['activated']) && $_REQUEST['activated'] && $pagenow == 'themes.php') {
 		global $wp_rewrite;
 		$wp_rewrite->init();
 		$wp_rewrite->flush_rules();
@@ -481,12 +486,13 @@ function ekuatorial_home_query($query) {
 add_action('pre_get_posts', 'ekuatorial_home_query');
 
 if(class_exists('SiteOrigin_Widget')) {
-	include_once(STYLESHEETPATH . '/inc/siteorigin-widgets/highlight-carousel/highlight-carousel.php');
+	include_once(STYLESHEETPATH . '/siteorigin-widgets/highlight-carousel/highlight-carousel.php');
 }
 
 function newsroom_pb_parse_query($pb_query) {
 	$query = wp_parse_args($pb_query);
-	if($query['tax_query']) {
+    // by mohjak: 2019-11-21 issue#113
+	if(isset($query['tax_query']) && $query['tax_query']) {
 		$tax_args = explode(',', $query['tax_query']);
 		$query['tax_query'] = array();
 		foreach($tax_args as $tax_arg) {
@@ -503,7 +509,7 @@ function newsroom_pb_parse_query($pb_query) {
 					'taxonomy' => $tax_arg[0],
 					'field' => 'slug',
 					'terms' => $tax_arg[1]
-				);	
+				);
 			}
 		}
 	}
@@ -533,3 +539,27 @@ function wpb_custom_new_menu() {
   );
 }
 add_action( 'init', 'wpb_custom_new_menu' );
+
+/*
+ * Limpeza KSES para ACF - https://github.com/Hube2/acf-filters-and-functions/blob/master/acf-form-kses.php
+ */
+
+function acf_wp_kses_post($data, $post_id=0, $field=array()) {
+		if (isset($field['type']) &&
+		    ($field['type'] == 'repeater' || $field['type'] == 'flexible_content' || $field['type'] == 'clone' || $field['type'] == 'group')) {
+			// no need to run it on repeaters
+			// will be called agaian for each subfield
+			return $value;
+		}
+		if (!is_array($data)) {
+			return wp_kses_post($data);
+		}
+		$return = array();
+		if (count($data)) {
+			foreach ($data as $index => $value) {
+				$return[$index] = acf_wp_kses_post($value);
+			}
+		}
+		return $return;
+	}
+	add_filter('acf/update_value', 'acf_wp_kses_post', 10, 3);

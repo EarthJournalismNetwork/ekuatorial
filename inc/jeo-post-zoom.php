@@ -1,6 +1,6 @@
 <?php
 
-/* 
+/*
  * JEO Post Zoom
  */
 
@@ -14,11 +14,14 @@ class JEO_Post_Zoom {
 	}
 
 	function zoom_input($post) {
-		$geocode_zoom = get_post_meta($post->ID, 'geocode_zoom', true);
+        // by mohjak: 2019-11-21 issue#106
+        if (isset($post) && $post) {
+            $geocode_zoom = get_post_meta($post->ID, 'geocode_zoom', true);
+        }
 		?>
 		<p>
 		<?php _e('Zoom', 'ekuatorial'); ?>:
-		<input type="text" id="geocode_zoom" name="geocode_zoom" value="<?php if($geocode_zoom) echo $geocode_zoom; ?>" />
+		<input type="text" id="geocode_zoom" name="geocode_zoom" value="<?php if(isset($geocode_zoom) && $geocode_zoom) echo $geocode_zoom; ?>" />
 		</p>
 		<?php
 	}

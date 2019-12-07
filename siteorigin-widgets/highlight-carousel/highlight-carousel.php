@@ -36,7 +36,7 @@ class Newsroom_Highlight_Carousel_Widget extends SiteOrigin_Widget {
           'default' => 8000
         )
       ),
-      plugin_dir_path(STYLESHEETPATH . '/inc/siteorigin-widgets/highlight-carousel')
+      plugin_dir_path(STYLESHEETPATH . '/siteorigin-widgets/highlight-carousel')
     );
   }
   function get_template_name($instance) {
@@ -55,7 +55,7 @@ class Newsroom_Highlight_Carousel_Widget extends SiteOrigin_Widget {
     if(!$enqueued) {
       $this->register_frontend_scripts(
         array(
-          array( 'newsroom-highlight-carousel', get_stylesheet_directory_uri() . '/inc/siteorigin-widgets/highlight-carousel/highlight-carousel.js', array( 'jquery', 'hammer.js' ), '0.0.1' )
+          array( 'newsroom-highlight-carousel', get_stylesheet_directory_uri() . '/siteorigin-widgets/highlight-carousel/highlight-carousel.js', array( 'jquery', 'hammer.js' ), '0.0.1' )
         )
       );
       $enqueued = true;
@@ -64,7 +64,7 @@ class Newsroom_Highlight_Carousel_Widget extends SiteOrigin_Widget {
 
     $this->register_frontend_styles(
       array(
-        array( 'newsroom-highlight-carousel', get_stylesheet_directory_uri() . '/inc/siteorigin-widgets/highlight-carousel/highlight-carousel.css', array(), '0.0.1' )
+        array( 'newsroom-highlight-carousel', get_stylesheet_directory_uri() . '/siteorigin-widgets/highlight-carousel/highlight-carousel.css', array(), '0.0.1' )
       )
     );
   }
