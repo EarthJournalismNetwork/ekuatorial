@@ -116,8 +116,14 @@ class Ekuatorial_AdvancedNav {
 				</div>
 			<?php endif; ?>
 			<?php
-			$oldest = array_shift(get_posts(array('posts_per_page' => 1, 'order' => 'ASC', 'orderby' => 'date')));
-			$newest = array_shift(get_posts(array('posts_per_page' => 1, 'order' => 'DESC', 'orderby' => 'date')));
+			// by mohjak 2019-12-11 Fix Notice: Only variables should be passed by reference in
+			// /var/www/html/wp-content/themes/ekuatorial/inc/advanced-navigation.php on line 119
+
+			$oldest_asc = get_posts(array('posts_per_page' => 1, 'order' => 'ASC', 'orderby' => 'date'));
+			$newest_desc = get_posts(array('posts_per_page' => 1, 'order' => 'DESC', 'orderby' => 'date'));
+
+			$oldest = array_shift($oldest_asc);
+			$newest = array_shift($newest_desc);
 
 			$before = $oldest->post_date;
 			$after = $newest->post_date;
@@ -166,7 +172,7 @@ class Ekuatorial_AdvancedNav {
 						numberOfMonths: 1,
 						maxDate: max,
 						minDate: min
-					});	
+					});
 
 				});
 

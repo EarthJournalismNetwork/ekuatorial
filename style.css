@@ -15,3 +15,8 @@ div.center {
     margin-right: auto;
     width: 80%;
 }
+
+.post-description ul {
+	list-style: disc;
+    padding-left: 40px;
+}
