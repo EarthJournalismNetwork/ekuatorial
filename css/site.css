@@ -671,3 +671,11 @@ footer#colophon ul > .menu-item {
 footer#colophon ul {
   margin-left: 0;
 }
+
+.map-template-default .stage-map {
+  height: 450px !important;
+}
+
+.post-template-default .stage-map {
+  height: 300px !important;
+}

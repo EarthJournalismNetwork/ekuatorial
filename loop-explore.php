@@ -40,7 +40,10 @@ wp_enqueue_script('lockfixed', get_stylesheet_directory_uri() . '/js/jquery.lock
 										<span class="lsf">clip</span>
 										<span class="publisher-content">
 											<?php
-											echo array_shift(get_the_terms($post->ID, 'publisher'))->name;
+											// mohjak 2012-12-12 Fix Notice: Only variables should be passed by reference
+											// in /var/www/html/wp-content/themes/ekuatorial/loop-explore.php on line 43
+											$terms = get_the_terms($post->ID, 'publisher');
+											echo array_shift($terms)->name;
 											?>
 										</span>
 									</span>
